@@ -1,0 +1,31 @@
+:root{
+    --primary-color:#7F0708;
+    --text-white-color:#ffff;
+    --text-black-color:#000000;
+    --text-color:#333;
+    --red-color:#BA1E1E;
+    --block-margin:90px 0;
+}
+*{
+    box-sizing: border-box;
+}
+html {
+    font-size: 62.5%;
+    line-height: 1.6rem;
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+.container{
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+    
+}
+.position_ab{
+    position: absolute;
+}
+.text_noen{
+    text-shadow: 0 0 3px var(--text-white-color), 0 0 3px var(--text-white-color);
+}

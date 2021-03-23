@@ -1,0 +1,353 @@
+/* Reset Css */
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior:smooth;
+    font-family: Arial, Helvetica, sans-serif;
+}
+#main{
+    overflow: hidden;
+}
+.text-white{
+    color: #ffffff!important;
+}
+.clear{
+    clear: both;
+}
+.row{
+    margin-left: -8px;
+    margin-right: -8px;
+}
+.row::after{
+    content:"";
+    display: block;
+    clear: both;
+}
+.col-1{
+    float: left;
+    width: 100%; 
+    padding-left: 8px;
+    padding-right: 8px;
+}
+.col-3{
+    float: left;
+    width: 33.33333333333%; 
+    padding-left: 8px;
+    padding-right: 8px;
+}
+.col-2{
+    float: left;
+    width: 50%;
+    padding-left: 8px;
+    padding-right: 8px;
+}
+.mt-8{
+    margin-top: 8px!important;
+}
+.mt-16{
+    margin-top: 16px!important;
+}
+/* css menu */
+#header{
+    height: 46px;
+    background-color: black;
+    /* Menu bám dính  */
+    position: fixed;
+    top:0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+   
+    /* Menu bám dính  */
+
+}
+#header #nav{
+   display: inline-block;
+   width: 100%;
+}
+#header > #nav > li{
+    display: inline-block;
+}
+#header #nav li{
+    
+    position: relative;
+}
+#header > #nav > li > a{
+    color: #ffffff;
+    text-transform: uppercase; 
+}
+
+#header #nav li a{
+    display: block;
+    
+    text-decoration: none;
+    line-height: 46px;
+    padding: 0 24px;
+}
+#header #nav :hover .subnav {
+    display: block;
+}
+#header #nav .subnav :hover a ,
+#header > #nav > li:hover > a{
+    background-color:#ccc ;
+    color: #000000;
+}
+#header #nav .subnav{
+    display: none;
+    min-width: 160px;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: white;
+    list-style: none;
+    box-shadow : 0 0 10px rgba(0,0,0,0.3);
+}
+
+#header #nav .subnav a {
+    color: black;
+    padding: 0 12px;
+    line-height: 38px;
+    
+}
+#nav .nav-arrow-down {
+    font-size: 14px;
+}
+#header .mobile-menu-btn{
+    display: none; 
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+#header .mobile-menu-btn,
+#header .search-btn{
+    float: right;
+    padding: 0 21px;
+   
+  
+}
+#header .mobile-menu-btn:hover{
+    background-color:#ccc ;
+    
+}
+#header .mobile-menu-btn:hover .menu-icon{
+    color: #000000;
+}
+#header .search-btn:hover{
+    background-color:#f44336 ;
+    cursor: pointer;
+}
+#header .menu-icon,
+#header .search-icon{
+    font-size:20px;
+    color: #ccc;
+    line-height: 46px;
+} 
+/* css menu */
+/* css Slider */
+#slider{
+    position: relative;
+    margin-top: 46px;
+    padding-top: 50%;/* kích thước chiều cao =50% chiều dọc */
+    background: url('/W3_band/assets/img/chicago.jpg') top center /cover no-repeat;
+    
+}
+#slider .text-content{
+    position: absolute;
+    color: #ffffff;
+    bottom: 47px;
+    /* Căn Giữa  */
+    width: 100%;
+    text-align: center;
+
+}
+/* css Slider */
+#content{
+    /* height: 3000px; */
+}
+#content .content-section{
+    padding :64px 0 112px;
+    width: 800px;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+ 
+}
+#content .section-heading{
+    font-size: 30px;
+    text-align: center;
+    font-weight: 500;
+    letter-spacing: 4px;
+}
+#content .section-sub-heading{
+    font-size: 15px;
+    text-align: center;
+    margin-top: 25px;
+    font-size: inherit;
+    opacity: 0.6;
+}
+#content .about-content{
+    margin-top: 25px;
+    font-size: 15px;
+    text-align: justify;
+    line-height: 1.4;
+
+}
+#content .members-list{
+    margin-top: 48px;
+   
+}
+#content .member-item{
+    text-align: center;
+    text-align: center;
+}
+#content .memmber-name{
+    font-size: 15px;
+   
+}
+#content .member-img{
+    margin-top: 15px;
+    width: 154px;
+    border-radius: 4px;
+   
+}
+#content .tour-section{
+    background-color: #000000;
+}
+#content .tickets-list{
+    background-color: #ffffff;
+    margin-top: 40px;
+}
+#content .tickets-list li{
+    color: #757575;
+    font-size: 15px;
+    padding: 11px 16px;
+    border-bottom: 1px solid #dddddd;
+    list-style: none;
+
+}
+#content .sold-out{
+    background-color: red;
+    padding: 3px 4px;
+    margin-left: 16px;
+}
+#content .quantity{
+    background-color: #000000;
+    border-radius: 50%;
+    float: right;
+    width: 24px;
+    height: 24px;
+    color: #ffffff;
+    /* Căn Giữa chữ */
+    text-align: center;
+    line-height: 24px;
+}
+/* places */
+.places-list{
+    margin-top: 48px;
+    margin-bottom: 32px;
+   
+}
+.place-item{
+    padding: 8px;
+}
+.place-img{
+    width: 100%;
+    display: block;
+}
+.place-img:hover{
+    opacity: 0.6;
+}
+.place-body{
+    background-color: #ffffff;
+    padding: 16px;
+    font-size: 15px;
+
+}
+.place-heading{ 
+    
+    font-size: 15px;
+    font-weight: 600;
+}
+.place-date{
+    margin-top: 15px;
+    color: #757577;
+    
+}
+.place-desc{
+    margin-top: 15px;
+    line-height: 1.4;
+}
+.place-btn{
+    background-color: #000000;
+    color: #ffffff;
+    padding: 4px 8px;
+    width: 108px;
+    height: 38px;
+    margin-top: 18px;
+}
+.place-btn:hover{
+    opacity: 0.6;
+}
+/* content form */
+.contact-content{
+    margin-top: 48px;
+}
+.contact-info{
+    font-size: 18px;
+    
+}
+ /*cách select nâng cao class */
+.contact-info i[class*="ti-"]{
+    width: 30px;
+    display: inline-block;
+    line-height: 1.5;
+}
+.contact-form{
+    font-size: 15px;
+
+}
+.contact-form .form-control{
+    padding: 10px;
+    border: 1px solid #ccc;
+    width: 100%;
+    
+}
+.btn-send{
+    background-color: #000000;
+    color: #ffffff;
+    font-size: 15px;
+    padding: 10px 16px;
+    float: right;
+    border: 1px solid #000000;
+}
+/* map-section */
+.map-section img{
+    width: 100%;
+}
+#footer{
+    padding: 64px;
+    text-align: center;
+}
+#footer .socials-list{
+    font-size: 24px;
+}
+#footer .socials-list a{
+    color:rgba(0,0,0,0.6);
+    text-decoration: none;
+}
+
+#footer .socials-list a:hover{
+    opacity: 0.4;
+}
+#footer .copyright{
+    margin-top: 15px;
+    color:rgba(0,0,0,0.6);
+}
+
+
+
+
+
