@@ -1,3 +1,8 @@
 $ git config --global user.name "Hiep"
 $ git config --global user.email "lehuyhiep449@gmail.com"
 git config --global credential.helper store
+
+
+//
+git clone lấ sorce code về >git pull tải tha đổi 
+git add . tạo 1 floder > git commit -m "" comit nó 1 cái tên > git push nó lên 
