@@ -1,6 +1,9 @@
-function drop_heart(){
-    var drop_heart = document.getElementById("drop_heart-action");
-    const check_heart = document.querySelector("#drop_heart-action");
+function drop_heart(event){
+    console.log(event.path);
+    var drop_heart = event;
+
+    var drop_heart = document.getElementById(event.path[1].id);
+    const check_heart = document.querySelector("#" + event.path[1].id);
     
 
     if(check_heart.classList.contains("home-product-items-like-liked")){

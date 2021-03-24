@@ -6,23 +6,128 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="./grid.css">
-    <style>
-        .container{
-            background-color: orange;
-            text-align: center;
-            font-size: 24px;
-        }
-        h1{
-            padding: 100px 0;
-            margin: 0;
-            color: white;
-        }
-    </style>
 </head>
 <body>
-    <div class="grid wide container">    
-            <h1>grid stem</h1>
+    <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      .col {
+        text-align: center;
+        background-color: #ccc;
+        background-clip: content-box;
+        margin-top: 8px;
+        margin-bottom: 8px;
+      }
+    </style>
+  </head>
 
+  <body>
+    <div class="grid container">
+      <div class="row">
+        <div class="col col-lg-2 col-md-4 col-sm-12">
+          <h2>l-2 m-4 c-12</h2>
+        </div>
+        <div class="col col-lg-2 col-md-4 col-sm-12">
+          <h2>l-2 m-4 c-12</h2>
+        </div>
+        <div class="col col-lg-2 col-md-4 col-sm-12">
+          <h2>l-2 m-4 c-12</h2>
+        </div>
+        <div class="col col-lg-2 col-md-4 col-sm-12">
+          <h2>l-2 m-4 c-12</h2>
+        </div>
+        <div class="col col-lg-2 col-md-4 col-sm-12">
+          <h2>l-2 m-4 c-12</h2>
+        </div>
+        <div class="col col-lg-2 col-md-4 col-sm-12">
+          <h2>l-2 m-4 c-12</h2>
+        </div>
+      </div>
+      
+      <div class="row">
+        <div class="col col-lg-3 col-md-6 col-sm-6">
+          <h2>l-3 m-6 c-6</h2>
+        </div>
+        <div class="col col-lg-3 col-md-6 col-sm-6">
+          <h2>l-3 m-6 c-6</h2>
+        </div>
+        <div class="col col-lg-3 col-md-6 col-sm-6">
+          <h2>l-3 m-6 c-6</h2>
+        </div>
+        <div class="col col-lg-3 col-md-6 col-sm-6">
+          <h2>l-3 m-6 c-6</h2>
+        </div>
+      </div>
+      
+      <div class="row">
+        <div class="col col-lg-4 col-md-12 col-sm-12">
+          <h2>l-4 m-12 c-12</h2>
+        </div>
+        <div class="col col-lg-4 col-md-12 col-sm-12">
+          <h2>l-4 m-12 c-12</h2>
+        </div>
+        <div class="col col-lg-4 col-md-12 col-sm-12">
+          <h2>l-4 m-12 c-12</h2>
+        </div>
+      </div>
+      
+      <div class="row">
+        <div class="col col-lg-6 col-md-6 col-sm-12">
+          <h2>l-6 m-6 c-12</h2>
+        </div>
+        <div class="col col-lg-6 col-md-6 col-sm-12">
+          <h2>l-6 m-6 c-12</h2>
+        </div>
+      </div>
+      
+      <div class="row">
+        <div class="col col-lg-12col-mdm-1 col-sm-12">
+          <h2>l-12 m-12 c-12</h2>
+        </div>
+      </div>
+      
+      <div class="row">
+        <div class="col col-lg-4 col-md-0 col-sm-0">
+          <h2>l-4 m-0 c-0</h2>
+        </div>
+        <div class="col col-lg-8 col-md-12 col-sm-12">
+          <h2>l-8 m-12 c-12</h2>
+        </div>
+      </div>
+      
+      <div class="row">
+        <div class="col col-lg-8 col-md-12 col-sm-12">
+          <h2>l-8 m-12 c-12</h2>
+        </div>
+        <div class="col col-lg-4 col-md-0 col-sm-0">
+          <h2>l-4 m-0 c-0</h2>
+        </div>
+      </div>
+      
+      <div class="row">
+        <div class="col col-lg-4 col-md-4 col-sm-6">
+          <h2>l-4 m-4 c-6</h2>
+        </div>
+        <div class="col col-lg-4 col-md-4 col-sm-6 offset-lg-4 offset-md-4">
+          <h2>l-4 m-4 c-6 l-o-4 m-o-4</h2>
+        </div>
+      </div>
+      
+      <div class="row">
+        <div class="col col-lg-4 col-md-4 col-sm-12 offset-lg-4 offset-md-4">
+          <h2>l-4 m-4 c-12 l-o-4 m-o-4</h2>
+        </div>
+      </div>
     </div>
+  </body>
+</html>
 </body>
 </html>

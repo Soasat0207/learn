@@ -1,0 +1,27 @@
+grid thẻ bọc
+>container thẻ căn giữa 
+container ,container-fluid{
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin:0 auto;
+}
+
+/* >= Tablet */
+@media (min-width: 740px) {}
+/* Tablet - PC low resolution */
+@media (min-width: 740px) and (max-width: 1023px) {}
+/* PC medium resolution > */
+@media (min-width: 1113px) {}
+/* > PC low resolution */
+@media (min-width: 1024px) and (max-width: 1239px) {}
+
+
+
+
+
+
+
+> row bọc column loại bỏ gutter
+>col
+offset
