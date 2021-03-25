@@ -1,3 +1,6 @@
+.app{
+    overflow: hidden;
+}
 .header{
     height: var(--height-header);
     /* background-image: linear-gradient Màu CHuyển */
@@ -475,10 +478,10 @@
     align-items: center;
     border-radius: 2px;;
 }
-.header__search-cart{
-    
+.header__search-cart{   
     width: 100px;
     text-align: center;
+    -webkit-tap-highlight-color: transparent;
 }
 .header__search-cart-wrap{
     position: relative;
@@ -502,6 +505,7 @@
     display: none;
     cursor: default;
     z-index: 1;
+
 }
 .header__cart-list::before{
     content: "";
@@ -979,6 +983,54 @@
     color: #ccc;
     background-color: #f9f9f9;
     cursor: default;
+}
+/* mobile -category */
+.mobile__category{
+    display: none;
+}
+.mobile__category-list{
+    display: flex;
+    padding-left: 0;
+    max-width: 100%;
+    overflow-x: auto;
+
+}
+.mobile__category-list::-webkit-scrollbar{
+    display: none;
+}
+.mobile__category-items{
+    list-style: none;
+    flex-shrink: 0;
+    margin-right: 10px;
+}
+.mobile__category-items:nth-of-type(3n + 1) .mobile__category-items-link{
+    background-color:#87ADD8 ;
+}
+.mobile__category-items:nth-of-type(3n + 2) .mobile__category-items-link{
+    background-color:#76C9BD ;
+}
+.mobile__category-items:nth-of-type(3n + 3) .mobile__category-items-link{
+    background-color:#88CD81 ;
+}
+.mobile__category-items-link{
+    text-decoration: none;
+    font-size: 1.4rem;
+    color: var(--white-color);
+    line-height: 2rem;
+    text-align: center;
+    width: 108px;
+    height: 40px;
+    display: block;
+    border-radius: 4px;
+    overflow: hidden;
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp:2;
+    user-select: none;
+    -webkit-user-select: none;
+    -webkit-tap-highlight-color: transparent;
+    padding:0 12px;
 }
 /* product item */
 .home-product{

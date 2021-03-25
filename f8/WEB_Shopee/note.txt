@@ -1,0 +1,46 @@
+Background-repeat:round là gì
+hỏi. rõ checked
+hỏi cách hoạt động của start
+hỏi phần yêu thích tam giác chìm xuống
+để ảnh luôn ở trong trọng tâm khung hình
+:nth-of-type
+
+//
+background-size: cover;
+    background-position: center;
+//
+Video 102 :hiển thị title … khi mà hết chỗ
+
+hỏi về cái này
+  max-height: 3rem;
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp:2;
+
+dấu .. trên 1 dòng
+https://www.w3schools.com/cssref/css3_pr_text-overflow.asp
+//
+tạo thanh kéo ngang
+max-width: 100%;
+    overflow-x: auto;
+ẩn thanh scroll 
+.mobile__category-list::-webkit-scrollbar{
+    display: none;
+}
+//
+Không hiển thị cái hightlight khi click zô
+ -webkit-tap-highlight-color: transparent;
+
+//
+Không cho người dùng select
+user-select: none;
+    -webkit-user-select: none;
+
+//
+gạch giữa chữ
+ text-decoration: line-through;
+//
+Lấy chữ đưa về chân dòng cho thẳng 
+align-items: baseline;
+//hỏi js chỗ trái tim tại sao click zô lại không được
