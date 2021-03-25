@@ -6,13 +6,12 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="./assets/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="./assets/css/grid.css">
+        <link rel="stylesheet" href="./assets/css/rest.css">
         <link rel="stylesheet" href="./assets/css/base.css">
         <link rel="stylesheet" href="./assets/css/main.css">
-        <link rel="stylesheet" href="./assets/css/rest.css">
+        <link rel="stylesheet" href="./assets/css/responsive.css">
         <link rel="preconnect" href="https://fonts.gstatic.com">
-        <link rel="stylesheet" href="assets/css/base.css">
-    
-       
         <title>Document</title>
     </head>
 
@@ -20,20 +19,20 @@
         <div class="app">
             <!-- header -->
             <header class="header">
-                <div class="grid">
-                    <nav class="header__navbar">
+                <div class="grid container">
+                    <nav class="header__navbar hide-on-mobile-tablet">
                         <ul class="header__navbar-list">
                             <li class="header__navbar-items  header__navbar-item-has-qr header__navbar_separate">
                                 Vào Cửa Hàng Trên Ứng Dụng F8-shop
                                 <!-- header qr code -->
                                 <div class="header__qr">
-                                    <img src="/WEB_Shopee/assets/img/qrcodeApp.png" alt="" class="header_qr-img">
+                                    <img src="./assets/img/qrcodeApp.png" alt="" class="header_qr-img">
                                     <div class="header__qr-apps">
                                         <a href="" class="header__qr-link">
-                                            <img src="/WEB_Shopee/assets/img/qrcodeAppstort.png" alt="" class="header__qr-download-img">
+                                            <img src="./assets/img/qrcodeAppstort.png" alt="" class="header__qr-download-img">
                                         </a>
                                         <a href="" class="header__qr-link">
-                                            <img src="/WEB_Shopee/assets/img/qrcodeGoogleplay.png" alt="" class="header__qr-download-img">
+                                            <img src="./assets/img/qrcodeGoogleplay.png" alt="" class="header__qr-download-img">
                                         </a>
 
                                     </div>
@@ -57,7 +56,7 @@
                                         <li class="header__notify-item header__notify-item-viewd">
                                             <a href="" class="header__notify-link">
                                                
-                                                <img src="/WEB_Shopee/assets/img/dongho.png" alt="" class="header__notify-img">
+                                                <img src="./assets/img/dongho.png" alt="" class="header__notify-img">
                                                 <div class="header__notify-body">
                                                     <p class="header__notify-name"> Nhận Lỳ Xì Từ curron Watch </p>
                                                     <p class="header__notify-desc">Nhận Ngay lì xì từ curron Watch lì xì tết  </p>
@@ -68,7 +67,7 @@
                                         <li class="header__notify-item">
                                             <a href="" class="header__notify-link">
                                                
-                                                <img src="/WEB_Shopee/assets/img/dongho.png" alt="" class="header__notify-img">
+                                                <img src="./assets/img/dongho.png" alt="" class="header__notify-img">
                                                 <div class="header__notify-body">
                                                     <p class="header__notify-name">TẢI ỨNG DỤNG SHOPEE NGAY ĐỂ MUA BÁN ONLINE MỌI LÚC, MỌI NƠI</p>
                                                     <p class="header__notify-desc"> Ưu điểm của ứng dụng Shopee là cho phép bạn mua và bán hàng mọi lúc, mọi nơi. Bạn có thể tải ứng dụng Shopee cũng như đăng sản phẩm bán hàng một cách nhanh chóng và tiện lợi. Ngoài ra, ứng dụng Shopee còn có những ưu điểm sau: - Giao diện thân thiện, đơn giản, dễ sử dụng  </p>
@@ -79,7 +78,7 @@
                                         <li class="header__notify-item">
                                             <a href="" class="header__notify-link">
                                                
-                                                <img src="/WEB_Shopee/assets/img/dongho.png" alt="" class="header__notify-img">
+                                                <img src="./assets/img/dongho.png" alt="" class="header__notify-img">
                                                 <div class="header__notify-body">
                                                     <p class="header__notify-name"> MUA HÀNG CHÍNH HÃNG TỪ CÁC THƯƠNG HIỆU LỚN VỚI SHOPEE </p>
                                                     <p class="header__notify-desc">Mua hàng trên Shopee luôn là một trải nghiệm ấn tượng. Dù bạn đang có nhu cầu mua bất kỳ mặt hàng thời trang nam, thời trang nữ, đồng hồ, điện thoại, nước rửa tay khô hay khẩu trang N95 thì Shopee cũng sẽ đảm bảo cung cấp cho bạn những sản phẩm ưng ý.   </p>
@@ -110,7 +109,16 @@
                         </ul>
                     </nav>
                     <div class="header-search">
-                        <div class="header-search__logo">
+                        <div class="header-search-icon-mobile">
+                            <label for="mobile-search-checkbox-category" class="header__mobile-search">
+                                <i class="fa fa-bars header__mobile-search-icon" aria-hidden="true"></i>
+                            </label>
+                            <label for="mobile-search-checkbox" class="header__mobile-search">
+                                <i class="fa fa-search header__mobile-search-icon" aria-hidden="true"></i>
+                            </label>
+                        </div>
+                        
+                        <div class="header-search__logo hide-on-tablet">
                             <a href="/" class="header__logo-link">   
                                 <svg viewBox="0 0 192 65" class="header-search__logo-img">
                                     <g fill-rule="evenodd">
@@ -119,7 +127,8 @@
                                 </svg>
                             </a>
                         </div>
-                        <div class="header__search">
+                        <input type="checkbox" id="mobile-search-checkbox" hidden class="header__search-checkbox">
+                        <div class="header__search ">
                             <div class="header__search-input-wrap">
                                 <input type="text" class="header__search-input" placeholder="Nhập để tìm kiếm sản phẩm" >
                                 <!-- search hítory -->
@@ -155,13 +164,13 @@
                                
                                 <!-- không có sản phẩm thì add class header__cart-list-nocart -->
                                 <div class="header__cart-list ">
-                                    <img src="/WEB_Shopee/assets/img/no-cart.png" alt="" class="header__cart-nocart-img">
+                                    <img src="./assets/img/no-cart.png" alt="" class="header__cart-nocart-img">
                                     <p class="header__cart-list-text">Chưa có sản phẩm</p>
                                     <h4 class="header__cart-heading">Sản phẩm đã thêm </h4>
                                     <ul class="header__cart-list-info">
                                         <!-- cart item -->
                                         <li class="header__cart-list-items">
-                                            <img src="/WEB_Shopee/assets/img/product01.jpeg" alt="" class="header__cart-list-items-img">
+                                            <img src="./assets/img/product01.jpeg" alt="" class="header__cart-list-items-img">
                                             <div class="header__cart-list-items-warp">
 
                                                 <div class="header__cart-list-items-head">
@@ -179,7 +188,7 @@
                                             </div>
                                         </li>
                                         <li class="header__cart-list-items">
-                                            <img src="/WEB_Shopee/assets/img/product01.jpeg" alt="" class="header__cart-list-items-img">
+                                            <img src="./assets/img/product01.jpeg" alt="" class="header__cart-list-items-img">
                                             <div class="header__cart-list-items-warp">
 
                                                 <div class="header__cart-list-items-head">
@@ -197,7 +206,7 @@
                                             </div>
                                         </li>
                                         <li class="header__cart-list-items">
-                                            <img src="/WEB_Shopee/assets/img/product01.jpeg" alt="" class="header__cart-list-items-img">
+                                            <img src="./assets/img/product01.jpeg" alt="" class="header__cart-list-items-img">
                                             <div class="header__cart-list-items-warp">
 
                                                 <div class="header__cart-list-items-head">
@@ -215,7 +224,7 @@
                                             </div>
                                         </li>
                                         <li class="header__cart-list-items">
-                                            <img src="/WEB_Shopee/assets/img/product01.jpeg" alt="" class="header__cart-list-items-img">
+                                            <img src="./assets/img/product01.jpeg" alt="" class="header__cart-list-items-img">
                                             <div class="header__cart-list-items-warp">
 
                                                 <div class="header__cart-list-items-head">
@@ -233,7 +242,7 @@
                                             </div>
                                         </li>
                                         <li class="header__cart-list-items">
-                                            <img src="/WEB_Shopee/assets/img/product01.jpeg" alt="" class="header__cart-list-items-img">
+                                            <img src="./assets/img/product01.jpeg" alt="" class="header__cart-list-items-img">
                                             <div class="header__cart-list-items-warp">
 
                                                 <div class="header__cart-list-items-head">
@@ -251,7 +260,7 @@
                                             </div>
                                         </li>
                                         <li class="header__cart-list-items">
-                                            <img src="/WEB_Shopee/assets/img/product01.jpeg" alt="" class="header__cart-list-items-img">
+                                            <img src="./assets/img/product01.jpeg" alt="" class="header__cart-list-items-img">
                                             <div class="header__cart-list-items-warp">
 
                                                 <div class="header__cart-list-items-head">
@@ -269,7 +278,7 @@
                                             </div>
                                         </li>
                                         <li class="header__cart-list-items">
-                                            <img src="/WEB_Shopee/assets/img/product01.jpeg" alt="" class="header__cart-list-items-img">
+                                            <img src="./assets/img/product01.jpeg" alt="" class="header__cart-list-items-img">
                                             <div class="header__cart-list-items-warp">
 
                                                 <div class="header__cart-list-items-head">
@@ -289,7 +298,7 @@
 
 
                                         <li class="header__cart-list-items">
-                                            <img src="/WEB_Shopee/assets/img/product01.jpeg" alt="" class="header__cart-list-items-img">
+                                            <img src="./assets/img/product01.jpeg" alt="" class="header__cart-list-items-img">
                                             <div class="header__cart-list-items-warp">
 
                                                 <div class="header__cart-list-items-head">
@@ -307,7 +316,7 @@
                                             </div>
                                         </li>
                                         <li class="header__cart-list-items">
-                                            <img src="/WEB_Shopee/assets/img/product01.jpeg" alt="" class="header__cart-list-items-img">
+                                            <img src="./assets/img/product01.jpeg" alt="" class="header__cart-list-items-img">
                                             <div class="header__cart-list-items-warp">
 
                                                 <div class="header__cart-list-items-head">
@@ -331,10 +340,18 @@
                         </div>
                     </div>
                 </div>
+                <div class="header__sort-bar">
+                    <ul class="header__sort-bar-list">
+                        <li class="header__sort-bar-list-items header__sort-bar-list-items-active"><a href="" class="header__sort-bar-list-items-link">Liên quan </a></li>
+                        <li class="header__sort-bar-list-items"><a href="" class="header__sort-bar-list-items-link">Mới Nhất</a></li>
+                        <li class="header__sort-bar-list-items"><a href="" class="header__sort-bar-list-items-link">Giá</a></li>
+                        <li class="header__sort-bar-list-items"><a href="" class="header__sort-bar-list-items-link">Trợ Giúp</a></li>
+                    </ul>
+                </div>
             </header>
 
             <div class="app_container">
-                <div class="grid">
+                <div class="grid container">
                     <div class="grid__row app_content">
                         <div class="grid__column-2">
                             <nav class="category">
@@ -359,7 +376,7 @@
                             </nav>
                         </div>
                         <div class="grid__column-10">
-                            <div class="home-filter">
+                            <div class="home-filter hide-on-mobile-tablet">
                                 <span class="home-filter__label">Sắp xếp theo</span>
                                 <button class="home-filter-btn btn"> Phổ biến</button>
                                 <button class="home-filter-btn btn btn--primary"> Mới nhất</button>
@@ -964,7 +981,7 @@
             </div>
 
             <footer class="footer">
-                <div class="grid">
+                <div class="grid container">
                     <div class="grid__row">
                         <div class="grid__column-2-4">
                             <h3 class="footer__heading">Chăm sóc khách hàng</h3>
@@ -1008,14 +1025,14 @@
                         </div>
                         <div class="grid__column-2-4">
                             <h3 class="footer__heading">Chăm sóc khách hàng</h3>
-                            <div class="footer__download">
+                            <!-- <div class="footer__download">
                                 <img src="./assets/img/qrcodeApp.png" alt="" class="footer__download-qr-img">
                                 <div class="footer__download-apps">
                                     <img src="./assets/img/qrcodeGoogleplay.png" alt="" class="footer__download-apps-android-img">
                                     <img src="./assets/img/qrcodeAppstort.png" alt="" class="footer__download-apps-ios-img">
                                 </div>
                                
-                            </div>
+                            </div> -->
                         </div>
                     </div>
                     <div class="grid__row">
@@ -1105,7 +1122,7 @@
             </div>       -->
         <!-- </div> -->
         
-        <script src="/WEB_Shopee/assets/js/notice.js"></script>
+        <script src="./assets/js/notice.js"></script>
         <script src="./assets/js/heart.js"></script>
     </body>
 

@@ -1,0 +1,92 @@
+/* Mobile & tablet */
+@media (max-width :1023px){
+    :root{
+        --height-header:68px;
+        --height-header__navbar:0px;
+        --header-sort__bar:40px;
+    }
+    .hide-on-mobile-tablet{
+        display: none;
+    }
+    .header{
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 1;
+    }
+    .header__cart-list {
+        position: fixed;
+        top: var(--height-header);
+        right: 0;
+        width: 100%;
+        padding: 0 calc((100% - 664px) / 2);
+    }
+    .header__cart-list::before{
+        display: none;
+    }
+    .header__sort-bar{
+        display: block;
+    }
+    .app_container{
+        margin-top:calc( var(--height-header) + var(--header-sort__bar) / 2 ) ;
+    }
+}
+/* tablet */
+@media (min-width :740px) and (max-width :1023px)  {
+    .hide-on-tablet{
+        display: none;
+    }
+    .header__search-cart{
+        width: 80px;
+        text-align: right;
+    }
+}
+/* Mobile */
+@media (max-width :739px){
+    .hide-on-mobile{
+        display: none;
+    }
+    .header-search{
+        justify-content: space-between;
+    }
+   
+    .header-search__logo,
+    .header__search-cart
+    {
+        width: unset;
+    }
+    .header__mobile-search{
+        display: block;
+    }
+    .header__search{
+        position: absolute;
+        top: var(--height-header) ;
+        left: 0;
+        right: 0;
+        height: 46px;
+        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+        z-index: 1;
+        padding: 0 16px;
+        animation: mobileSearchSideIn linear 0.3s;
+        display: none;
+    }
+    .header__search-history{
+        position: fixed;
+        width: 100%;
+        top: calc ( var(--height-header) + var(--header-sort__bar) );
+        left: 0; 
+        padding: 16px;
+    }
+    @keyframes mobileSearchSideIn{
+        from{
+            opacity: 0;
+            top: calc( var(--height-header) / 2) ;
+        }
+        to{
+            opacity: 1;
+            top: var(--height-header);
+        }
+    }
+}
+

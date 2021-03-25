@@ -7,6 +7,7 @@
     --height-header:120px;
     --height-header__navbar:34px;
     --height-header__search:calc(var(--height-header) - var(--height-header__navbar));
+    --header-sort__bar:40px;
 }
 *{
     
@@ -20,11 +21,7 @@ html {
     box-sizing: border-box;
 }
 /* responsive */
-.grid{
-    width: 1200px;
-    max-width: 100%;
-    margin: 0 auto;
-}
+
 .grid__full-with{
     width: 100%;
 }
