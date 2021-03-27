@@ -1,0 +1,8 @@
+Javascript number method
+1. tạo giá trị number 
+-cách tạo 
+-dùng thế nào  ? tại sao 
+kiểm tra data type 
+2. làm việc với Number 
+-to string : Chuyển đổi kiểu number thành kiểu string
+to Fixed : Làm tròn số những sẽ chuyển kiểu sang string

@@ -1,0 +1,33 @@
+
+2. Tạo mảng 
+--cách tạo 
+- sử dụng cách nào ? tại sao ?
+--kiểm tra data type 
+2. truy xuất mảng 
+    -độ dài của mảng- lấy phẩn tử theo index 
+    // làm việc với array
+    keyword javascript array methods 
+1. to string Chuyển chuỗi thành string
+2 .join  Chuyển chuỗi thành string
+3 . Pop xoá phần tử cuối mảng trả chính phần tử đó
+3. Push  thêm phần tử
+5 .Shift xoá phần tử đầu mảng trả chính phần tử đó
+6.unshift  them phần tử vào đầu manrg
+7.splicing xoá cắt chèn phần tử mới vào mảng
+arrayName.splice(1,2);//Xoá đi 2 phần tử từ vị trí đầu 
+arrayName.splice(1,2,'');//chèn 1 phẩn tử vào vị trí số 1 
+8.concat //nối các mảng mởi nhau
+array1.concat(array 2)
+9,slicing cắt 1 vài elemt của mảng
+array.slice(1,2);
+
+
+Bài toán
+Một website nọ có chức năng tải thêm (load more) tại trang danh sách sản phẩm. Cứ mỗi khi người dùng kéo con lăn chuột xuống (scroll down) cuối danh sách sản phẩm là sẽ tải thêm 10 sản phẩm.
+
+Diễn dải
+Về mặt logic xử lý phía sau giao diện web, bài toán trên sẽ sử dụng kỹ thuật nối mảng. Thứ tự thực hiện các công việc thường diễn ra như sau:
+
+Khi load trang web, tải sẵn một số lượng sản phẩm nhất định (mảng A)
+Khi scroll down cuối danh sách, tải thêm một số lượng sản phẩm nhất định (mảng B)
+Thực hiện nối mảng A và mảng B thành một mảng duy nhất sau đó hiển thị ra giao diện người dùng

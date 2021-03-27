@@ -1,0 +1,12 @@
+1.Hàm ?
+- Một khối mã
+- làm 1 việc cụ thể
+2. Loại hàm 
+-Built -in 
+- Tự định Nghĩa
+3. Tính chất 
+-Không thực thi khi định nghĩa 
+-sẽ thực thi khi được gọi 
+-có thể nhận tham số
+-có thể trả về 1 giá trị
+4. tạo hàm đầu tiên

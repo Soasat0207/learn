@@ -1,0 +1,39 @@
+var myString ='Hoc JS tai JS F8 JS!';
+// 1.length : Để đo đọ dài của chuỗi
+    // console.log(myString.length);
+// 2. find index :tiìm được vị trí ở trong chuỗi
+//indexof trả về chuỗi đầu tiên mà nó tìm được trong chuỗi
+    console.log(myString.indexOf('S'));
+    // kiểm tra 1 chuuỗi có chưa chuỗi không  
+    includes
+    var string = "foo",
+    substring = "oo";
+    string.includes(substring);
+
+    indexOf
+    var string = "foo",
+    substring = "oo";
+    string.indexOf(substring) !== -1;
+
+    search
+    var string = "foo",
+    expr = /oo/;
+    string.search(expr);
+
+// 3.cut string
+slice
+var str = "Hello world!";
+var res = str.slice(0, 5);
+
+split
+substring()
+// 4 replace
+str.replace();
+replace tất cả sử dụng //g
+var res = str.replace(/blue/g, "red");
+replace tất cả không phân biệt chữ hoa hay chữ thường sử dụng //gi
+// 5.convert to upper case
+// 6.convart to lower case
+// 7. trim
+// 8 ChannelSplitterNode
+// 9.get a character by index
