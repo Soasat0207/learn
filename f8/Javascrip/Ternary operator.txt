@@ -1,0 +1,12 @@
+variable_name = (condition) ? value1 : value2
+[Điều kiện] ? [Biểu thức nếu đúng] : [Biểu thức nếu sai]
+var age = 16;
+
+console.log(age >= 18 ? 'Người lớn' : 'Trẻ con');
+// Kết quả: Trẻ con
+
+console.log(age > 12 && age < 20 ? 'Tuổi teen' : 'Tuổi không teen');
+// Kết quả: Tuổi teen
+var input = 'f8';
+var result = input === 'f8' ? 'Fullstack.edu.vn' : 'Unknown';
+console.log(result);

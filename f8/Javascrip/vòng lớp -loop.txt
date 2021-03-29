@@ -1,0 +1,5 @@
+1.for -lắp với điều kiện đúng
+2. for/in --lặp qua key của đối tương
+3.for/ò -lặp qua value của đối tương 
+4.ưhile-lặp khi điều kiẹn đúng
+5.do/while -lặp ít nhất 1 lần sau đó lặp khi điều kiện đúng
