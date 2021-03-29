@@ -29,9 +29,13 @@ html{
     text-align: left;
     background-color: #fff;
 }
-.disable{
+.disable .navbar-items-link{
     cursor: default !important;
     color: #ccc !important;
+}
+.disable:hover .navbar-items-link::after{
+    background-color: transparent;
+    width: 0 !important;
 }
 /* button */
 .btn{
@@ -63,6 +67,7 @@ html{
     cursor: default;
     color: #ccc;
     background-color: rgb(165, 164, 164);
+
 }
 /* end button */
 /* navigation bar  */

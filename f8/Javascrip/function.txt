@@ -10,3 +10,32 @@
 -có thể nhận tham số
 -có thể trả về 1 giá trị
 4. tạo hàm đầu tiên
+// Tham số Trong function
+1.tham số?
+Định nghĩa
+kiểu dữ liệu
+tính provate
+1 tham số
+nhiều time số
+2.truyền tham số
+-1 tham số
+- nhiều tham số
+3.arguments
+đối tượng tham ra arguments
+Giới thiệu vòng for
+4.return 
+
+// một số điều cần biêt
+1. khi khai báo function trùng tên : function sau sẽ đè lên function trước 
+2. khai báo biến trong hàm
+3.dịnh nghĩa hàm trong hàm
+//
+1.declaration function
+function showMessage(){
+
+}
+2.expression function
+var showMessage2 = function(){
+
+}x
+3.arrow function
