@@ -89,11 +89,20 @@ function tich3sodau(array){
     return multiply;
 }
 console.log(tich3sodau(array));
-console.log(array.sort());
+console.log('tong 3 so sau');
+console.log(array.slice(0,-2))
 console.log('phan tu 5');
 function searchFive (){
     
 }
+console.log('Dem so 8 xuat hien bao lan');
+var count= 0 ;
+for(let i = 0 ; i <array.length; i++){
+    if(array[i] == 8){
+        count++;
+    }
+}
+console.log(count);
 //bài 2
 console.log('bai 2');
 function dienTich(r){
@@ -112,3 +121,6 @@ var car ={
     gia:300000,
     xuatXu:'duc',
 }
+car.mauSac ='Mau den';
+car.gia =250000;
+console.log(car);

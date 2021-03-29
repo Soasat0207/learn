@@ -13,7 +13,8 @@
     --gray: #6c757d;
     --light: #f8f9fa;
     --dark: #343a40;
-    --text-color:#343a40
+    --text-color:#343a40;
+    --border-color-dark:rgba(255,255,255,.1);
 }
 *{
     box-sizing: border-box;
@@ -70,7 +71,7 @@ html{
     display: flex;
     align-items: center;
 }
-.navbar-logo{
+.navbar-logo-img{
     width: 100%;
 }
 .navbar-list{
@@ -193,4 +194,103 @@ html{
     stroke: #000000;
     stroke-width: 2px;
 }
+.navbar__overlay{
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0 ,0.4);
+    z-index: 2;
+    display: none;
+}
+.navbar__tablet-mobile{
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 320px;
+    max-width: 100%;
+    background-color: var(--white);
+    z-index: 3;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid rgba(100,100,100,.4);
+    box-shadow: 0 3px 8px rgb(0 0 0 / 25%);
+    transform: translateX(-100%);
+}
+.navbar__tablet-mobile-list{
+    margin-top: 0;
+    padding: 1rem;
+}
+.navbar__tablet-mobile-items{
+    list-style: none;
+}
+.navbar__tablet-mobile-items-link{
+    text-decoration: none;
+    color: var(--text-color);
+    list-style: none;
+    font-size: 1.2rem;
+    font-weight: 500;
+    letter-spacing: 2px;
+    padding: 1rem 0;
+    display: block;
+    color: var(--text-color);
+    width: 100%;
+    
+}
+.navbar__tablet-mobile-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem ;
+    border-bottom: 1px solid rgba(0,0,0,.2);
+}
+.navbar__tablet-mobile-user{
+    display: flex;
+    align-items: center;
+}
+.navbar__tablet-mobile-user-img{
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+}
+.navbar__tablet-mobile-user-name{
+    font-size: 1rem;
+    padding: 0 1rem;
+    font-weight: 600;
+}
+.navbar__tablet-mobile-icon-close-link{
+    font-size: 1.7rem;
+}
 /* end navigation bar */
+/* Mobile & tablet */
+.hide-on-pc{
+    display: none;
+}
+@media (max-width :1023px){
+    .hide-on-pc{
+        display: block;
+    }
+    .hide-on-mobile-tablet{
+        display: none;
+    }
+    .navbar-logo{
+        text-align: center;
+    }
+    .navbar-logo-img{
+        width: 50%;
+    }
+}
+/* tablet */
+@media (min-width :740px) and (max-width :1023px)  {
+    .hide-on-tablet{
+        display: none;
+    }
+}
+@media (max-width :739px){
+    .hide-on.mobile{
+        display: none;
+    }
+}
+    
