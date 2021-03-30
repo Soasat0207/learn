@@ -9,13 +9,13 @@ Phương thức chính là một function
     keyword javascript array methods 
 1. to string Chuyển chuỗi thành string
 2 .join  Chuyển chuỗi thành string
-3 . Pop xoá phần tử cuối mảng trả chính phần tử đó
-3. Push  thêm phần tử
+3 . Pop xoá phần tử cuối mảng trả chính phần tử đó trả về kiểu mảng dữ liệu
+3. Push  thêm phần tử vào cuối mảng
 5 .Shift xoá phần tử đầu mảng trả chính phần tử đó
 6.unshift  them phần tử vào đầu manrg
 7.splicing xoá cắt chèn phần tử mới vào mảng
-arrayName.splice(1,2);//Xoá đi 2 phần tử từ vị trí đầu 
-arrayName.splice(1,2,'');//chèn 1 phẩn tử vào vị trí số 1 
+arrayName.splice(1,2);//Xoá đi 2 phần tử từ vị trí đầu không ảnh hưởng đến chuỗi gốc
+arrayName.splice(1,2,'');//chèn 1 phẩn tử vào vị trí số 1  
 8.concat //nối các mảng mởi nhau
 array1.concat(array 2)
 9,slicing cắt 1 vài elemt của mảng
@@ -104,3 +104,5 @@ console.log(course);
 filter() :giống find nhưng trả về hết tất cả các phần tử chưa tất
 map()
 reduce()
+
+sort
