@@ -67,7 +67,40 @@ var courses =[
 courses.forEach(function(course ,index){
     console.log(index,course);
 });
-every():kiểm tra tất cả các phần tử của mảng đều thoả mãn 1 điều kiện nào đó
+every():kiểm tra tất cả các phần tử của mảng đều thoả mãn 1 điều kiện nào đó :trả về kiểu boolen
+var courses =[
+    {
+        id: 1,
+        name:'javascript',
+        coin:0
+    },
+    {
+        id: 2,
+        name:'php',
+        coin:0
+    },
+    {
+        id: 3,
+        name:'ruby',
+        coin:0
+    },
+    {
+        id: 4,
+        name:'java',
+        coin:0
+    },
+    {
+        id: 5,
+        name:'reacts',
+        coin:0
+    }
+]
+//callback : hàm truyền vào dưới dạng tham số
+//duyệt qua từng phần tử của mảng với điều kiện coin = không thì sẽ đến phần tử tiếp theo
+var isFree = courses.every(function(course ,index){
+    return course.coin === 0;
+});
+console.log(isFree);
 some()
 find()
 filter()
