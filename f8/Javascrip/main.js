@@ -1,33 +1,28 @@
-var courses =[
-    {
-        id: 1,
-        name:'javascript',
-        coin:200
-    },
-    {
-        id: 2,
-        name:'php',
-        coin:1
-    },
-    {
-        id: 3,
-        name:'ruby',
-        coin:1
-    },
-    {
-        id: 4,
-        name:'java',
-        coin:45
-    },
-    {
-        id: 5,
-        name:'reacts',
-        coin:23
-    }
+
+var formValues =[
+    { field: 'name', value: 'Sơn Đặng' },
+    { field: 'age', value: 18 },
+    { field: 'address', value: 'Hà Nội' }
+   
 ]
-//callback : hàm truyền vào dưới dạng tham số
-//duyệt qua từng phần tử của mảng chỉ cần 1 phần tử sẽ trả về true
-var isFree = courses.some(function(course ,index){
-    return course.coin === 0;
-});
-console.log(isFree);
+
+for(i = 0 ; i < formValues.length ; i++){
+    var obj ={}
+    var property = ''
+    for(  key in formValues[i] ){
+        if(key==='field'){
+            property = formValues[i][key]
+            obj[property]=''
+        }else{
+            obj[property]=formValues[i][key]
+        }
+        // console.log(key);
+    }
+    console.log(obj)
+}
+
+    // formValues.forEach(function(x){s
+    //     console.log(x);
+    // });
+ 
+

@@ -1,4 +1,4 @@
-
+Phương thức chính là một function
 2. Tạo mảng 
 --cách tạo 
 - sử dụng cách nào ? tại sao ?
@@ -68,8 +68,39 @@ courses.forEach(function(course ,index){
     console.log(index,course);
 });
 every():kiểm tra tất cả các phần tử của mảng đều thoả mãn 1 điều kiện nào đó
-some()
-find()
-filter()
+some() : kiểm tra tất cả các phần tử của mảng chỉ cần 1 thằng đúng sẽ trả về true 
+find() : tìm xem trong 1 mảng có 1 phần tử nào chứ .... không nếu có sẽ trả về chính phần tử đó (chỉ tìm được 1 ông)
+var courses =[
+    {
+        id: 1,
+        name:'javascript',
+        coin:250
+    },
+    {
+        id: 2,
+        name:'php',
+        coin:0
+    },
+    {
+        id: 3,
+        name:'ruby',
+        coin:0
+    },
+    {
+        id: 4,
+        name:'java',
+        coin:400
+    },
+    {
+        id: 5,
+        name:'reacts',
+        coin:500
+    }
+]
+var course = courses.find(function(x,index){
+    return x.name === 'javascript';
+});
+console.log(course);
+filter() :giống find nhưng trả về hết tất cả các phần tử chưa tất
 map()
 reduce()
