@@ -1,0 +1,14 @@
+Khi thực thi đến break nó sẽ lập tức thoát khỏi vòng lắp
+for (let i = 0; i < 10; i++) {
+    if( i%2 == 0){
+        console.log(i);
+        break;
+    }
+}
+continue khi được thực thi sẽ bỏ qua tất cả các dòng phía dưới r thực thi chạy tiếp vòng lặp
+for (let i = 0; i < 10; i++) {
+    if( i%2 == 0){     
+       continue;
+    }
+    console.log(i);
+}

@@ -31,3 +31,45 @@ Về mặt logic xử lý phía sau giao diện web, bài toán trên sẽ sử 
 Khi load trang web, tải sẵn một số lượng sản phẩm nhất định (mảng A)
 Khi scroll down cuối danh sách, tải thêm một số lượng sản phẩm nhất định (mảng B)
 Thực hiện nối mảng A và mảng B thành một mảng duy nhất sau đó hiển thị ra giao diện người dùng
+
+array methods:
+
+for Each()
+var courses =[
+    {
+        id: 1,
+        name:'javascript',
+        coin:250
+    },
+    {
+        id: 2,
+        name:'php',
+        coin:0
+    },
+    {
+        id: 3,
+        name:'ruby',
+        coin:0
+    },
+    {
+        id: 4,
+        name:'java',
+        coin:400
+    },
+    {
+        id: 5,
+        name:'reacts',
+        coin:500
+    }
+]
+//callback : hàm truyền vào dưới dạng tham số
+//duyệt qua từng phần tử của mảng 
+courses.forEach(function(course ,index){
+    console.log(index,course);
+});
+every():kiểm tra tất cả các phần tử của mảng đều thoả mãn 1 điều kiện nào đó
+some()
+find()
+filter()
+map()
+reduce()

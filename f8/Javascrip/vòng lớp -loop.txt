@@ -12,3 +12,14 @@ for (var key in my info){
 4.while-lặp khi điều kiẹn đúng
 5.do/while -lặp ít nhất 1 lần sau đó lặp khi điều kiện đúng
 
+//vong lặp lồng nhau nếtd loop
+var myArray =[
+    [1,2],
+    [3,4],
+    [5,6]
+];
+for (var i = 0; i < myArray.length; i++) {
+    for (var j = 0; j < myArray[i].length; j++) {
+        console.log(myArray[i][j]);     
+    }
+}
