@@ -2,32 +2,38 @@ var courses =[
     {
         id: 1,
         name:'javascript',
-        coin:200
+        coin:0
     },
     {
         id: 2,
         name:'php',
-        coin:1
+        coin:0
     },
     {
         id: 3,
         name:'ruby',
-        coin:1
+        coin:0
     },
     {
         id: 4,
         name:'java',
-        coin:45
+        coin:0
     },
     {
         id: 5,
         name:'reacts',
-        coin:23
+        coin:0
     }
 ]
-//callback : hàm truyền vào dưới dạng tham số
-//duyệt qua từng phần tử của mảng chỉ cần 1 phần tử sẽ trả về true
-var isFree = courses.some(function(course ,index){
-    return course.coin === 0;
-});
-console.log(isFree);
+function courseHandle(course , index ,originArray){
+    return{
+        id:course.id,
+        name:`khoa hoc: ${course.name}`,
+        coin:course.coin,
+        coinText:`Gia: ${course.coin}`,
+        index:index,
+        originArray:originArray
+    }
+}
+var newCourses = courses.map(courseHandle);
+console.log(newCourses);

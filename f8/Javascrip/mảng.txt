@@ -1,4 +1,4 @@
-
+Phương thức chính là một function
 2. Tạo mảng 
 --cách tạo 
 - sử dụng cách nào ? tại sao ?
@@ -9,13 +9,13 @@
     keyword javascript array methods 
 1. to string Chuyển chuỗi thành string
 2 .join  Chuyển chuỗi thành string
-3 . Pop xoá phần tử cuối mảng trả chính phần tử đó
-3. Push  thêm phần tử
+3 . Pop xoá phần tử cuối mảng trả chính phần tử đó trả về kiểu mảng dữ liệu
+3. Push  thêm phần tử vào cuối mảng
 5 .Shift xoá phần tử đầu mảng trả chính phần tử đó
 6.unshift  them phần tử vào đầu manrg
 7.splicing xoá cắt chèn phần tử mới vào mảng
-arrayName.splice(1,2);//Xoá đi 2 phần tử từ vị trí đầu 
-arrayName.splice(1,2,'');//chèn 1 phẩn tử vào vị trí số 1 
+arrayName.splice(1,2);//Xoá đi 2 phần tử từ vị trí đầu không ảnh hưởng đến chuỗi gốc
+arrayName.splice(1,2,'');//chèn 1 phẩn tử vào vị trí số 1  
 8.concat //nối các mảng mởi nhau
 array1.concat(array 2)
 9,slicing cắt 1 vài elemt của mảng
@@ -101,8 +101,10 @@ var isFree = courses.every(function(course ,index){
     return course.coin === 0;
 });
 console.log(isFree);
-some()
-find()
-filter()
+some() : kiểm tra tất cả các phần tử của mảng 1 phần tử thoả mãn 1 điều kiện nào đó :trả về kiểu boolen
+find() :Kiểm tra và trả về phần tử đầu tiên của mảng : trả về phần tử đầu tiên tìm được 
+filter() tạo một mảng mới với tất cả các phần tử vượt qua kiểm tra được thực hiện bởi hàm được cung cấp.
 map()
 reduce()
+
+sort
