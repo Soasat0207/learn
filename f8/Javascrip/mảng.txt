@@ -105,6 +105,45 @@ some() : kiểm tra tất cả các phần tử của mảng 1 phần tử tho�
 find() :Kiểm tra và trả về phần tử đầu tiên của mảng : trả về phần tử đầu tiên tìm được 
 filter() tạo một mảng mới với tất cả các phần tử vượt qua kiểm tra được thực hiện bởi hàm được cung cấp.
 map()
+var courses =[
+    {
+        id: 1,
+        name:'javascript',
+        coin:0
+    },
+    {
+        id: 2,
+        name:'php',
+        coin:0
+    },
+    {
+        id: 3,
+        name:'ruby',
+        coin:0
+    },
+    {
+        id: 4,
+        name:'java',
+        coin:0
+    },
+    {
+        id: 5,
+        name:'reacts',
+        coin:0
+    }
+]
+function courseHandle(course , index ,originArray){
+    return{
+        id:course.id,
+        name:`khoa hoc: ${course.name}`,
+        coin:course.coin,
+        coinText:`Gia: ${course.coin}`,
+        index:index,
+        originArray:originArray
+    }
+}
+var newCourses = courses.map(courseHandle);
+console.log(newCourses);
 reduce()
 
 sort
