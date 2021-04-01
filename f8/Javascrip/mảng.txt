@@ -104,7 +104,7 @@ console.log(isFree);
 some() : kiểm tra tất cả các phần tử của mảng 1 phần tử thoả mãn 1 điều kiện nào đó :trả về kiểu boolen
 find() :Kiểm tra và trả về phần tử đầu tiên của mảng : trả về phần tử đầu tiên tìm được 
 filter() tạo một mảng mới với tất cả các phần tử vượt qua kiểm tra được thực hiện bởi hàm được cung cấp.
-map()
+map():tạo 1 mảng số lượng phân tử đúng bằng thằng gốc 
 reduce()
 
 sort
