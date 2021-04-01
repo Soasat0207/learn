@@ -26,7 +26,7 @@ var str = "Hello world!";
 var res = str.slice(0, 5);
 
 split
-substring()
+substring() :cắt chuỗi
 // 4 replace
 str.replace();
 replace tất cả sử dụng //g
@@ -37,3 +37,4 @@ replace tất cả không phân biệt chữ hoa hay chữ thường sử dụng
 // 7. trim
 // 8 ChannelSplitterNode
 // 9.get a character by index
+startsWith()phương thức xác định xem một chuỗi có bắt đầu bằng các ký tự của một chuỗi được chỉ định hay không trả về true false

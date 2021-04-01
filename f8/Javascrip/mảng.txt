@@ -104,46 +104,7 @@ console.log(isFree);
 some() : kiểm tra tất cả các phần tử của mảng 1 phần tử thoả mãn 1 điều kiện nào đó :trả về kiểu boolen
 find() :Kiểm tra và trả về phần tử đầu tiên của mảng : trả về phần tử đầu tiên tìm được 
 filter() tạo một mảng mới với tất cả các phần tử vượt qua kiểm tra được thực hiện bởi hàm được cung cấp.
-map()
-var courses =[
-    {
-        id: 1,
-        name:'javascript',
-        coin:0
-    },
-    {
-        id: 2,
-        name:'php',
-        coin:0
-    },
-    {
-        id: 3,
-        name:'ruby',
-        coin:0
-    },
-    {
-        id: 4,
-        name:'java',
-        coin:0
-    },
-    {
-        id: 5,
-        name:'reacts',
-        coin:0
-    }
-]
-function courseHandle(course , index ,originArray){
-    return{
-        id:course.id,
-        name:`khoa hoc: ${course.name}`,
-        coin:course.coin,
-        coinText:`Gia: ${course.coin}`,
-        index:index,
-        originArray:originArray
-    }
-}
-var newCourses = courses.map(courseHandle);
-console.log(newCourses);
+map():tạo 1 mảng số lượng phân tử đúng bằng thằng gốc 
 reduce()
 
 sort

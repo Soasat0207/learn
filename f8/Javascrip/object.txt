@@ -3,3 +3,5 @@ var info ={
     //namelà key value là hiẹp
 
 }
+Deep copy (sao chép sâu) tức là tạo mới một biến có cùng giá trị và không có liên quan gì đến biến gốc.
+Shallow copy tức là tạo mới một biến cũng có cùng giá trị so với biến gốc nhưng sâu bên trong nó vẫn giữ mối quan hệ giữa nó với biến gốc. Có nghĩa là một khi giá trị của biến gốc thay đổi thì biến copy cũng thay đổi theo.
