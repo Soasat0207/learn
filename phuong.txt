@@ -1,0 +1,256 @@
+// Câu 1 Viết 1 hàm reverse với tham số là 'str' có tác dụng đảo ngược string
+// ex : reverse ('Nodemy') ==> ymedon
+/**  gợi ý đầu tiên dùng hàm split lấy str ra 
+sau  dùng hàm reverse để đảo ngược str và dùng .join để tạo ra str mới */
+
+// function reverse(str) {
+//   let splitString = str.split("");
+//   let reverseArr = splitString.reverse ();
+//   let joinArr = reverseArr.join("");
+//   return joinArr;
+// }
+
+// console.log(reverse('nodemy'));
+
+//--------------------------------------------------------------------------
+// Câu 2:
+/**
+ * 1. Viết hàm penta có tham số 1 số bất kì, trả về  số đó nhân 5
+ *  Vd: penta(6) === 30
+ * 2. Viết hàm sumPenta có tham số 1 array và 1 callback function.
+ * Hàm sumPenta có chức năng tính tổng array đó,
+ * sau đó gọi callback function với tham số là kết quả tổng vừa tính
+ * 3. Nếu mảng trống trả về giá trị 0
+ * Vd: sumPenta([1, 2, 3 ,4 ,5 ,6], penta) = 105
+ */
+
+// function penta(num) {
+//   return num * 5;
+// }
+
+// function sumAndDo(nums, callback) {
+//     let sum = 0;
+//     for (const a of nums) {
+//        sum = sum + a
+//     }
+//   callback = penta(sum)
+//   console.log(callback);
+// }
+// sumAndDo([1, 2, 3 ,4 ,5 ,6], penta)
+
+//   console.log(sumAndDo([1,2,3,4,5,6],penta));
+
+//--------------------------------------------------------------------------
+// Câu 3:
+/**  Viết 1 function có tham số là str, kiểm tra số lương kí tự 'k' và 'h' của str
+ * có bằng nhau hay không nếu bằng nhau thì trả về true không thì false
+ * ex :  equal_str ('nguyễn khắc trung khải') ==> k = 2, h = 2 kết quả true */
+
+function equal_st(str) {
+
+}
+
+//    console.log(equal_st('nguyễn khắc trung khải'));
+
+//--------------------------------------------------------------------------
+// Câu 4: Viết 1 hàm getExtensionFilename lấy đuôi tên file
+// ex : getExtensionFilename('index.html') ==> result : .html
+
+// function getExtensionFilename(filename) {
+//   let tail = filename.split('.')
+//   return  tail [1]
+// }
+
+//   console.log(getExtensionFilename('index.html'));
+
+//--------------------------------------------------------------------------
+// Câu 5 : viết function kiểm tra xem str bắt đầu bằng "Nodemy" hay không ?
+// ex : checkFirstStr('Nodemy học lập trình') ==> True
+
+// function checkFirstStr(str) {
+//   let check1 = str.indexOf ('Nodemy');
+//   if(check1 == 0){
+//     return true;
+//   }else{
+//     return false;
+//   }
+// }
+
+// console.log(checkFirstStr('Nodemy học lập trình'));
+
+//--------------------------------------------------------------------------
+// Câu 6 : Cho 1 danh sách học viên Nodemy là 1 arr như sau:
+/**
+ * Viết 1 hàm getTopStudents trả về arr gồm tên 3 người có điểm cao nhất xếp theo thứ tự giảm dần
+ * Gợi ý dùng hàm sort
+ * relust ==> [ 'Minh' , 'Phương , 'Duy ]
+ */
+
+// var students = [
+//   { name: "Phương", score: 10 },
+//   { name: "Duy", score: 9.5 },
+//   { name: "Vương", score: 7 },
+//   { name: "Minh", score: 11 },
+//   { name: "Văn Anh", score: 0 },
+// ];
+
+// function getTopStudents(students) {
+//   let arrangeArr = students.sort(function(item1,item2){
+//     let sort1 = item1.score;
+//     let sort2 = item2.score;
+//     if(sort1 > sort2){
+//       return -1;
+//     }
+//     if(sort1 < sort2){
+//       return 1;
+//     }
+//     if(sort1 == sort2){
+//       return 0;
+//     }
+//   })
+//   let print = arrangeArr.slice(0,3)
+//   let ketQua = [print[0].name,print[1].name,print[2].name]
+//   console.log(ketQua);
+// }
+// getTopStudents(students);
+
+//--------------------------------------------------------------------------
+// Câu 7 :
+/**
+ * Viết hàm transform có tham số 1 array và 1 function callback.
+ * - Khai báo 1 biến result có giá trị là 1 array trống []
+ * - Lặp qua từng phần tử trong array đầu vào, truyền giá trị từng phần tử vào hàm callback
+ * - được kết quả bao nhiêu thì push vào array result ở trên
+ * - return result array
+ * ex : transform([1,2,3,4,5],double) //kết quả: [ 2, 4, 6, 8, 10 ]
+ */
+
+// function transform(numbers, callback) {
+//   let array = [];
+//   for (const a of numbers) {
+
+//    callback= double(a)
+  
+//     array.push(callback)
+//   }
+//   return array;
+// }
+// function double(num) {
+//   return num * 2;
+// }
+// console.log(transform([1,2,3,4,5],double));//kết quả: [ 2, 4, 6, 8, 10 ]
+
+//--------------------------------------------------------------------------
+// Câu 8 : Cho 1 danh sách các sản phẩm viết 1 hàm truyền vào 2 tham số,
+// 1. danh sách sản phẩm
+// 2. số lượng
+// trả về các sản phẩm có số lượng đạt yêu cầu
+// ex : filterProductsByCategoryId(listProducts, 3000)
+/**
+  * result :
+  *
+  { id: 3, amountProduct: 3000, name: 'Coca cola' },
+  { id: 7, amountProduct: 3000, name: 'Nước cam Twister' },    
+  { id: 9, amountProduct: 3000, name: 'Nước tăng lực Compact' }
+  */
+var listProducts = [
+  { id: 1, amountProduct: 1000, name: "Pepsi" },
+  { id: 2, amountProduct: 1000, name: "Trà xanh không độ" },
+  { id: 3, amountProduct: 3000, name: "Coca cola" },
+  { id: 4, amountProduct: 1000, name: "7up" },
+  { id: 5, amountProduct: 2000, name: "Number one" },
+  { id: 6, amountProduct: 2000, name: "Mirinda" },
+  { id: 7, amountProduct: 3000, name: "Nước cam Twister" },
+  { id: 8, amountProduct: 1000, name: "Red bull" },
+  { id: 9, amountProduct: 3000, name: "Nước tăng lực Compact" },
+  { id: 10, amountProduct: 2000, name: "Trà xanh C2" },
+];
+
+// function filterProductsByCategoryId(products, amountProduct) {
+//   for (const a of products) {
+//     if(a.amountProduct == amountProduct){
+//       console.log(a);
+//     }
+//   }
+// }
+// filterProductsByCategoryId(listProducts, 3000);
+
+//--------------------------------------------------------------------------
+// Câu 9: /**
+//  Sử dụng switch case và map để chuyển đổi array các chữ thành các số tương ứng theo quy tắc:
+// * 'N' hoặc 'n' -> 1
+// * 'O' hoặc 'o' -> 2
+// * 'D' hoặc 'd' -> 3
+// * 'E' hoặc 'e' -> 4
+// * 'M' hoặc 'm' -> 5
+// * 'Y' hoặc 'y' -> 6
+// *  còn lại -> 0
+// */
+
+function SwichcaseArr(arr) {
+  // viết code ở đây.
+}
+
+// console.log(SwichcaseArr(['N', 'n', 'O', 'o', 'D' , 'd', 'E', 'e', 'M' , 'm' , 'Y' , 'y' , 'A']));
+// --------------- Math ------------------
+// không biết thì seach google
+
+//--------------------------------------------------------------------------
+// Câu 10 :
+/**
+ * viết 1 hàm trigonometric trả về 3 giá trị của sin cos tan của 1 một số nhập vào
+ * yêu cầu lấy 3 số sau dấu . gợi ý : toFixed() method
+ * ex : trigonometric (20) ==> [ '0.913', '0.408', '2.237' ]
+ */
+// function trigonometric(number) {
+//   let newArray =[]
+//   let sin = Math.sin(number).toFixed(3)
+//   let cos = Math.cos(number).toFixed(3)
+//   let tan = Math.tan(number).toFixed(3)
+//   newArray.push(sin, cos, tan);
+//   console.log(newArray);
+// }
+// trigonometric(20);
+
+//--------------------------------------------------------------------------
+// Câu 11: viết 1 hàm random truyền vào 2 tham số max min
+// có chức năng random tham số do người dùng nhập vào ví dụ random (0,100) từ 1 tới 100
+
+// function random(min,max) {
+//   min = Math.ceil(min);
+//   max = Math.floor(max);
+//   return Math.floor(Math.random() * (max - min) + min);
+// }
+// console.log(random(1,100));
+//--------------------------------------------------------------------------
+// Câu 12
+/* 
+  Viết hàm positiveNumber để chuyển các số âm trong một mảng thành các số dương.
+  Yêu cầu sử dụng Math 
+  */
+
+// function positiveNumber(arr) {
+//   let newArray = []
+//   for (const a of arr) {
+//     let abc = Math.abs(a);
+//     newArray.push(abc)
+//   }
+//   console.log(newArray);
+// }
+// positiveNumber([-2, -3, -2]); 
+
+//--------------------------------------------------------------------------
+// Câu 13 :
+/**
+ * Viết hàm balanceTriangle nhập vào 3 cạnh của một tam giác.
+ * Cho biết đó có phải là tam giác vuông hay không?
+ */
+// function balanceTriangle(a, b, c) {
+//   if(a*a == b*b + c*c || b*b == a*a + c*c || c*c == a*a + b*b){
+//     console.log('Đây là tam giác vuông');
+//   }else{
+//     console.log('Đây không phải tam giác vuông');
+//   }
+// }
+// (balanceTriangle(5 , 12 , 13));
+// Displaying dapancuoikhoa.js.

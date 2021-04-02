@@ -25,9 +25,10 @@ slice
 var str = "Hello world!";
 var res = str.slice(0, 5);
 
-split
+split phương thức được sử dụng để tách một chuỗi thành một mảng các chuỗi con và trả về mảng mới.
 substring() :cắt chuỗi
-// 4 replace
+// 4 replace 
+// 5 reverse() :đảo ngược lại thứ tự của mảng
 str.replace();
 replace tất cả sử dụng //g
 var res = str.replace(/blue/g, "red");
@@ -38,3 +39,4 @@ replace tất cả không phân biệt chữ hoa hay chữ thường sử dụng
 // 8 ChannelSplitterNode
 // 9.get a character by index
 startsWith()phương thức xác định xem một chuỗi có bắt đầu bằng các ký tự của một chuỗi được chỉ định hay không trả về true false
+// 10.join :method returns the array as a string.
