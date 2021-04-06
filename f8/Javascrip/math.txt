@@ -1,0 +1,9 @@
+math obj
+math.Pi trả về PI 
+Math.round() Làm tròn số 
+math.abs() 
+math.ceil()
+math.floor()
+math.ramdom()
+math.max()
+math.min

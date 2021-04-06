@@ -128,21 +128,45 @@ var response = [
   console.log(increaseDate(response));
   console.log('-----------------------------');
   // e) 1đ In ra tên, tuổi của những người có tuổi bằng nhau
-  function sameAge (array_c,checkAge){
-    checkSameAge = array_c.filter(function(x){
-      if(x.age == checkAge){
-        return x;
-      }
-    });
-    
-
-    return checkSameAge;
+  function sameAge (array_c,callback){
+    var arrTrung = callback(array_c)
+    var checkSameAge = []
+   for(let i=0;i<arrTrung.length;i++){
+       var trung = array_c.filter(function(element){
+           if(arrTrung[i] === element.age){
+               return element;
+           }
+           
+       })
+       checkSameAge.push(trung)
+   }
    
-  }
-  function checkAge (){
-    
-  }
-  console.log(sameAge(response,19));
+
+   return checkSameAge;
+  
+ }
+
+ function checkAge (array){
+   var newArr =  array.map(function(x ,index){
+       return x.age;
+      
+   });
+   var result = []
+
+   for(let i = 0; i< newArr.length;i++){
+       for(let j = i+1;j < newArr.length;j++){
+           if(newArr[i] === newArr[j]){
+               result.push(newArr[i])
+           }
+       }
+   }
+   return result
+ }
+ console.log(98,checkAge(response));
+
+
+
+ console.log(100,sameAge(response,checkAge));
   // [{name:'Cicero Reichel',age:18},{name:"Jody Parisian",age:18},
   // {name:"Urban Rogahn",age:19},{name:'Bechtelar',age:19}]
 
