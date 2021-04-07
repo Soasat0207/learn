@@ -1,0 +1,9 @@
+1. DOM là gì ?  :documents object Element
++Element
++attribute
++text 
+2. api :Application programming interface
+3.Documents object :
++document.write('hello world'); :nhận vào 1 chuỗi
+4.element methods :
++document.getElementById():lấy id của element
