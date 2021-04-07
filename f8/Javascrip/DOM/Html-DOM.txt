@@ -7,3 +7,10 @@
 +document.write('hello world'); :nhận vào 1 chuỗi
 4.element methods :
 +document.getElementById():lấy id của element
++document.getElementsByClassName():lấy tên class của element
++document.getElementsByTagName():lấy đến thẻ
++document.querySelector():css cho cái class
++document.querySelectorAll():
+
+
++html collection

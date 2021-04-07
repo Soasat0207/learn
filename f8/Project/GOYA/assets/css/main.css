@@ -1,0 +1,29 @@
+header{
+    background-color: var(--white);
+}
+header:hover{
+    box-shadow: rgb(149 157 165 / 20%) 0px 8px 24px;
+    background-color: white;
+}
+.navbar-list{
+    padding: 0;
+}
+.navbar__list-dropdown::before{
+    top: -20px;
+    left: 6px;
+}
+.navbar-items-link{
+    font-size: 0.9rem;
+    margin-right: 1rem;
+    color: var(--text-color);
+}
+.search-path{
+    stroke: var(--text-color);
+}
+.navbar-svg-icon path{
+    fill: var(--text-color);
+}
+.navbar-logo-img{
+    width: 24%;
+    max-height: 24px;
+}
