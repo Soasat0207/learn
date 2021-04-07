@@ -15,6 +15,11 @@
     --dark: #343a40;
     --text-color:#343a40;
     --border-color-dark:rgba(255,255,255,.1);
+    --margin--section:50px 0px;
+    --font-size-title:1.6rem;
+    --min-height-section:360px;
+    --width-section:100vw;
+    --padding-section-mobile:0px 30px;
 }
 *{
     box-sizing: border-box;
@@ -28,6 +33,7 @@ html{
     color: var(--text-color);
     text-align: left;
     background-color: #fff;
+    letter-spacing: 0px;
 }
 .disable .navbar-items-link{
     cursor: default !important;
@@ -75,6 +81,9 @@ html{
     padding: .5rem 1rem;
     display: flex;
     align-items: center;
+    position: fixed;
+    width: 100%;
+    z-index: 1;
 }
 .navbar-logo-img{
     width: 100%;
@@ -96,7 +105,7 @@ html{
 }
 .navbar-list-items:hover .navbar-items-link::after  {
     width: 100%;
-  }
+}
 .navbar-items-link{
     display: block;
     text-decoration: none;

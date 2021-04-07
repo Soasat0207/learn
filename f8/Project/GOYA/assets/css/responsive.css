@@ -9,4 +9,41 @@
 /* Mobile */
 @media (max-width :739px){
     
+    .section-banner{
+        padding:var(--padding-section-mobile);
+    }
+    .section-best-selling{
+        padding:var(--padding-section-mobile);
+    }
+    .section-visit{
+        padding: var(--padding-section-mobile);
+    }
+    footer{
+        padding: var(--padding-section-mobile);
+    }
+    .introduce-social{
+        margin-left: -15px;
+    }
+    .discount-title{
+        font-size: 1.4rem;
+    }
+    .discount-content{
+        font-size: 0.7rem;
+    }
+    .discount-input{
+        width: 100%;
+    }
+    .discount-btn{
+        width: 100%;
+        display: block;
+        text-align: center;
+        margin-top: 10px;
+    }
+    .footer-privacy{
+        display: block;
+        text-align: center;
+    }
+    .copyright{
+        text-align: center;
+    }
 }
