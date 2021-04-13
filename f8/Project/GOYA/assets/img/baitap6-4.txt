@@ -1,0 +1,74 @@
+
+    // Bài 1//
+// function checking (num){
+//     if (num >100){
+//         console.log(num);
+//     }
+// }
+
+// function newFunction (a,callback){
+//     let arr = [];
+//     setTimeout(() => {
+//         for(i=1; i <= 4;i++){
+//             arr.push(a**i);
+//                 }
+//         console.log(arr);
+        
+//         for(i = 0; i < arr.length; i++){
+//              callback = checking(arr[i])
+//         }
+        
+//     }, 3000);
+
+// }
+// newFunction(10);
+
+
+        // Bài 2//
+
+var promise1 = new Promise(function(resolve, reject){
+    setTimeout(() => {
+        resolve( Math.floor(Math.random() * 100  + 1));
+    }, 2000);
+})
+promise1
+.then(function(data){
+    console.log(data);
+})
+
+var promise2 = new Promise(function(resolve, reject){
+    setTimeout(function() {
+        promise1
+        .then(function(data){
+         resolve(data**2)
+    }, 5000);
+    })
+})
+promise2
+.then(function(data){
+    console.log(data);
+})
+
+var promise3 = new Promise(function(resolve, reject){
+    setTimeout(() => {
+         promise1
+            .then(function(data){
+             resolve(data*50)
+    }, 2000);
+    })
+})
+promise3
+.then(function(data){
+    var kq3 = data;
+    console.log(kq3);
+})
+
+Promise.all([promise3, promise2])
+.then((data)=>{
+    console.log(data);
+    var ketqua = data[0] > data[1] ? data[0] : data[1];
+    console.log(ketqua);
+})
+
+
+
