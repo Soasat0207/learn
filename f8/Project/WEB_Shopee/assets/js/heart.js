@@ -12,6 +12,4 @@ function drop_heart(event){
     else{
         drop_heart.classList.add("home-product-items-like-liked");
     }
-
-    
 }
