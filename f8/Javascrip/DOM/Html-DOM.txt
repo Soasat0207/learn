@@ -14,3 +14,5 @@
 
 
 +html collection
+DOM attributes :
+element.setAttribute(attributename, attributevalue)
