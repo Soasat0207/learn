@@ -1,0 +1,144 @@
+:root{
+    --black-color:#191811;
+    --white-color:#f8f8f8;
+    --yellow-color:#ffab08;
+}
+.calculator{
+    margin: 50px ;
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.form__calculator{
+    width: 500px;
+    height: 650px;
+    background-color:  var(--black-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 6px 0;
+    border-radius: 20px;
+    box-shadow: -10px 10px 20px rgba(10,10,7,0.2),
+                10px -10px 20px rgba(10,10,7,0.2),
+                -10px -10px 20px rgba(40,38,27,0.9),
+                10px 10px 25px rgba(10,10,9,0.9),
+                inset 1px 1px 2px rgba(40,38,27,0.3),
+                inset -1px -1px 2px rgba(10,10,7,0.5);
+}
+.calculator-grid{
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr ;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    margin: 6px;
+    grid-template-areas: 
+    'form__calculator-display form__calculator-display form__calculator-display form__calculator-display'
+    'form__calculator-display form__calculator-display form__calculator-display form__calculator-display'
+    '. . . .'
+    '. . . .'
+    '. . . .'
+    '. . . calculator__equal'
+    '. . . calculator__equal'
+    ;
+}
+.form__calculator-display{
+    grid-area :form__calculator-display;
+}
+.calculator__equal{
+    grid-area: calculator__equal;
+}
+.form__calculator-display, .calculator-btn , .calculator__equal{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.form__calculator-inner-display{
+    width: 400px;
+    height: 100px;
+    background-color:  var(--black-color);
+    box-shadow: 1px 1px 2px rgba(40,38,27,0.3),
+                -1px -1px 2px rgba(10,10,7,0.2),
+                inset -5px 5px 10px rgba(10,10,7,0.2),
+                inset 5px -5px 10px rgba(40,38,27,0.9),
+                inset -5px -5px 10px rgba(40,38,27,0.9),
+                inset 5px 5px 13px rgba(10,10,7,0.9);
+    border-radius: 20px;
+    text-align: right;
+    display: flex;
+    flex-direction: column-reverse;
+}
+.calculator-text{
+    text-align: right;
+    background-color:  var(--black-color);
+    height: 100px;
+    font-size: 45px;
+    margin: 20px 10px 10px 10px;
+    font-style: normal;
+    color:  var(--white-color);
+    font-weight: 500;
+    border-width: 0px;
+    border:none;
+}
+.calculator-text:focus{
+    border: 0px;
+    border: none;
+    outline: none;
+}
+.calculator-inner-button{
+    cursor: pointer;
+    width: 60px;
+    height: 60px;
+    border-radius: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color:  var(--black-color);
+    box-shadow: -5px 5px 10px rgba(10,10,7,0.2),
+                5px -5px 10px rgba(10,10,7,0.2),
+                -5px -5px 10px rgba(40,38,27,0.9),
+                5px 5px 13px rgba(10,10,7,0.9),
+                inset 1px 1px 2px rgba(40,38,27,0.3)  ,
+                inset -1px -1px 2px rgba(10,10,7,0.5);
+    font-size: 25px;
+    font-weight: 500;
+    font-style: normal;
+    color:  var(--white-color);
+    transition: box-shadow 0.3 ease-in-out;
+}
+.calculator-inner-button:active{
+    box-shadow: 1px 1px 2px rgba(40,38,27,0.3),
+                -1px 1px 2px rgba(10,10,7,0.5),
+                inset -5px 5px 10px rgba(10,10,7,0.2),
+                inset 5px -5px 10px rgba(10,10,7,0.2),
+                inset -5px -5px 10px rgba(40,38,27,0.9),
+                inset 5px 5px 13px rgba(10,10,7,0.9);
+    transition: box-shadow 0.3 ease-in-out;
+    font-size: 14px;
+}
+.calculator__equal .calculator-inner-button{
+    height: 150px;
+    background-color:  var(--yellow-color);
+    color:  var(--black-color);
+}
+
+.yellow{
+    color: var(--yellow-color);
+}
+.form__calculator-inner-display{
+    width: 400px;
+    height: 100px;
+    background-color:  var(--black-color);
+    box-shadow: 1px 1px 2px rgba(40,38,27,0.3),
+                -1px -1px 2px rgba(10,10,7,0.2),
+                inset -5px 5px 10px rgba(10,10,7,0.2),
+                inset 5px -5px 10px rgba(40,38,27,0.9),
+                inset -5px -5px 10px rgba(40,38,27,0.9),
+                inset 5px 5px 13px rgba(10,10,7,0.9);
+    border-radius: 20px;
+    text-align: right;
+    display: flex;
+    flex-direction: column-reverse;
+}

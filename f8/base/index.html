@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="./base.css">
     <link rel="stylesheet" href="./responsive.css">
     <link rel="stylesheet" href="./main.css">
+    <link rel="stylesheet" href="./caculator.css">
 </head>
 <body>
     <div class="grid container">
@@ -41,6 +42,124 @@
             <span class="carousel_dot" onclick="currentSlide(3)"></span>
         </div>
      </div>
+     <div class="grid container">
+       <div class="slides_tab">
+         <div class="slides__tab-header">
+           <ul class="slides__tab-header-list">
+             <li class="slides__tab-items"><a id="slides__tab-default" class="slides__tab-itens-link" onclick='openCity(this, "London")' >London</a></li>
+             <li class="slides__tab-items"><a  class="slides__tab-itens-link" onclick='openCity(event, "Paris")'>Paris</a></li>
+             <li class="slides__tab-items"><a class="slides__tab-itens-link" onclick='openCity(event, "Tokyo")'>Tokyo</a></li>
+           </ul>
+         </div>
+         <!-- content -->
+         <div id="London" class="slides__tab-content">
+           
+           <h3 class="slides__tab-title">London</h3>
+           <p class="slides__tab-decs">
+             Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam, quibusdam, laudantium ipsum quas maiores vel unde aspernatur itaque iure ullam illo. Quidem, quam esse dolor incidunt deserunt similique animi praesentium.
+           </p>
+           <!-- parentElement là thành phần cha của nút hiện tại -->
+           <span onclick="this.parentElement.style.display='none'" >&times</span>
+         </div>
+         <div id="Paris" class="slides__tab-content">
+          <h3 class="slides__tab-title">Paris</h3>
+          <p class="slides__tab-decs">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam, quibusdam, laudantium ipsum quas maiores vel unde aspernatur itaque iure ullam illo. Quidem, quam esse dolor incidunt deserunt similique animi praesentium.
+          </p>
+          <span onclick="this.parentElement.style.display='none'" >&times</span>
+        </div>
+        <div id="Tokyo" class="slides__tab-content">
+          <h3 class="slides__tab-title">Tokyo</h3>
+          <p class="slides__tab-decs">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam, quibusdam, laudantium ipsum quas maiores vel unde aspernatur itaque iure ullam illo. Quidem, quam esse dolor incidunt deserunt similique animi praesentium.
+          </p>
+          <span onclick="this.parentElement.style.display='none'" >&times</span>
+        </div>
+
+       </div>
+     </div>
+     <div class="calculator">
+        <div class="grid container">
+          <div class="form__calculator">
+            <div class="calculator-grid">
+              <div class="form__calculator-display">
+                <div class="form__calculator-inner-display">
+                  <input type="text" class="calculator-text" id="output-screen">
+                  <input type="text" class="calculator-text" id="history">
+                </div>
+              </div>
+              <div class="calculator__equal">
+                <div class="calculator-btn">
+                  <div class="calculator-inner-button" onclick="calculate()">
+                    <p>=</p>
+                  </div>
+                </div>
+              </div>
+              <div class="calculator-btn">
+                <div class="calculator-inner-button yellow"  onclick="allClear()">AC</div>
+              </div>
+              <div class="calculator-btn">
+                <div class="calculator-inner-button yellow"  onclick="display('/')">/</div>
+              </div>
+              <div class="calculator-btn">
+                <div class="calculator-inner-button yellow"  onclick="display('*')">x</div>
+              </div>
+              <div class="calculator-btn">
+                <div class="calculator-inner-button yellow"  onclick="del()">Del</div>
+              </div>
+              <div class="calculator-btn">
+                <div class="calculator-inner-button "  onclick="display('7')">7</div>
+              </div>
+              <div class="calculator-btn">
+                <div class="calculator-inner-button "  onclick="display('8')">8</div>
+              </div>
+              <div class="calculator-btn">
+                <div class="calculator-inner-button "  onclick="display('9')">9</div>
+              </div>
+              <div class="calculator-btn">
+                <div class="calculator-inner-button yellow"  onclick="display('-')">-</div>
+              </div>
+              <div class="calculator-btn">
+                <div class="calculator-inner-button "  onclick="display('4')">4</div>
+              </div>
+              <div class="calculator-btn">
+                <div class="calculator-inner-button "  onclick="display('5')">5</div>
+              </div>
+              <div class="calculator-btn">
+                <div class="calculator-inner-button "  onclick="display('6')">6</div>
+              </div>
+              <div class="calculator-btn">
+                <div class="calculator-inner-button yellow"  onclick="display('+')">+</div>
+              </div>
+              <div class="calculator-btn">
+                <div class="calculator-inner-button "  onclick="display('1')">1</div>
+              </div>
+              <div class="calculator-btn">
+                <div class="calculator-inner-button "  onclick="display('2')">2</div>
+              </div>
+              <div class="calculator-btn">
+                <div class="calculator-inner-button "  onclick="display('3')">3</div>
+              </div>
+              <div class="calculator-btn">
+                <div class="calculator-inner-button yellow"  onclick="display('%')">%</div>
+              </div>
+              <div class="calculator-btn">
+                <div class="calculator-inner-button "  onclick="display('0')">0</div>
+              </div>
+              <div class="calculator-btn">
+                <div class="calculator-inner-button yellow"  onclick="display('.')">.</div>
+              </div>
+              </div>
+
+            </div>
+          </div>
+          
+          
+        </div>
+     </div>
+     
 </body>
-<script src="./main.js"></script>
+<script src="./carousel.js"></script>
+<script src="./slides_tab.js"></script>
+<script src="./caculator.js"></script>
 </html>
