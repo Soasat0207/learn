@@ -1,0 +1,15 @@
+tạo 1 calendar gần giống gg và macos 
+Chức năng 
++lấy ngày 
++day :chưa có ý tưởng 
++moth :hiển thị tháng click chuyển tháng đổi tháng 
++year thì hiển thị thêm lịch year
++có đồng hồ hiển thị h 
++search lịch
++kết hợp với todolist
+
+cách link tham khảo
+https://www.youtube.com/watch?v=krOTeX1DqHI
+https://codepen.io/srph/pen/yObwXJ
+https://www.youtube.com/watch?v=o1yMqPyYeAo
+https://demo.mobiscroll.com/javascript/calendar/responsive#

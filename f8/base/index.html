@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>demo js cơ bản</title>
    
     <link rel="stylesheet" href="./asset/css/rest.css">
     <link rel="stylesheet" href="./asset/css/grid.css">
@@ -12,35 +12,38 @@
     <link rel="stylesheet" href="./asset/css/caculator.css">
 </head>
 <body>
+<!-- carousel -->
     <div class="grid container">
-        <div class="carousel">
-        
-            <div class="mySlides fade">
-                <img class="carousel_img" src="https://www.w3schools.com/howto/img_nature_wide.jpg" >
-                <div class="carousel-desc">Caption Text</div>
-            </div>
-              
+          <div class="carousel">
+          
               <div class="mySlides fade">
-                <img class="carousel_img" src="https://www.w3schools.com/howto/img_snow_wide.jpg" >
-                <div class="carousel-desc">Caption Two</div>
+                  <img class="carousel_img" src="https://www.w3schools.com/howto/img_nature_wide.jpg" >
+                  <div class="carousel-desc">Caption Text</div>
               </div>
-              
-              <div class="mySlides fade">
-                <img class="carousel_img" src="https://www.w3schools.com/howto/img_mountains_wide.jpg" >
-                <div class="carousel-desc">Caption Three</div>
-              </div>
-              
-            <a class="carousel_prev" onclick="plusSlides(-1)">&#10094;</a>
-            <a class="carousel_next" onclick="plusSlides(1)">&#10095;</a>
-        </div>
-        
-        <div style="text-align:center">
-            <span class="carousel_dot" onclick="currentSlide(1)"></span>
-            <span class="carousel_dot" onclick="currentSlide(2)"></span>
-            <span class="carousel_dot" onclick="currentSlide(3)"></span>
-        </div>
-     </div>
-     <div class="grid container">
+                
+                <div class="mySlides fade">
+                  <img class="carousel_img" src="https://www.w3schools.com/howto/img_snow_wide.jpg" >
+                  <div class="carousel-desc">Caption Two</div>
+                </div>
+                
+                <div class="mySlides fade">
+                  <img class="carousel_img" src="https://www.w3schools.com/howto/img_mountains_wide.jpg" >
+                  <div class="carousel-desc">Caption Three</div>
+                </div>
+                
+              <a class="carousel_prev" onclick="plusSlides(-1)">&#10094;</a>
+              <a class="carousel_next" onclick="plusSlides(1)">&#10095;</a>
+          </div>
+          
+          <div style="text-align:center">
+              <span class="carousel_dot" onclick="currentSlide(1)"></span>
+              <span class="carousel_dot" onclick="currentSlide(2)"></span>
+              <span class="carousel_dot" onclick="currentSlide(3)"></span>
+          </div>
+    </div>
+<!-- carousel -->
+<!-- slides_tab -->
+    <div class="grid container">
        <div class="slides_tab">
          <div class="slides__tab-header">
            <ul class="slides__tab-header-list">
@@ -75,8 +78,10 @@
         </div>
 
        </div>
-     </div>
-     <div class="calculator">
+    </div>
+<!-- slides_tab -->
+<!-- calculator -->
+    <div class="calculator">
         <div class="grid container">
           <div class="form__calculator">
             <div class="calculator-grid">
@@ -147,14 +152,14 @@
               <div class="calculator-btn">
                 <div class="calculator-inner-button yellow"  onclick="display('.')">.</div>
               </div>
-              </div>
-
             </div>
           </div>
-          
-          
         </div>
-     </div>
+          
+          
+        
+    </div>
+<!-- calculator -->
      
 </body>
 <script src="./asset/js/carousel.js"></script>
