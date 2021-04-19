@@ -83,6 +83,4 @@ document.addEventListener('keydown', function(e) {
     if(e.key == '1' || e.key == '2' || e.key == '+'){
         display(e.key);
     }
-    
-    
 });
