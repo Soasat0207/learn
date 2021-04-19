@@ -13,7 +13,32 @@
     <link rel="stylesheet" href="./assets/css/main.css">
     <link rel="stylesheet" href="./assets/css/responsive.css">
 </head>
-<body>
-  <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatem, illo voluptate nobis sed laudantium optio non natus tenetur illum alias sint reiciendis ducimus dolore atque, ea asperiores magnam maxime inventore.</p>  
+<body onload='load_calender()'>
+  
+  <div class="main">
+    <div class="calendar month">
+      <div class="icon pre" onclick="pre_month()" >&#8592</div>
+      <h3 class="month-text" id="month"></h3>
+      <div class="icon next" onclick="next_month()">&#8594</div>
+    </div>
+    <div class="calendar year">
+      <h3 class="year-text" id="year" onclick="getAllMonth()"></h3>
+    </div>
+    <div class="calendar  ">
+      <div class="weekdays">
+        <div class="name-day">Sun</div>
+        <div class="name-day">Mon</div>
+        <div class="name-day">Tue</div>
+        <div class="name-day">Wed</div>
+        <div class="name-day">Thu</div>
+        <div class="name-day">Fri</div>
+        <div class="name-day">Sat</div>
+      </div>
+      <div class="days">
+        <div class="date"></div>
+      </div>
+    </div>
+  </div>
 </body>
+<script src="./assets/js/main.js"></script>
 </html>
