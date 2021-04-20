@@ -10,24 +10,27 @@ const monthDays = document.querySelectorAll(".days");
 // ngày cuối  cùng trong tháng hiện tại
 const lastDay = new Date(
   date.getFullYear(),
-  date.getMonth() + 1,
+  2,
   0
 ).getDate();
 console.log(166,lastDay);
  //ngày cuối cùng trong tháng trước
 const prevLastDay = new Date(
   date.getFullYear(),
-  date.getMonth(),
+  1,
   0
 ).getDate();
   console.log(174,prevLastDay);
   // vị trí mà ngày đầu tiên trong tháng hiển thị nghĩa là thứ ngày đầu tiên trong tháng hiển thị 
-const firstDayIndex = date.getDay();
+const firstDayIndex = new Date(
+  date.getFullYear(),
+  2
+).getDay();
   console.log(176,firstDayIndex)
 //vị trí hiển thị của ngày cuối cùng trong tháng hiện tại nghĩa là hiển thị ra thứ của ngày cuối cùng trong tháng hiện tại
 const lastDayIndex = new Date(
   date.getFullYear(),
-  date.getMonth() + 1,
+  2,
   0
 ).getDay();
 console.log(184,lastDayIndex)
@@ -49,13 +52,17 @@ const months = [
   "December",
 ];
 const monthArr = document.querySelectorAll(".date h1");
+let monthStoreArr =[]
 for (let i = 0; i < monthArr.length; i++) {
-    for (let j = 0; j < 4; j++) {
-        console.log(j);
-        monthArr[i].innerHTML = months[0];
-    }
+   
+        // console.log(j);
+        console.log(55,monthArr[i])
+        monthArr[i].innerHTML = months[i];
+        monthStoreArr.push(i)
     
 }
+
+console.log(monthStoreArr)
 
 const yearArr = document.querySelectorAll(".date p");
 for (let i = 0; i < yearArr.length; i++) {
@@ -69,7 +76,7 @@ let days = "";
 for (let x = firstDayIndex; x > 0; x--) {
   days += `<div class="prev-date">${prevLastDay - x + 1}</div>`;
   for (let i = 0; i < monthDays.length; i++) {
-    monthDays[i].innerHTML=days;
+    monthDays[1].innerHTML=days;
   }
 //   monthDays.innerHTML = days;
 }
@@ -81,13 +88,13 @@ for (let i = 1; i <= lastDay; i++) {
   ) {
     days += `<div class="today">${i}</div>`;
     for (let j = 0; j < monthDays.length; j++) {
-        monthDays[j].innerHTML=days;
+        monthDays[1].innerHTML=days;
       }
     // monthDays.innerHTML = days;
   } else {
     days += `<div>${i}</div>`;
     for (let j = 0; j < monthDays.length; j++) {
-        monthDays[j].innerHTML=days;
+        monthDays[1].innerHTML=days;
       }
     // monthDays.innerHTML = days;
   }
@@ -96,7 +103,7 @@ for (let i = 1; i <= lastDay; i++) {
 for (let i = 1; i <= nextDays; i++) {
   days += `<div class="next-date">${i}</div>`;
   for (let j = 0; j < monthDays.length; j++) {
-    monthDays[j].innerHTML=days;
+    monthDays[1].innerHTML=days;
   }
 //   monthDays.innerHTML = days;
 }

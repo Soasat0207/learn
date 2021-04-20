@@ -1,7 +1,8 @@
 let outputScreen=document.querySelector('#output-screen');
 let historyScreen=document.querySelector('#history');
 var input =  document.querySelector('#output-screen')
-input.setAttribute('value','0');
+// input.setAttribute('value','0');
+outputScreen.value='0'
 function display(num){
     var isOperator = checkInput(num);
     var end = outputScreen.value.slice( outputScreen.value.length - 1 , outputScreen.value.length);
@@ -14,13 +15,16 @@ function display(num){
         
         if(outputScreen.value === '0' && isOperator == false ){
             if(outputScreen.value === '0' && num == '%' ){
-                input.setAttribute('value','0%');
+                // input.setAttribute('value','0%');
+                outputScreen.value = '0%'
             }
             else{
-                input.setAttribute('value','');
+                // input.setAttribute('value','');
+                outputScreen.value = ''
                 outputScreen.value += num;
             }
         }
+
         else{
             outputScreen.value += num;
         }
@@ -48,7 +52,11 @@ function calculate(){
     
 }
 function allClear(){
-    outputScreen.value = '0';
+    
+    // input.removeAttribute("disabled");
+    // outputScreen.value= '';
+    // input.setAttribute('value','0');
+    outputScreen.value = '0'
 }
 function del(){
     outputScreen.value = outputScreen.value.slice(0,-1);
@@ -71,16 +79,17 @@ function checkInput(n){
 
 // keyCode
 document.addEventListener('keydown', function(e) {
-    console.log(e);
-    console.log(e.keyCode);
+    console.log(82,e);
+    console.log(83,e.keyCode);
     console.log(typeof(e.which));
-    console.log( e.key  );
+    console.log( Number(e.keyCode) >= 42 && Number(e.keyCode) <= 57 );
+    
     if(e.key == 'Enter'){
         calculate();
         console.log('ok');
     }
     // tại sao sử dụng .keycode == 1 thì lại không chạy
-    if(e.key == '1' || e.key == '2' || e.key == '+'){
+    if(Number(e.keyCode) >= 42 && Number(e.keyCode) <= 57){
         display(e.key);
     }
 });

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./assets/css/rest.css">
+    <link rel="stylesheet" href="./assets/css/grid.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/css/base.css">
+    <link rel="stylesheet" href="./assets/css/main.css">
+    <link rel="stylesheet" href="./assets/css/responsive.css">
+</head>
+<body onload='load_calender()'>
+  
+  <div class="main">
+    <div class="calendar month">
+      <div class="icon pre" onclick="pre_month()" >&#8592</div>
+      <h3 class="month-text" id="month"></h3>
+      <div class="icon next" onclick="next_month()">&#8594</div>
+    </div>
+    <div class="calendar year">
+      <h3 class="year-text" id="year" onclick="getAllMonth()"></h3>
+    </div>
+    <div class="calendar  ">
+      <div class="weekdays">
+        <div class="name-day">Sun</div>
+        <div class="name-day">Mon</div>
+        <div class="name-day">Tue</div>
+        <div class="name-day">Wed</div>
+        <div class="name-day">Thu</div>
+        <div class="name-day">Fri</div>
+        <div class="name-day">Sat</div>
+      </div>
+      <div class="days">
+        <div class="date"></div>
+      </div>
+    </div>
+  </div>
+</body>
+<script src="./assets/js/main.js"></script>
+</html>
