@@ -16,3 +16,24 @@
 +html collection
 DOM attributes :
 element.setAttribute(attributename, attributevalue)
+
++text innerText ,textContent
+innerText:trả lại những gì hiển thị trên màn hình 
+textContent:trả lại tất cả text note
+
++innerHTML,outerHTML 
+innerHTML:
+outerHTML:
+
+Node Properties
+
+
+Dom css 
+Object.assgin (a.style , {
+
+})
++ClassList property 
+add
+contains
+remove
+toggle
