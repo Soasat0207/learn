@@ -12,7 +12,6 @@ function display(num){
     // }
     
     if(isOperatorEnd !== isOperator || (isOperator === false && isOperatorEnd === false ) ){
-        
         if(outputScreen.value === '0' && isOperator == false ){
             if(outputScreen.value === '0' && num == '%' ){
                 // input.setAttribute('value','0%');

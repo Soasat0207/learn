@@ -1,0 +1,6 @@
+$ và $()
+jquery selector :https://www.w3schools.com/jquery/jquery_ref_selectors.asp
+jquery event 
+jquery get value elemnet
+array.eq(i).val(); //gets jquery object at index i
+array[i].value; //gets dom element at index i
