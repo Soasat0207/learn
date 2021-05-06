@@ -1,4 +1,14 @@
-textNode1 = document.querySelector('div').firstChild;
-// textNode2 = document.querySelector('div').lastChild;
-textNode2 = document.querySelector('h1');
-console.log(textNode2);
+var inputValue;
+var inputElenment = document.querySelector('input[type = "text"]');
+var inputElenmentCheckBox = document.querySelector('input[type = "checkbox"]');
+inputElenment.oninput = function(e){
+    inputValue = e.target.value;
+    console.log(inputValue);
+}
+inputElenment.onkeyup = function(e){
+    console.log(e.keyCode);
+}
+    
+inputElenmentCheckBox.onchange = function(e){
+    console.log(e.target.checked);
+}

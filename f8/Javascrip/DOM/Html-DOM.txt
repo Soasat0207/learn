@@ -37,3 +37,9 @@ add
 contains
 remove
 toggle
+
+Dom Event :
+onchange là sự kiện thay đổi nó sẽ thay đổi khi mà blu ra ngoài
+oninput là lấy value tất cả khi mỗi lần gõ
+keyup & keydown : keyup là khi người dùng nhấc tay ra khỏi phím
+keypress người dùng ấn dữ phím
