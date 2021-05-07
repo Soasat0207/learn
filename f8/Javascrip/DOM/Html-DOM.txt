@@ -43,3 +43,55 @@ onchange là sự kiện thay đổi nó sẽ thay đổi khi mà blu ra ngoài
 oninput là lấy value tất cả khi mỗi lần gõ
 keyup & keydown : keyup là khi người dùng nhấc tay ra khỏi phím
 keypress người dùng ấn dữ phím
+
+
+preventDefault :
+stopPropagation:
+
+1.event listener
+2.json
++Json là gì ? 
++Json là 1 định dạng dữ liệu  (Chuỗi)
++Viết tắt của Javascript Object Notation 
++Json :Number ,Boolean , Null ,Array ,Object ,String
++STRINGIFY :từ js types -> Json
++Parse : từ JSON -> js types
++Json server 
+https://github.com/typicode/json-server 
+
+cách cài json sever cho 1 folder 
+npm init xong r enter đến hết 
+xong thì npm i json-server  đợi 
+
+3.promise 
+    Các Khái niệm sinh ra để xử lý các vấn đề bất đồng bộ 
+    +Sync :đồng bộ : là thằng nào viết trước chayj trước viết sau chạy sau 
+    +Async :bất đồng bộ bao gồm 
+    XMLHttpRequest ,file reading , request animation frame ,settimeout 
+
+Promise có 3 trạng thái : pending :trạng thái ban đầu  ,
+fulfilled :thành công,
+rejected :thất bại
+
++Promise.resolve 
+var promise = new Promise(function(resolve ,reject){
+    resolve('done');
+})
+promise
+.then(function(result){
+    console.log(result);
+})
+
++Promise.reject 
+
++Promise.all 
+
+
+3.fetch :tích hợp sử dụng promise 
+
+4.dom location 
+5.local storage
+7.coding convention
+8.best practices 
+9.mistakes
+10.performance
