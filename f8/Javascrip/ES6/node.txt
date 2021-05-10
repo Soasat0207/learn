@@ -1,0 +1,17 @@
+1. let,const
+
+var /let ,const : khác nhau ở Scope và Hosting , asignment
+
+
+2.template Literals
+3.Multi-line String
+4 Arrow function
+5. classes
+6.Default parameter values
+7.Destructuring
+8.rest Paramenters
+9.Spread
+10.Enhanced Object Literals 
+11.Tagged template Literal
+12. modules
+13.Babel
