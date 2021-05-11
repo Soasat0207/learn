@@ -13,7 +13,7 @@ function TodoItem({todo,index,editIndex }) {
                 ${todo.completed && 'checked'}
                 onchange = "dispatch('toggle',${index})"
             >
-            <label ondblclick = "dispatch('startEdit',${index})">${todo.title}</label>
+            <label ondblclick = "dispatch('startEdit',${index})"><ul class="toDoList__list-style">${todo.title}</ul></label>
             <button class="destroy" onclick="dispatch('destroy',${index})"></button>
         </div>
         <input class="edit" value="${todo.title}"
