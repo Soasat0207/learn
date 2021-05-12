@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="./assets/fonts/fontawesome-free-5.15.3-web/css/all.min.css">
+    <link rel="stylesheet" href="./assets/css/rest.css">
+    <link rel="stylesheet" href="./assets/css/grid.css">
+    <link rel="stylesheet" href="./assets/css/base.css">
+    <link rel="stylesheet" href="./assets/css/main.css">
+    <link rel="stylesheet" href="./assets/css/responsive.css">
+</head>
+<body>
+    <div class="app">
+        <section class="header">
+            <header>
+                <div class="row">
+                    <div class="col col-lg-2 header__logo">
+                        <div class="header__logo-icon">
+                            <i class="far fa-bars"></i>
+                        </div> 
+                        <div class="header__logo-image">
+                            <img src="./assets/img/Calendar-400x267.png" alt="">
+                            <span>Lich</span>
+                        </div>   
+                    </div> 
+                    <div class="col col-lg-10 header__calendar">
+                        <div class="header__calendar-left">
+                            <div class="header__calendar-left-item">
+                                <p class="header__calendar-left-today">Hôm Nay</p>
+                            </div>  
+                            <div class="header__calendar-left-icon header__calendar-left-item">
+                                <i class="header__calendar-left-icon-prev far fa-chevron-left"></i>
+                            </div>   
+                            <div class="header__calendar-left-icon header__calendar-left-item">
+                                <i class="header__calendar-left-icon-after far fa-chevron-right"></i>
+                            </div> 
+                            <div class="header__calendar-left-item">
+                                <p class="header__calendar-left-month" >Tháng 5 , 2021</p>
+                            </div> 
+                        </div>
+                        <div class="header__calendar-right">
+                            <div class="header__calendar-right-function">
+                                <div class="header__calendar-right-icon">
+                                    <i class="header__calendar-right-search fal fa-search"></i>
+                                </div>
+                                <div class="header__calendar-right-icon">
+                                    <i class="header__calendar-right-info fal fa-question-circle"></i>
+                                </div>
+                                <div class="header__calendar-right-icon">
+                                    <i class="header__calendar-right-setting far fa-cog"></i>
+                                </div>
+                                <div class="header__calendar-right-function-search">
+                                    <p>Tháng</p>
+                                </div>
+                            </div>
+                            <div class="header__calendar-right-login">
+                                <div class="header__calendar-right-login-icon">
+                                    <i class="far fa-bars"></i>
+                                </div>
+                                <div class="header__calendar-right-login-image">
+                                    <img src="./assets/img/150609262_924202854786569_3111661637071497757_n.jpeg" alt="">
+                                </div>
+                                
+                            </div>
+                        </div>
+    
+                    </div>    
+                </div>
+                 
+                  
+            </header>
+        </section>
+        <section class="body">
+            <div class="row">
+                <div class="col col-lg-2 celander__job">
+                    <div class="celander__job-month">
+
+                    </div>
+                    <div class="celander__job-checklist">
+                        <p>Lịch của tôi</p>
+                        <input value=20  type="checkbox" class="celander__job-checklist-input">
+                        <label for="">Lời nhắc</label>
+                    </div>
+                </div>
+                <div class="col col-lg-10 todolist">
+                    <div id="root">
+    
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="footer">
+
+        </section>
+    </div>
+</body>
+<script type='module' src="./js/main.js"></script>
+<script src="./js/app.js"></script>
+</html>

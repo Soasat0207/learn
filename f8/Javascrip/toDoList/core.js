@@ -15,6 +15,8 @@ export function createStore(reducer) {
     function render() {
         for (const [root, component] of roots) {
             const output = component();
+            // in vào thằng có id root n
+
             root.innerHTML = output
         }
     }
