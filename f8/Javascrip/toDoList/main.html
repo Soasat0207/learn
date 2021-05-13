@@ -75,21 +75,59 @@
             </header>
         </section>
         <section class="body">
-            <div class="row">
-                <div class="col col-lg-2 celander__job">
-                    <div class="celander__job-month">
-
-                    </div>
+            <div class="row " style="height:100%">
+                <div class="col col-lg-3 celander__job">
                     <div class="celander__job-checklist">
-                        <p>Lịch của tôi</p>
-                        <input value=20  type="checkbox" class="celander__job-checklist-input">
-                        <label for="">Lời nhắc</label>
+
+                        <p class="celander__job-checklist-text-job-me">Lịch của tôi</p>
+                        <div class="celander-checklist">
+                            <input value=20  type="checkbox" class="celander__job-checklist-input">
+                            <label class="celander__job-checklist-label" for="">Lời nhắc</label>
+                        </div>
+                        <div class="celander-checklist">
+                            <input value=20  type="checkbox" class="celander__job-checklist-input">
+                            <label class="celander__job-checklist-label" for="">Việc cần làm</label>
+                        </div>
+                        <div class="celander-checklist">
+                            <input value=20  type="checkbox" class="celander__job-checklist-input">
+                            <label class="celander__job-checklist-label" for="">Lê Hu Hiệp</label>
+                        </div>
+                        
                     </div>
+                    <div class="celander__job-month">
+                        <div class="celandar">
+                            <div class="month">
+                                <div class=" prev">
+                                    <i class="month-icon far fa-chevron-left"></i>
+                                </div>
+                                <div class="date">
+                                    <div class="date-year">
+                                        <h1></h1>
+                                        <p></p>
+                                    </div>
+                                  
+                                </div>
+                                <div class=" next">
+                                    <i class="month-icon far fa-chevron-right"></i>
+                                </div>
+                              </div>
+                              <div class="weekdays">
+                                <div>Sun</div>
+                                <div>Mon</div>
+                                <div>Tue</div>
+                                <div>Wed</div>
+                                <div>Thu</div>
+                                <div>Fri</div>
+                                <div>Sat</div>
+                              </div>
+                              <div class="days"></div>
+                        </div>
                 </div>
-                <div class="col col-lg-10 todolist">
-                    <div id="root">
+                </div>
+                <div class="col col-lg-9 todolist">
+                    <!-- <div id="root">
     
-                    </div>
+                    </div> -->
                 </div>
             </div>
         </section>
@@ -100,4 +138,5 @@
 </body>
 <script type='module' src="./js/main.js"></script>
 <script src="./js/app.js"></script>
+<script src="./js/month.js"></script>
 </html>
