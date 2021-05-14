@@ -3,7 +3,7 @@
 .header {
   width: 100%;
   padding: 0.5rem 1rem;
-  border-bottom: 1px solid #dadce0;
+  border-bottom: 1px solid var(--border-color);
 }
 .header__logo {
   display: flex;
@@ -34,7 +34,7 @@
 }
 
 .header__calendar-left-today {
-  border: 1px solid #dadce0;
+  border: 1px solid var(--border-color);
   padding: 0.4rem 0.8rem;
   border-radius: 3px;
   background-color: transparent;
@@ -68,7 +68,7 @@
   width: 100%;
 }
 .header__calendar-right-function-search {
-  border: 1px solid #dadce0;
+  border: 1px solid var(--border-color);
   padding: 0.4rem 0.8rem;
   border-radius: 3px;
   background-color: transparent;
@@ -86,7 +86,7 @@
   padding-right: 0.8rem;
 }
 .header__calendar-right-login-image img {
-  width: 50%;
+  width: 35px;
   border-radius: 50%;
 }
 /* end header */
@@ -219,6 +219,87 @@
     padding: 12px 0;
 }
 
-/* right  */
+/* right */
 
+.todolist{
+  border: 1px solid var(--border-color);
+  border-top: none;
+}
+.header__todolist{
+  padding:0.8rem;
+}
+.header__todolist-title{
+  display: flex;
+  justify-content:space-between;
+  align-items:center;
+}
+.header__todolist-title-logo{
+  display: flex;
+  /* justify-content:space-evenly; */
+}
+.header__todolist-title-logo-img{
+  width:6%;
+}
+
+.header__todolist-title-habitTracker-link{
+  font-size: 0.9rem;
+  padding: 0 1.3rem;
+  display:block;
+  text-decoration: none;
+  color: var(--text-color);
+  letter-spacing:1px;
+}
+.header__todolist-title-habitTracker-link:after{
+  content:'';
+  display:block;
+  height:2px;
+  width:0;
+  background-color:var(--dark-color);
+  transition: width ease 1s;
+}
+.header__todolist-title-habitTracker:hover .header__todolist-title-habitTracker-link:after{
+  width:100%;
+}
+.header__todolist-title-function{
+  display: flex;
+  align-items: center;
+}
+.header__todolist-function{
+  padding:0 5px;
+  font-size:0.9rem;
+}
+/* habit Tracker */
+.habit_tracker-wrapper{
+  width: 100%;
+}
+.habit_tracker-header{
+
+}
+.habit_tracker-header-title{
+  display: flex;
+  align-items: center;
+}
+.habit_tracker-header-title-img{
+  width:4%;
+}
+.habit_tracker-header-title-content{
+  font-size: 1.2rem;
+}
+.habit_tracker-header-description{
+  font-size: 0.9rem;
+  padding: 0 3.3vw;
+  width: 80%;
+}
+.habit_tracker-table{
+  font-size: 0.9rem;
+  padding: 0 6vw;
+  width: 80%;
+}
+.habit_tracker-day{
+  display: flex;
+}
+.habit_tracker-day-items{
+  padding: 10px 30px;
+  border: 1px solid var(--border-color);
+}
 /* end body */
