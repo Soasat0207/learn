@@ -1,4 +1,6 @@
-
+.app {
+  position: relative;
+}
 /* header */
 .header {
   width: 100%;
@@ -93,8 +95,8 @@
 
 /* body */
 /* left */
-.body{
-    height:100%;
+.body {
+  height: 100%;
 }
 .body-left {
   display: flex;
@@ -105,7 +107,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content:space-between;
+  justify-content: space-between;
 }
 .celander__job-month {
   width: 100%;
@@ -125,25 +127,24 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding:0 0.5rem;
+  padding: 0 0.5rem;
   text-align: center;
   /* text-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.5); */
 }
 
-
-.month-icon{
-    font-size:1rem;
+.month-icon {
+  font-size: 1rem;
 }
-.date-year{
-    display: flex;
-    /* width: 100%; */
-    align-items: center;
+.date-year {
+  display: flex;
+  /* width: 100%; */
+  align-items: center;
 }
 .month h1 {
   font-size: 1rem;
   font-weight: 400;
   text-transform: uppercase;
-  padding:0 0.3rem;
+  padding: 0 0.3rem;
   /* letter-spacing: 0.2rem; */
   /* margin-bottom: 1rem; */
 }
@@ -151,7 +152,7 @@
 .month p {
   font-size: 1rem;
   text-transform: uppercase;
-  padding:0 0.3rem;
+  padding: 0 0.3rem;
   /* letter-spacing: 0.2rem; */
 }
 
@@ -193,8 +194,8 @@
   transition: background-color 0.2s;
 }
 .prev-date,
-.next-date{
-    opacity: 0.6;
+.next-date {
+  opacity: 0.6;
 }
 
 .days div:hover:not(.today) {
@@ -203,103 +204,144 @@
   cursor: pointer;
 }
 
-
 .today {
   background-color: #167e56;
 }
 
-.celander__job-checklist{
-    width:100%;
-    padding:1rem;
+.celander__job-checklist {
+  width: 100%;
+  padding: 1rem;
 }
-.celander__job-checklist-label{
-    padding:0 1rem;
+.celander__job-checklist-label {
+  padding: 0 1rem;
 }
-.celander-checklist{
-    padding: 12px 0;
+.celander-checklist {
+  padding: 12px 0;
 }
 
 /* right */
 
-.todolist{
+.todolist {
   border: 1px solid var(--border-color);
   border-top: none;
 }
-.header__todolist{
-  padding:0.8rem;
+.header__todolist {
+  padding: 0.8rem;
 }
-.header__todolist-title{
+.header__todolist-title {
   display: flex;
-  justify-content:space-between;
-  align-items:center;
+  justify-content: space-between;
+  align-items: center;
 }
-.header__todolist-title-logo{
+.header__todolist-title-logo {
   display: flex;
   /* justify-content:space-evenly; */
 }
-.header__todolist-title-logo-img{
-  width:6%;
+.header__todolist-title-logo-img {
+  width: 6%;
 }
 
-.header__todolist-title-habitTracker-link{
+.header__todolist-title-habitTracker-link {
   font-size: 0.9rem;
   padding: 0 1.3rem;
-  display:block;
+  display: block;
   text-decoration: none;
   color: var(--text-color);
-  letter-spacing:1px;
+  letter-spacing: 1px;
 }
-.header__todolist-title-habitTracker-link:after{
-  content:'';
-  display:block;
-  height:2px;
-  width:0;
-  background-color:var(--dark-color);
+.header__todolist-title-habitTracker-link:after {
+  content: "";
+  display: block;
+  height: 2px;
+  width: 0;
+  background-color: var(--dark-color);
   transition: width ease 1s;
 }
-.header__todolist-title-habitTracker:hover .header__todolist-title-habitTracker-link:after{
-  width:100%;
-}
-.header__todolist-title-function{
-  display: flex;
-  align-items: center;
-}
-.header__todolist-function{
-  padding:0 5px;
-  font-size:0.9rem;
-}
-/* habit Tracker */
-.habit_tracker-wrapper{
+.header__todolist-title-habitTracker:hover
+  .header__todolist-title-habitTracker-link:after {
   width: 100%;
 }
-.habit_tracker-header{
-
-}
-.habit_tracker-header-title{
+.header__todolist-title-function {
   display: flex;
   align-items: center;
 }
-.habit_tracker-header-title-img{
-  width:4%;
+.header__todolist-function {
+  padding: 0 5px;
+  font-size: 0.9rem;
 }
-.habit_tracker-header-title-content{
+/* habit Tracker */
+.habit_tracker-wrapper {
+  width: 100%;
+}
+.habit_tracker-header {
+}
+.habit_tracker-header-title {
+  display: flex;
+  align-items: center;
+}
+.habit_tracker-header-title-img {
+  width: 4%;
+}
+.habit_tracker-header-title-content {
   font-size: 1.2rem;
 }
-.habit_tracker-header-description{
+.habit_tracker-header-description {
   font-size: 0.9rem;
   padding: 0 3.3vw;
   width: 80%;
 }
-.habit_tracker-table{
+.habit_tracker-table {
   font-size: 0.9rem;
   padding: 0 6vw;
-  width: 80%;
+  width: 100%;
 }
-.habit_tracker-day{
+.habit_tracker-day {
   display: flex;
 }
-.habit_tracker-day-items{
-  padding: 10px 30px;
+.habit_tracker-items {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 144px;
+  height: 35px;
   border: 1px solid var(--border-color);
 }
+.habit_tracker-plans {
+  display: flex;
+}
 /* end body */
+/* modal habit tracker */
+.layout {
+  background-color: rgba(204, 204, 204,0.8);
+  width: 100%;
+  position: absolute;
+  z-index: 1;
+  height: 100%;
+  top: 0;
+  display: none;
+}
+.modal{
+  min-width:500px;
+  position: absolute;
+  background-color: var(--white-color);
+  margin:20vh auto;
+  border:1px solid var(--dark-color);
+  border-radius: 5px;
+  z-index: 1;
+  top: 0;
+  left: 40%;
+  display:none;
+}
+.modal-title{
+  padding: 0 1rem 1rem 1rem;
+  border-bottom: 1px solid var(--border-color);
+}
+.modal-body{
+  padding: 0 1rem 1rem 1rem; 
+}
+.btn-modal{
+  padding: 0 1rem 1rem 1rem; 
+}
+.btn-modal-close{
+  background-color:#ccc
+}
