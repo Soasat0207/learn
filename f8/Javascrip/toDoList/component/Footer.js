@@ -18,9 +18,9 @@ function Footer({todos , filter , filters}) {
 			</li>
 			`)}
 			
-			
+			${todos.filter(filters.completed).length > 0 ? html`<button class="clear-completed" onclick="dispatch('clearCompleted')">Clear completed</button>` : null}
 		</ul>
-		${todos.filter(filters.completed).length > 0 ? html`<button class="clear-completed" onclick="dispatch('clearCompleted')">Clear completed</button>` : null}
+		
 		
 	</footer>
 	

@@ -6,46 +6,108 @@ const modalData = document.querySelector('.modal_data');
 const modalAdd = document.querySelector('.btn-modal-add');
 const outputData = document.querySelector('.output_data');
 const addPlan = document.querySelector('.add_plan-input');
-
+const btnDelPlan = document.querySelector('.btn-modal-del-plan');
+const classDecsHabit = document.querySelector('.habit_tracker-header-description');
+const inputModalDescription = document.querySelector('.modal_description');
+const lblTitle = document.querySelector('.lbl_title');
+const inputCheckPlan = document.querySelectorAll('.habit_tracker-items input[type=checkbox]');
+const habitTrackerWrapper = document.querySelector('.habit_tracker-wrapper');
+const toDoListWrapper = document.querySelector('#root');
+let countPlan = 0;
+function showTodoList(){
+    habitTrackerWrapper.setAttribute('style','display:none');
+    toDoListWrapper.setAttribute('style','display:block');
+}
+function showHabitTracker(){
+    toDoListWrapper.setAttribute('style','display:none');
+    habitTrackerWrapper.setAttribute('style','display:block');
+}
 layOut.addEventListener('click', function (e) {
-    layOut.setAttribute('style', 'display:none');
-    modalClass.setAttribute('style', 'display:none')
+    hiddenModal();
 });
 modalClose.addEventListener('click', function (e) {
-    layOut.setAttribute('style', 'display:none');
-    modalClass.setAttribute('style', 'display:none')
+    hiddenModal();
+    controlFunction();
 });
-// btnAddPlans.addEventListener('click', function (e) {
-//     const addDataPlan = addPlan.value;
-//     var node = document.createElement("LI");
-//     var textnode = `q`;         
-//     node.appendChild(textnode);                              
-//     sorTable.appendChild(node);
-//     console.log(addDataPlan);
-// })
 
+function showModal() {
+    layOut.setAttribute('style', 'display:block');
+    modalClass.setAttribute('style', 'display:block');
+}
 
+function hiddenModal() {
+    layOut.setAttribute('style', 'display:none');
+    modalClass.setAttribute('style', 'display:none');
+}
 
-for (let i = 0; i < habitTarget.length; i++) {
-    habitTarget[i].addEventListener('dblclick', function (e) {
-        const elementPlan = this;
-        layOut.setAttribute('style', 'display:block');
-        modalClass.setAttribute('style', 'display:block');
-        outputData.innerHTML = this.innerHTML;
-        modalAdd.addEventListener('click', function (e) {
-            if (modalData.value == "") {
-                alert('bạn chưa nhập gì')
-            }
-            else {
-                elementPlan.innerHTML = modalData.value;
-                    layOut.setAttribute('style', 'display:none');
-                    modalClass.setAttribute('style', 'display:none')
-            }
-            return modalData.value = "";
-        });
+function eventAddPlan(elementPlan) {
+    console.log(elementPlan);
+    modalAdd.addEventListener('click', function () {
+        if (modalData.value == "" && inputModalDescription.value == "") {
+            alert('bạn chưa nhập gì');
+        } else if (modalData.value == "") {
+            elementPlan.innerHTML = inputModalDescription.value;
+            hiddenModal();
+        } else {
+            elementPlan.innerHTML = modalData.value;
+            console.log(modalData.value);
+            hiddenModal();
+            console.log(elementPlan);
+        }
+    });
+}
+
+function eventDelPlan(elementPlan) {
+    btnDelPlan.addEventListener('click', function () {
+        console.log(elementPlan.parentElement);
+        elementPlan.parentElement.remove();
+        hiddenModal();
+    });
+}
+
+function controlFunction() {
+    for (let i = 0; i < habitTarget.length; i++) {
+        habitTarget[i].addEventListener('dblclick', function (e) {
+            const elementPlan = this;
+            showModal();
+            modalData.setAttribute('style', 'display:block');
+            lblTitle.setAttribute('style', 'display:block');
+            outputData.innerHTML = this.innerHTML;
+            modalData.value = this.innerHTML;
+            console.log(modalData.value);
+            eventAddPlan(elementPlan);
+            eventDelPlan(elementPlan);
+        })
+
+    };
+}
+console.log(inputCheckPlan);
+
+for(let i = 0; i < inputCheckPlan.length ; i++){
+    inputCheckPlan[i].addEventListener('click',function (e) {
+       
+       if(inputCheckPlan[i].checked){
+         countPlan += 1;
+       }
+       else{
+        countPlan -= 1;
+       }
+       document.querySelector('.count_plan').innerHTML = countPlan;
+       console.log(countPlan);
     })
     
 }
-function removePlans(){
-    habitTarget.empty();
+
+function descriptionHabit() {
+    classDecsHabit.addEventListener('dblclick', function (e) {
+        elementdesc = this;
+        showModal();
+        modalData.setAttribute('style', 'display:none');
+        lblTitle.setAttribute('style', 'display:none');
+        eventAddPlan(elementdesc);
+    })
 }
+
+
+controlFunction();
+descriptionHabit();

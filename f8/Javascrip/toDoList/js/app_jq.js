@@ -17,24 +17,24 @@ $(document).ready(function () {
             <div class="habit_tracker-items"><input type="checkbox"> </div>
             <div class="habit_tracker-items"><input type="checkbox"> </div>
             </div>`);
-            
         }
         $(".add_plan-input").val("");
 
     });
 });
-console.log($(".habit_tracker-plans"));
-for (let i = 0; i < $(".habit_tracker-plans").length; i++) {
-    $(".habit_tracker-plans").eq(i).dblclick(function() {
-        let elementRemove = this;
-        console.log(elementRemove);
-        $('.btn-modal-del-plan').click(function() {
-            elementRemove.empty();
-            console.log('ok')
-        })
-      });
-}
-
-$(".removePlans").click(function() {
-    $(".habit_tracker-plans").empty();
-  });
+// for (let i = 0; i < $(".habit_tracker-items-target").length; i++) {
+//     $(".habit_tracker-items-target").eq(i).dblclick(function() {
+//         let elementRemove = $(this);
+//         console.log(elementRemove);
+//         $('.btn-modal-del-plan').click(function() {
+//             console.log(elementRemove);
+//             elementRemove.parent().empty();
+//         })
+//       });
+// }
+// if($('.habit_tracker-items input[type=checkbox]')[0].checked = false){
+//     console.log('true');
+// }
+// else{
+//     console.log('false');
+// }
