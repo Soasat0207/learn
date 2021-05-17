@@ -13,14 +13,29 @@ const lblTitle = document.querySelector('.lbl_title');
 const inputCheckPlan = document.querySelectorAll('.habit_tracker-items input[type=checkbox]');
 const habitTrackerWrapper = document.querySelector('.habit_tracker-wrapper');
 const toDoListWrapper = document.querySelector('#root');
+const hr = document.querySelector('#hr');
+const mn = document.querySelector('#mn');
+const sc = document.querySelector('#sc');
 let countPlan = 0;
-function showTodoList(){
-    habitTrackerWrapper.setAttribute('style','display:none');
-    toDoListWrapper.setAttribute('style','display:block');
+function resetClock(){
+    let date = new Date();
+    let hours = date.getHours() * 30;
+    let minutes = date.getMinutes() * 6;
+    let seconds = date.getSeconds() * 6;
+    hr.style.transform = `rotateZ(${(hours)+(minutes/12)}deg)`;
+    mn.style.transform = `rotateZ(${(minutes)}deg)`;
+    sc.style.transform = `rotateZ(${seconds}deg)`;
 }
-function showHabitTracker(){
-    toDoListWrapper.setAttribute('style','display:none');
-    habitTrackerWrapper.setAttribute('style','display:block');
+
+
+function showTodoList() {
+    habitTrackerWrapper.setAttribute('style', 'display:none');
+    toDoListWrapper.setAttribute('style', 'display:block');
+}
+
+function showHabitTracker() {
+    toDoListWrapper.setAttribute('style', 'display:none');
+    habitTrackerWrapper.setAttribute('style', 'display:block');
 }
 layOut.addEventListener('click', function (e) {
     hiddenModal();
@@ -83,19 +98,18 @@ function controlFunction() {
 }
 console.log(inputCheckPlan);
 
-for(let i = 0; i < inputCheckPlan.length ; i++){
-    inputCheckPlan[i].addEventListener('click',function (e) {
-       
-       if(inputCheckPlan[i].checked){
-         countPlan += 1;
-       }
-       else{
-        countPlan -= 1;
-       }
-       document.querySelector('.count_plan').innerHTML = countPlan;
-       console.log(countPlan);
+for (let i = 0; i < inputCheckPlan.length; i++) {
+    inputCheckPlan[i].addEventListener('click', function (e) {
+
+        if (inputCheckPlan[i].checked) {
+            countPlan += 1;
+        } else {
+            countPlan -= 1;
+        }
+        document.querySelector('.count_plan').innerHTML = countPlan;
+        console.log(countPlan);
     })
-    
+
 }
 
 function descriptionHabit() {
@@ -108,6 +122,8 @@ function descriptionHabit() {
     })
 }
 
-
+setInterval(() => {
+    resetClock()
+},1000)
 controlFunction();
 descriptionHabit();
