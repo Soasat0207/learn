@@ -1,0 +1,6 @@
+gói path 
+__dirname :trả về đường dẫn mà folder hiện tại mình đang ở
+path.join : ghép đường dẫn folder hiện tại mới ./tên file 
+
+module.exports ={biến 1, biến 2}
+var import required('./link')

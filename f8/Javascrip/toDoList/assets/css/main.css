@@ -1,5 +1,6 @@
 .app {
   position: relative;
+  background-color:var(--white-color);
 }
 :focus {
   outline: none;
@@ -363,6 +364,7 @@ header{
   background-color: rgba(0, 255, 196, 0.7);
   font-family: "Gochi Hand", cursive;
   font-size: 1.2rem;
+  color: black;
 }
 .toDoList_today {
   display: flex;
@@ -371,6 +373,7 @@ header{
   font-size: 1.8rem;
   margin-top: 5%;
   font-family: "Gochi Hand", cursive;
+  color: black;
 }
 .todoapp input::-webkit-input-placeholder {
   font-style: italic;
@@ -844,3 +847,53 @@ html .clear-completed:active {
 
 }
 /* end clock */
+
+/* dark mode */
+.theme-switch-wrapper {
+  display: flex;
+  align-items: center;
+  top: 10px;
+  right: 10px;
+  z-index: 1000;
+}
+.theme-switch {
+  display: inline-block;
+  height: 34px;
+  position: relative;
+  width: 60px;
+}
+.theme-switch input {
+  display:none;
+}
+.slider {
+  background-color: #999;
+  bottom: 0;
+  cursor: pointer;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transition: .4s;
+}
+.slider:before {
+  background-color: white;
+  bottom: 4px;
+  content: "";
+  height: 26px;
+  left: 4px;
+  position: absolute;
+  transition: .4s;
+  width: 26px;
+}
+.theme-switch input[type="checkbox"]:checked + .slider {
+  background-color: #07a787;
+ }
+.theme-switch input[type="checkbox"]:checked + .slider:before {
+  transform: translateX(26px);
+ }
+.slider.round {
+  border-radius: 34px;
+}
+.slider.round:before {
+  border-radius: 50%;
+}
