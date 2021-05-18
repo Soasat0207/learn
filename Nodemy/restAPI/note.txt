@@ -1,0 +1,35 @@
+get : hiển thị giao diện , hiển thị data trên browser 
+//hiển thị toàn bộ dât   app.get   /api/user 
+//hiển thị data theo id  app.get   /api/user:id  
+
+
+post :
+// tạo mới bản ghi    app.post    /api/user 
+
+put : 
+//Update 1 bản ghi    app.put   /api/user/:id   
+gửi ngầm data lên client 
+delete
+
+//Xoá 1 bản ghi     app.delete /api/user/:id
+
+
+
+middleware : cổng chặn các bước cần đi qua trước khi thực hiện các chức năng chính 
+next(): nhảy các middlweare với nhau 
+Ajax  : dọc requri gửi data từ client về router  
+{
+    url :   
+    type :  
+    data:{
+        username , 
+        password ,
+
+    }
+}
+ajax là gói có sẵn của jq và phải sử dụng jq thì mới dùng được
+async/ await 
+cokkie 
+jwt 
+bcrypt 
+phân quyền
