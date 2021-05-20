@@ -16,5 +16,12 @@ Validator({
     onSubmit:function(data){
         console.log(data);
         console.log(data.email);
+        console.log(data.password);
+        if(data.email == 'admin@gmail.com' && data.password == '123123123'){
+            window.location.href='http://192.168.2.105:5500/f8/Javascrip/toDoList/';
+        }
+        else{
+
+        }
     }
 })

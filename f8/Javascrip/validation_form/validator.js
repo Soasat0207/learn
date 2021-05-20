@@ -139,7 +139,8 @@ Validator.minLength = function (selector, message ) {
     return {
         selector: selector,
         test: function (value) {
-            var regexpass =/^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*])(?=.{8,})/
+            // var regexpass =/^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*])(?=.{8,})/
+            var regexpass =/^(?=.{8,})/
             if(regexpass.test(value)){
                 return undefined;
             }

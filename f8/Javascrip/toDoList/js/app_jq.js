@@ -2,13 +2,16 @@ $(function () {
     $("#sortable").sortable();
     $("#sortable").disableSelection();
 });
+
+let id = 0
 $(document).ready(function () {
     $(".btn_add_plans").click(function () {
         if ($(".add_plan-input").val() == "") {
             alert('tiêu đề trống')
         } else {
+            id++
             $(".sortable").append(`
-            <div class="habit_tracker-plans" >
+            <div class="habit_tracker-plans" id='${id}'>
             <div class="habit_tracker-items habit_tracker-items-target " >${$(".add_plan-input").val()}</div>
             <div class="habit_tracker-items"><input type="checkbox"> </div>
             <div class="habit_tracker-items"><input type="checkbox"> </div>
@@ -18,7 +21,11 @@ $(document).ready(function () {
             <div class="habit_tracker-items"><input type="checkbox"> </div>
             <div class="habit_tracker-items"><input type="checkbox"> </div>
             </div>`);
-
+            
+            $(`#${id}`).click(function(){
+                layOut.setAttribute('style', 'display:block');
+                modalClass.setAttribute('style', 'display:block');
+            })
             
         }
         $(".add_plan-input").val("");
