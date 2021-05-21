@@ -1,0 +1,20 @@
+Bước 1 khởi tạo 1 folder đi đến folder đó trên teminal 
+bước 2 tải npm bằng lệnh npm init  
+bước 3 tải express :npm install express 
+bước 4 tải demon để khi tha đổi sever tự đổi không cần chạ lại : npm install nodemon 
+bước 5 thêm "start": 'nodemon tên file '
+bước 6 tạo 1 file app.js thêm 
+const express = require('express');
+const app = express();
+const port = 3000;
+app.get('/',(req,res) => {
+    res.send('hello world');
+});
+app.listen(port,() =>{
+    console.log(`Example app listening at http://localhost:${port}`)
+});
+Bước 7 chạ :npm start
+
+cách tạo đường dẫn tĩnh
+app.use('/public',express.static(path.join(__dirname,'./public')))
+res.download:cho phép dơload 1 file về

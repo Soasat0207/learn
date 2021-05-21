@@ -1,0 +1,10 @@
+Bất đồng bộ là 
+    promise 
+    Async await  
+method căn bản trong js 
+Sting split ,include toUperCases 
+Math:
+Date:date.now  
+Object ,Array :
+Object.assgin():    
+push,pop,filter,map

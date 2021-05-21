@@ -1,0 +1,47 @@
+Note js là gì ?
+note js không phải là 1 ngôn ngữ mà chỉ là nên tảng để chạ js
+Đồng bộ là gì ?
+Đồng bộ từ trên xuống dưới 
+Bất đồng bộ là gì ?
+Bất đồng bộ là không thực hiện 1 cách tuần tự nào cả
+câu lệnh sẽ được đưa ra ngoài gọi là web api  sau đó sẽ được đẩ xuống call backqueue 
+event loop
+blockking non-blockking 
+khi nào cần dùng bất đồng bộ và khi nào dùng đồng bộ 
+
+node js event loop
+http://latentflip.com
+câu hỏi :
+console.log('1')
+setTimeout(function(){
+    console.log('2')
+},0)
+console.log('3')
+Câu trả lời : sẽ in ra 1,3,2
+vì 2 sẽ được đưa sang web api sau đó xuống callback Queue mà callbackQueue được ưu tiên thấp
+
+ví dụ 
+var fs = require('fs');
+//readFile là hàm bất đồng bộ data ở dạng là buffer function sẽ đưuocj đẩy xuống callback queury khi chạy hết file sẽ chạy thằng này
+fs.readFile('./note.txt',function(err,data){
+    console.log(data);
+})
+// readFileSync là hàm đồng bộ
+var ketqua = fs.readFileSync('./note.txt')
+console.log(ketqua.toString());
+------------------------------------------------------------------------------------------------
+Module :
+Module exports 
+require
+path 
+__dirname
+Đường dẫn tương đối 
+đường dẫn tuyệt đối 
+buidin //fs sửa xoá file tác động đến file
+// path tác động đến đường dẫn 
+các biến global
+--------------------------------------------------------------------------------------------------
+npm : kho thư viện của javascript
+npm init : để tạo ra 1 file quản lý tất cả những gói thư viện đang sử Dụng 
+sử dụng để giải quyết logic
+npm start tương ứng vs khởi tạo thằng start ở trong thằng package.json

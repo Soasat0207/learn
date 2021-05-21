@@ -267,3 +267,11 @@ if(localStorage.getItem('checked')){
     console.log('ok')
     // checkPlanSunday[0].setAttribute('checked', 'checked');
 }
+
+
+
+
+
+
+
+

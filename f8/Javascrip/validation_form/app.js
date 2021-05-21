@@ -17,11 +17,12 @@ Validator({
         console.log(data);
         console.log(data.email);
         console.log(data.password);
-        if(data.email == 'admin@gmail.com' && data.password == '123123123'){
-            window.location.href='http://192.168.2.105:5500/f8/Javascrip/toDoList/';
+        if(data.email == 'admin@gmail.com' && data.password == 'Hiep123123@'){  
+            alert('dang nhap thanh cong')  
+            window.location.href='http://192.168.1.187:5500/f8/Javascrip/toDoList/main.html';
         }
         else{
-
+            alert('err')
         }
     }
 })
