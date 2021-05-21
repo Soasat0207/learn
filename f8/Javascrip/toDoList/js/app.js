@@ -75,13 +75,30 @@ function hiddenModal() {
     layOut.setAttribute('style', 'display:none');
     modalClass.setAttribute('style', 'display:none');
 }
+function controlFunction() {
+    habitTarget.forEach(function element(element) {
+        element.addEventListener('dblclick', function (e) {
+            console.log(element);
+            showModal();
+            inputModalDescription.setAttribute('style', 'display:block');
+            lblTitle.setAttribute('style', 'display:block');
+            outputData.innerHTML = element.innerHTML;
+            modalData.value = element.innerHTML;
+            elementPlan = element;
+            console.log(elementPlan)
+
+        })
+    })
+};
 modalAdd.addEventListener('click', function () {
+    console.log(elementPlan)
     if (modalData.value == "" && inputModalDescription.value == "") {
         alert('bạn chưa nhập gì');
     } else if (modalData.value == "") {
         elementPlan.innerHTML = inputModalDescription.value;
         hiddenModal();
     } else {
+        console.log(elementPlan)
         elementPlan.innerHTML = modalData.value;
         hiddenModal();
     }
@@ -95,19 +112,7 @@ btnDelPlan.addEventListener('click', function () {
 });
 
 
-function controlFunction() {
-    habitTarget.forEach(function element(element) {
-        element.addEventListener('dblclick', function (e) {
-            console.log(element);
-            showModal();
-            inputModalDescription.setAttribute('style', 'display:block');
-            lblTitle.setAttribute('style', 'display:block');
-            outputData.innerHTML = element.innerHTML;
-            modalData.value = element.innerHTML;
-            elementPlan = element;
-        })
-    })
-};
+
 
 
 
@@ -194,6 +199,7 @@ for (let i = 0; i < checkPlanThursday.length; i++) {
         localStorage.setItem('countPlanThursday', countPlanThursday);
     })
 }
+
 const checkPlanFriday = document.querySelectorAll('.habit_tracker-items input[name=Friday][type=checkbox]');
 let countPlanFriday = 0;
 const checkPlanDayFriday = document.querySelector('.checkPlanDay[name=Friday]');
