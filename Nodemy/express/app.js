@@ -13,12 +13,14 @@ app.get('/login',(req,res) => {
 app.get('/download',(req,res) => {
     res.download(path.join(__dirname,'./public/img/videoplayback.mp4'))
 })
-app.listen(port,() =>{
-    console.log(`Example app listening at http://localhost:${port}`)
-});
 //  tạo 1 đường dẫn tĩnh
 app.use('/public',express.static(path.join(__dirname,'./public')));
 app.use('/api',baiTap1Router);
 app.use('/api',baiTap2Router);
+
+app.listen(port,() =>{
+    console.log(`Example app listening at http://localhost:${port}`)
+});
+
 
 
