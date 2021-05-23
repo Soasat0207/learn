@@ -1,10 +1,17 @@
-var tool = require('./tool.js')
+var fs = require('fs');
 var path = require('path');
-var api = path.join(__dirname,'index.js')
-console.log(api)
-var ketqua = tool(10,20);
-console.log(ketqua);
-var lodash = require('lodash')
-var test = lodash.chunk([1,2,3,4,5,6,7],3);
-console.log(test);
-
+// for(let i = 0; i <10;i++){
+//     fs.appendFile('./note.txt',`\nhello lần thứ ${i}`,'utf-8',function(err){
+//         console.log(err)
+//       })
+// }
+// fs.readFile('./note.txt','utf-8',function(err,data){
+//     if(!err){
+//         console.log(data)
+//     }
+// })
+// fs.rmdir('test',{recursive:true},function(err){
+//     console.log(err);
+// })
+var link = path.join(__dirname, '../');
+console.log(link);

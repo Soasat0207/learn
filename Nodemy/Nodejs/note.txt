@@ -45,3 +45,111 @@ npm : kho thư viện của javascript
 npm init : để tạo ra 1 file quản lý tất cả những gói thư viện đang sử Dụng 
 sử dụng để giải quyết logic
 npm start tương ứng vs khởi tạo thằng start ở trong thằng package.json
+
+
+bài toán đốt tre 
+
+------------------------------------------------------------------------------------------------
+Builtin
+FileSystem :
++readFile : là 1 hàm bất đồng bộ 
+
+fs.readFile('/etc/passwd', 'utf8', callback);
+ví dụ :
+    var fs = require('fs');
+    fs.readFile('./note.txt','utf8',function(err,data){
+    if(err){
+        console.log(err)
+    }
+    else{
+        console.log(data);
+    }
+    })
++writeFile:
+fs.writeFile:là hàm bất đồng bộ
+fs.writeFileSync :là hàm đồng bộ 
++Writestream:
+vis duj
+var readStream = fs.createReadStream('./note.txt',{
+    encoding:'utf-8'
+})
+readStream.on('open',function(){
+    console.log("stream dược mở")
+})
+readStream.on('data',function(chunk){
+    console.log(chunk)
+})
+readStream.on('error',function(){
+    console.log("stream bi loi")
+})
+
+fs.appendFile : để viết thêm 1 đoạn văn xuống cuối
+ví dụ :
+
+for(let i = 0; i <10;i++){
+    fs.appendFile('./note.txt',`\nhello lần thứ ${i}`,'utf-8',function(err){
+        console.log(err)
+      })
+}
+tạo file :fs.writeFile nếu chưa có file mới thì nó sẽ tự tạo file
+fs.writeFile('test.txt','helloworld','utf-8',function(err){
+    console.log(err);
+})
+Xoá file fs.unlink
+fs.unlink('test.txt',function(err){
+    console.log(err);
+})
+
+Foloder:
+tạo Floder mới dùng lệnh mkdir
+fs.mkdir('test',function(err){
+    console.log(err);
+})
+tapk floder con :vẫn dùng lệnh mkdir nhưng mà sẽ / thêm tên folder nữa
+fs.mkdir('test/child',function(err){
+    console.log(err);
+})
+Xoá floder : phải thêm recursive để cho nó xoá tất thư mục
+fs.rmdir('test',{recursive:true},function(err){
+    console.log(err);
+})
+* chú ys nếu sử dụng Đồng bộ thì sử ly lỗi bằng try catch
+----------------------------------------------------------------------------------------------
+Biến global:
+__dirname: folder đang chứa file hiện tại 
+__filename:đường dẫn cụ thể chi tiết đến file hiện tại chứ không phải folder nhé
+global objects:
++process.
+process.memoryUsage()
+process.getgid()
+process.env : biến môi truòng 
+console.log(process.argv)
+sẽ ra 1 mảng đó chính là mngr time số đầu vào 
+đầu tiên sẽ hiển thị file này sẽ được chạy bằng vesion note nào ở đâu 
+dưới là file đang chạy 
+----------------------------------------------------------------------------------------------
+path  
+đường dẫn tương đối và đường dẫn tuyệt đối 
+path.jion()
+path.dirname()
+path.extname()
+----------------------------------------------------------------------------------------------
+HTTP
+HTTP là gì ? 
+localhost là gì ?
+cách tạo ra server bằng http 
+request?
+response?
+ví dụ :
+ var http = require('http');
+//  tạo ra một con server 
+var server = http.createServer(function(request, response){
+    response.write('hello');
+    response.end();
+}) 
+// tạo ra 1 cổng 
+server.listen(3000);
+----------------------------------------------------------------------------------------------
+HTTPS    
+HTPPS là gì?
+
