@@ -1,0 +1,1 @@
+mongod --dbpath ~/Desktop/macos/learn/dbmongo
