@@ -1,0 +1,15 @@
+model
+crud 
+create: 
+find:tìm toàn bộ những thằng đúng điều kiện (trả về array)
+findOne : thằng đầu tiên đúng điều kiện (trả về object không tìm được trả về null)
+findOneAndUpdate:tương tự thằng sửa 
+findOneAndReplace
+findOneAndDelete(tìm được thằng nào và đã xoá thằng nào)
+deleteOne : xoá thằng đầu tiên tìm thấy (dữ liệu trả về tìm được mấy xoá mấy )
+deleteMany:
+count
+updateOne:thằng đầu tiên là thằng điều kiện sửa thằng thứ 2 sửa thành cái gì
+.limit: giới hạn data trả về
+sort():sắp xếp
+.skip(3):bỏ qua 3 thằng 
