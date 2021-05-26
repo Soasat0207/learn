@@ -12,40 +12,43 @@ const UserSchema = mongoose.Schema({
     email:String,
     age: Number,
     school:String,
+    blog:{
+        type:String, 
+        ref:'PostBlog'
+    }
 }, {
     collection: 'user'
 })
 
 const UserMondel = mongoose.model('user', UserSchema);
-// UserMondel.create({
-//     username:'Student 1',
-//     password:"123123",
-//     age:13,
-//     email:'test5@gmail.com',
-//     school:'NEU',
-// },
-// {
-//     username:'Student 2',
-//     password:"xxx123",
-//     age:89,
-//     email:'test6@gmail.com',
-//     school:'BKap',
-// },
-// {
-//     username:'Student 3',
-//     password:"678",
-//     age:18,
-//     email:'test7@gmail.com',
-//     school:'us',
-// },
-// {
-//     username:'Student 4',
-//     password:"890",
-//     age:23,
-//     email:'test8@gmail.com',
-//     school:'Na',
-// },
-// )
+module.exports = UserMondel;
+// UserMondel.aggregate([
+//     {   
+
+//             $match : {  age:{ $lte:20 }},
+//         // $count:'total'
+
+        
+//     }
+// ])
+// .then((data) =>{
+//     console.log(data)
+// })
+// .catch((err) =>{
+//     console.error(err)
+// })
+UserMondel.create({
+    username:'Test 1',
+    password:"123123",
+    age:13,
+    email:'test5@gmail.com',
+    school:'NEU',
+    blog:'60adca97c7224237a30f2dc7',
+},
+
+
+
+)
 // UserMondel.deleteMany({
 
 // })
@@ -163,28 +166,28 @@ const UserMondel = mongoose.model('user', UserSchema);
 //     console.log(error)
 // })
 
-UserMondel.find({
-    //tuổi lớn hơn 20 và nhỏ hơn 30 không có chứa user name là hiệp 
-    $and: [ 
-        {age:{ $gte:20 }},
-        {age:{ $lte:30 }},
-        {username:{ $not:{ $regex: /hiep/i } }}
-        ] ,
+// UserMondel.find({
+//     //tuổi lớn hơn 20 và nhỏ hơn 30 không có chứa user name là hiệp 
+//     $and: [ 
+//         {age:{ $gte:20 }},
+//         {age:{ $lte:30 }},
+//         {username:{ $not:{ $regex: /hiep/i } }}
+//         ] ,
     
     
-})
-.then((data)=>{
-    // tính tổng của số tuổi 
-    var total = 0 
-    for(let i = 0;i<data.length;i++){
-        total += data[i].age;
-    }
-    console.log(data.length)
-    console.log(`tổng tuổi là `+total)
-    console.log(`trung bình  tuổi là `+(total / data.length))
-})
-.catch((error)=>{
-    console.log(error)
-})
+// })
+// .then((data)=>{
+//     // tính tổng của số tuổi 
+//     var total = 0 
+//     for(let i = 0;i<data.length;i++){
+//         total += data[i].age;
+//     }
+//     console.log(data.length)
+//     console.log(`tổng tuổi là `+total)
+//     console.log(`trung bình  tuổi là `+(total / data.length))
+// })
+// .catch((error)=>{
+//     console.log(error)
+// })
 
 
