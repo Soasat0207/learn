@@ -37,18 +37,15 @@ module.exports = UserMondel;
 // .catch((err) =>{
 //     console.error(err)
 // })
-UserMondel.create({
-    username:'Test 1',
-    password:"123123",
-    age:13,
-    email:'test5@gmail.com',
-    school:'NEU',
-    blog:'60adca97c7224237a30f2dc7',
-},
-
-
-
-)
+// UserMondel.create({
+//     username:'Test 1',
+//     password:"123123",
+//     age:13,
+//     email:'test5@gmail.com',
+//     school:'NEU',
+//     blog:'60adca97c7224237a30f2dc7',
+// },
+// )
 // UserMondel.deleteMany({
 
 // })
