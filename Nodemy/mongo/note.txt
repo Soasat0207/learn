@@ -13,3 +13,29 @@ updateOne:thằng đầu tiên là thằng điều kiện sửa thằng thứ 2 
 .limit: giới hạn data trả về
 sort():sắp xếp
 .skip(3):bỏ qua 3 thằng 
+$gt:Lớn hơn 
+$lt:less than :nhỏ hơn 
+$lte:less than equa :nhỏ hơn hoặc bằng 
+$gte:lớn hơn hoặc bằng
+$nin: [<value1>, <value2>, ... <valueN> ]
+$or
+lớn hơn 20 tuổi và nhỏ hơn 30 tuổi 
+$and: [ {age:{ $gte:20 }},{age:{ $lte:30 }} ]
+$nor:cũng không chứa 
+$not 
+$or 
+----------------------------------------------------------------
+Schemas là gì ? và schemasles 
+bản chất của mongo là schemasles 
+nhung thằng thư viẹn mongoose recomoment là schemas101020
+regex được ký hiệu bởi  / / 
+username: new RegExp('Student ', "i")
+/ten can tim/i
+
+
+----------------------------------------------------------------
+CRUD
+----------------------------------------------------------------
+thêm phần tử 
+Create:
+trường hợp thêm thừa trường thì  
