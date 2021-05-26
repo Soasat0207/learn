@@ -1,5 +1,7 @@
-mongod --dbpath ~/Desktop/macos/learn/dbmongo
-mongod --dbpath ~/Documents/macos/learn-code/dbmongo/
 echo $PTAH :kiểm tra 
+vi ~/.bashrc
 export PATH="/usr/local/mongodb/bin:$PATH"
 source ~/.bashrc
+
+mongod --dbpath ~/Desktop/macos/learn/dbmongo
+mongod --dbpath ~/Documents/macos/learn-code/dbmongo/
