@@ -7,31 +7,31 @@ mongoose.connect('mongodb://localhost/K11_Nodemy',{
     useCreateIndex:true,
 });
 const AccountSchema = new Schema({
-    username: String,
-    password: String,
-    email: String,
+    username:String,
+    password:String,
+    email:String,
     idPost: [{
-        type: String,
-        ref:'post'
+        type:String,
+        ref:'port'
     }]
 },{
     collection:'Account'
 });
 const PortSchema = new Schema({
-    title: String,
-    comment: String,
+    title:String,
+    comment:String,
     author: String,
-    idComment: [{
-        type: String,
+    idComment:[{
+        type:String,
         ref:"comment"
     }]
 },{
     collection:'port'
 });
 const CommentSchema = new Schema({
-    content: String,
+    content:String,
     idAccount: {
-        type: String,
+        type:String,
         ref:'Account'
     }
 },{
@@ -82,9 +82,14 @@ const CommentModel = mongoose.model('comment',CommentSchema);
 // CommentModel.findOneAndUpdate({
 //     _id:'60b2112598c6e365735fe22c',
 // },{
-//     idUser:[
-//         '60b2112598c6e365735fe22a',
-//     ]
+//     idAccount:'60b2112598c6e365735fe22a'
+    
+// })
+// .then((data)=>{
+//     console.log(data);
+// })
+// .catch((error)=>{
+//     console.log(error)
 // })
 // .then((data)=>{
 //     console.log(data);
@@ -92,11 +97,13 @@ const CommentModel = mongoose.model('comment',CommentSchema);
 // .catch((error)=>{
 //     console.log(error);
 // })
-AccountModel.findOne({
-    _id:'60b2112598c6e365735fe22a',
+PostModel.find({
+    _id:'60b2112598c6e365735fe22b',
 })
+.populate('comment')
+// .populate('idAccount')
 .then((data)=>{
-    console.log(data);
+    console.log(data[0]);
 })
 .catch((error)=>{
     console.log(error);
