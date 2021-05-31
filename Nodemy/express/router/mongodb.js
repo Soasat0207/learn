@@ -17,6 +17,7 @@ const AccountSchema = new Schema({
 },{
     collection:'Account'
 });
+
 const PortSchema = new Schema({
     title:String,
     commentPost:String,
@@ -28,6 +29,8 @@ const PortSchema = new Schema({
 },{
     collection:'port'
 });
+
+
 const CommentSchema = new Schema({
     content:String,
     idAccount: {
@@ -40,6 +43,7 @@ const CommentSchema = new Schema({
 const AccountModel = mongoose.model('Account',AccountSchema);
 const PostModel = mongoose.model('port',PortSchema);
 const CommentModel = mongoose.model('comment',CommentSchema);
+module.exports ={AccountModel,PostModel,CommentModel};
 // AccountModel.create({
 //     username: 'lehuyhiep',
 //     password: '123123',
@@ -97,18 +101,17 @@ const CommentModel = mongoose.model('comment',CommentSchema);
 // .catch((error)=>{
 //     console.log(error);
 // })
-PostModel.find({
-    _id:'60b37b94eb33de135a735cd4',
-})
-.populate('comment')
-.populate({
-    path:'idComment',
-    populate:{path:'idAccount'}
-})
-.populate('id')
-.then((data)=>{
-    console.log(data[0].idComment[0]);
-})
-.catch((error)=>{
-    console.log(error);
-})
+// PostModel.find({
+//     _id:'60b37b94eb33de135a735cd4',
+// })
+// .populate('comment')
+// .populate({
+//     path:'idComment',
+//     populate:{path:'idAccount'}
+// })
+// .then((data)=>{
+//     console.log(data[0].idComment[0]);
+// })
+// .catch((error)=>{
+//     console.log(error);
+// })
