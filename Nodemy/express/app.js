@@ -3,8 +3,6 @@ const app = express();
 const path = require('path');
 const bodyParser = require("body-parser");
 const ModelMongo = require("./router/mongodb");
-const baiTap1Router = require('./router/bai1.js');
-const baiTap2Router = require('./router/bai2.js');
 const AccountRouter = require('./router/account')
 const port = 3000;
 app.use(
@@ -159,8 +157,6 @@ app.post("/register", (req, res) => {
   });
 //  tạo 1 đường dẫn tĩnh
 app.use('/public',express.static(path.join(__dirname,'./public')));
-app.use('/api',baiTap1Router);
-app.use('/api',baiTap2Router);
 app.use('/api/account/',AccountRouter)
 app.listen(port,() =>{
     console.log(`Example app listening at http://localhost:${port}`)
