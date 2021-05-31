@@ -19,7 +19,7 @@ const AccountSchema = new Schema({
 });
 const PortSchema = new Schema({
     title:String,
-    comment:String,
+    commentPost:String,
     author: String,
     idComment:[{
         type:String,
@@ -45,9 +45,9 @@ const CommentModel = mongoose.model('comment',CommentSchema);
 //     password: '123123',
 //     email: 'lehuyhiep449@gmail.com'
 // }),
-// PortModel.create({
+// PostModel.create({
 //     title: 'Hoc mongodb',
-//     comment: 'fightting',
+//     commentPost: 'fightting',
 //     author: 'Hiep'
 // })
 // CommentModel.create({
@@ -67,7 +67,7 @@ const CommentModel = mongoose.model('comment',CommentSchema);
 //     console.log(error);
 // })
 // PostModel.findOneAndUpdate({
-//     _id:'60b2112598c6e365735fe22b',
+//     _id:'60b37b94eb33de135a735cd4',
 // },{
 //     idComment:[
 //         '60b2112598c6e365735fe22c',
@@ -98,12 +98,16 @@ const CommentModel = mongoose.model('comment',CommentSchema);
 //     console.log(error);
 // })
 PostModel.find({
-    _id:'60b2112598c6e365735fe22b',
+    _id:'60b37b94eb33de135a735cd4',
 })
 .populate('comment')
-// .populate('idAccount')
+.populate({
+    path:'idComment',
+    populate:{path:'idAccount'}
+})
+.populate('id')
 .then((data)=>{
-    console.log(data[0]);
+    console.log(data[0].idComment[0]);
 })
 .catch((error)=>{
     console.log(error);
