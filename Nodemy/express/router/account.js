@@ -9,7 +9,7 @@ router.get('/',(req, res) =>{
     })
     .then((data) =>{
         res.json(data)
-        // console.log(data);
+        console.log(data);
     })
     .catch((error)=>{
         res.status(500).json('loi sever')
@@ -61,6 +61,35 @@ router.delete('/:id',(req, res)=>{
 
     })
 })
+//paginator
+router.get('/paginator',(req, res)=>{
+    const page = parseInt(req.query.page);
+    const view = parseInt(req.query.view);
+    console.log(req.query)
+    ModelMongo.AccountModel.find({
 
+    })
+    .skip((page-1)*view)
+    .limit(view)
+    .then((data)=>{
+        ModelMongo.AccountModel.find({
+
+        })  
+        .then((totalPage)=>{
+            res.json({
+                totalPage:totalPage,
+                data:data
+            });
+            console.log(totalPage.length)
+
+        })
+        .catch((err)=>{
+            console.log(err)
+        })
+    })
+    .catch((err)=>{
+        res.json(err);
+    })
+})
 
 module.exports = router
