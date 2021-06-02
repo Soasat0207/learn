@@ -11,7 +11,13 @@ $.ajax({
 })
 let currentPage = 1;
 let view = 2;
+let totalPage = Number;
+
+function changePage(){
 // lấy ra 2 thằng hiển thị đầu tiên trong trang  và in ra có bao nhiêu phân trang
+if(currentPage < 1 ){
+    currentPage = 1;
+}
 $.ajax({
     url: `http://localhost:3000/api/account/paginator?page=${currentPage}&view=${view}`,
     type: 'GET'
@@ -41,6 +47,9 @@ $.ajax({
 .catch((error)=>{
     console.log(error);
 })
+}
+changePage();
+
 //hàm load page để xử lý click vào nút nào
 function loadPage(page){
     currentPage = page;
@@ -69,12 +78,22 @@ function loadPage(page){
 function nextPage(){
     currentPage += 1 ;
     console.log(currentPage)
+    if(currentPage <1){
+        currentPage = 1;
+    }
+    if(currentPage > totalPage){
+        currentPage = totalPage;
+    }
+   
     $.ajax({
         url: `http://localhost:3000/api/account/paginator?page=${currentPage}&view=${view}`,
         type: 'GET'
     })
     .then((data)=>{
+        totalPage =Math.ceil((data.totalPage.length)/view);
+        console.log(totalPage)
         data = data.data;
+        
         $('.content').html('');
         for(let i=0; i<data.length; i++) {
             let item = $(`
@@ -92,28 +111,29 @@ function nextPage(){
 function prevPage(){
     currentPage -= 1 ;
     console.log(currentPage)
-    if(currentPage > 0){
-        $.ajax({
-            url: `http://localhost:3000/api/account/paginator?page=${currentPage}&view=${view}`,
-            type: 'GET'
-        })
-        .then((data)=>{
-            data = data.data;
-            $('.content').html('');
-            for(let i=0; i<data.length; i++) {
-                let item = $(`
-                <h1>${data[i].username} : ${data[i].password} : ${data[i].email}</h1>
-                <br>
-                `);
-                $('.content').append(item);
-            }
-        })
-        .catch((error)=>{
-            console.log(error);
-        })
-    }
-    else{
+    if(currentPage < 1 ){
         currentPage = 1;
     }
-
+    $.ajax({
+        url: `http://localhost:3000/api/account/paginator?page=${currentPage}&view=${view}`,
+        type: 'GET'
+    })
+    .then((data)=>{
+        console.log(data);
+        let totalPage =Math.ceil((data.totalPage.length)/view);
+        data = data.data; 
+        console.log(totalPage );
+        $('.content').html('');
+        for(let i=0; i<data.length; i++) {
+            let item = $(`
+            <h1>${data[i].username} : ${data[i].password} : ${data[i].email}</h1>
+            <br>
+            `);
+            $('.content').append(item);
+        }
+    
+    })
+    .catch((error)=>{
+        console.log(error);
+    })
 }
