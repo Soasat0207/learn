@@ -1,0 +1,13 @@
+#paginator{
+    display:flex;
+    justify-content:center; 
+    align-items:center;
+}
+#paginator ul {
+    display:flex;
+    justify-content:center; 
+    align-items:center;
+    list-style: none;
+    padding: 10px;
+    border: 1px solid #dee2e6;
+}

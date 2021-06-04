@@ -79,14 +79,17 @@ var dataEmail;
             data:{
               dataUsename, 
               dataPassword, 
-              dataPassword
+              dataEmail,
             }
           
         })
         .then((data)=>{
             console.log(data);
-            if(dataEmail == data[0].email){
-                console.log('ok')
+            if(data){
+              console.log("đăng nhập thành công");
+            }
+            else{
+              console.log("đăng nhập thất bại ")
             }
         })
         .catch((error)=>{

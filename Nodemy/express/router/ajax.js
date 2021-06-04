@@ -1,3 +1,6 @@
+let currentPage = 1;
+let view = 2;
+let totalPage = Number;
 $.ajax({
     url: 'http://localhost:3000',
     type: 'POST'
@@ -9,9 +12,7 @@ $.ajax({
 .catch((error)=>{
     console.log(error);
 })
-let currentPage = 1;
-let view = 2;
-let totalPage = Number;
+
 
 function changePage(){
 // lấy ra 2 thằng hiển thị đầu tiên trong trang  và in ra có bao nhiêu phân trang
@@ -23,10 +24,8 @@ $.ajax({
     type: 'GET'
 })
 .then((data)=>{
-    console.log(data);
     let totalPage =Math.ceil((data.totalPage.length)/view);
     data = data.data; 
-    console.log(totalPage );
     $('.content').html('');
     for(let i=0; i<data.length; i++) {
         let item = $(`
@@ -36,7 +35,6 @@ $.ajax({
         $('.content').append(item);
     }
     for(let i = 1; i <= totalPage ; i++){
-        console.log(i)
         let item = $(`
             <li class="page-item"><a class="page-link" onclick=loadPage(${i}) href="#">${i}</a></li>
         `)
@@ -59,10 +57,8 @@ function loadPage(page){
     })
     .then((data)=>{
         data = data.data;
-        console.log(data);
         $('.content').html('');
         for(let i=0; i<data.length; i++) {
-            console.log(data[i]);
             let item = $(`
             <h1>${data[i].username} : ${data[i].password} : ${data[i].email}</h1>
             <br>
@@ -77,7 +73,6 @@ function loadPage(page){
 // hàm next để next page
 function nextPage(){
     currentPage += 1 ;
-    console.log(currentPage)
     if(currentPage <1){
         currentPage = 1;
     }
@@ -91,7 +86,6 @@ function nextPage(){
     })
     .then((data)=>{
         totalPage =Math.ceil((data.totalPage.length)/view);
-        console.log(totalPage)
         data = data.data;
         
         $('.content').html('');
@@ -110,7 +104,6 @@ function nextPage(){
 //hàm prev để prev page
 function prevPage(){
     currentPage -= 1 ;
-    console.log(currentPage)
     if(currentPage < 1 ){
         currentPage = 1;
     }
@@ -119,10 +112,8 @@ function prevPage(){
         type: 'GET'
     })
     .then((data)=>{
-        console.log(data);
         let totalPage =Math.ceil((data.totalPage.length)/view);
         data = data.data; 
-        console.log(totalPage );
         $('.content').html('');
         for(let i=0; i<data.length; i++) {
             let item = $(`
