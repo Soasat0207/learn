@@ -28,7 +28,7 @@
 html{
     margin: 0;
     font-family: 'Oswald', sans-serif;
-    font-size: 1rem;
+    font-size: 62.5%;
     line-height: 1.5;
     color: var(--text-color);
     text-align: left;
@@ -79,7 +79,7 @@ html{
 /* navigation bar  */
 .navbar{
     padding: .5rem 1rem;
-    display: flex;
+    /* display: flex; */
     align-items: center;
     position: fixed;
     width: 100%;
@@ -231,7 +231,7 @@ html{
     left: 6px;
 }
 .navbar-items-link{
-    font-size: 0.9rem;
+    font-size: 1.2rem;
     margin-right: 1rem;
     color: var(--text-color);
 }
@@ -242,8 +242,8 @@ html{
     fill: var(--text-color);
 }
 .navbar-logo-img{
-    width: 24%;
-    max-height: 24px;
+    width: 70%;
+    /* max-height: 24px; */
 }
 .navbar-list-items:hover .header__submenu-list{
     display: block;
