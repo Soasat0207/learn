@@ -4,8 +4,8 @@ function plusSlides(n){
     showSlides(slideIndex += 1);
     restart();
 }
-function currentSlide(n){
-
+function currentSlide(n) {
+    showSlides(slideIndex = n);
 }
 
 function showSlides(n){
@@ -22,7 +22,7 @@ function showSlides(n){
     }
     slides[slideIndex-1].style.display = "block";
 }
-function ramdomSlides(){
+function randomSlides(){
     let slides = document.querySelectorAll('.mySlides');
     if(slideIndex > slides.length){
         slideIndex = 1 ;
@@ -36,10 +36,10 @@ function ramdomSlides(){
     }
     slides[Math.ceil(Math.random() * slides.length)-1].style.display = "block";
 }
-let autoChange = setInterval(ramdomSlides,delay);
+let autoChange = setInterval(randomSlides,delay);
 const restart = function(){
     clearInterval(autoChange);
-    autoChange = setInterval(ramdomSlides,delay)
+    autoChange = setInterval(randomSlides,delay)
 }
 showSlides(slideIndex);
 

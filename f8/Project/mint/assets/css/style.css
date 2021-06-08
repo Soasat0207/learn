@@ -251,6 +251,7 @@
 .menu-vertical{
     width:100%;
     transition: all 1s linear;
+    position: relative;
 }
 .menu-vertical-headding{
     width: 100%;
@@ -279,7 +280,7 @@
 .menu-vertical-items{
     list-style: none;
     border-bottom: 1px solid #ccc;
-    position: relative;
+   
 }
 .menu-vertical-link{
     text-decoration: none;
@@ -312,13 +313,11 @@
     background-color: var(--white);
     top: 0;
     left: 100%;
-    width: 60vw;
-    border-radius: 4px;
-    border-top: 1px solid rgb(230, 229, 229);
+    width: 55vw;
     animation: fadeIn ease-in-out .7s;
-    box-shadow: 0 10px 20px rgb(0 0 0 / 19%), 0 6px 6px rgb(0 0 0 / 23%);
     z-index: 1;
-    background:var(--white-color)
+    background:var(--white-color);
+    height: 40rem;
     /* position: relative; */
 }
 .menu-vertical-dropdown{
@@ -385,6 +384,7 @@
 }
 .mySlides{
     /* display: none; */
+    width: 100%;
 }
  /* carousel-desc */
 .carousel-desc{
@@ -400,6 +400,7 @@
  .carousel_img{
     width: 100%;
     vertical-align: middle;
+    height: 342px;
 }
  /* carousel_dot */
 .carousel_dot{
