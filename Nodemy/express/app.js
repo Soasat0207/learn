@@ -138,7 +138,7 @@ app.post("/register", (req, res) => {
 app.post("/login", (req, res) => {
   let username = req.body.username;
   let password = req.body.password;
-  ModelMongo.AccountModel.findOne({
+  ModelMongo.AccountModel.create({
     username: username,
     password: password,
   })
@@ -159,6 +159,62 @@ app.post("/login", (req, res) => {
     res.status(500).json(error);
   });
 });
+app.get("/login/all", (req, res) => {
+  ModelMongo.AccountModel.find({
+    // username: username,
+    // password: password,
+  })
+  .then((data) => {
+    // if (data){
+    //   var token = jwt.sign({
+    //     _id:data._id,
+    //   },'mk')
+    //   return res.json({
+    //     message:'success',
+    //     token:token,
+    //   });
+    // } else {
+    //   res.status(400).json('dang nhap that bai');
+    // }
+    res.json(data);
+  })
+  .catch((error) => {
+    res.status(500).json(error);
+  });
+});
+app.delete('/login/',(req,res) => {
+  let id = req.body.id;
+  ModelMongo.AccountModel.deleteOne({
+    _id:id,
+  })
+  .then((data) => {
+    res.json({data:data,status:200})
+  })
+  .catch((error) => {
+    console.log(error)
+  })
+})
+app.put('/login/',(req,res) => {
+  console.log(req.body)
+  let id = req.body.id;
+  let username = req.body.username;
+  let password = req.body.password;
+  let email = req.body.email;
+  ModelMongo.AccountModel.findOneAndUpdate({
+    _id:id
+  },{
+    username:username,
+    password:password,
+    email:email,
+  })
+  .then((data) => {
+    res.json({data:data,status:200});
+    console.log(data)
+  })
+  .catch((error) => {
+    console.log(error)
+  })
+})
 app.get('/private/', (req, res,next) => {
   try{
     let token = req.cookies.token

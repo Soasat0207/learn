@@ -14,6 +14,9 @@
         <input id="password" name="password"type="text">
         <button id="click" onclick="login()">send</button>
     </div>
+    <div class="data_account">
+
+    </div>
 </body>
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
@@ -21,6 +24,75 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script src="http://localhost:3000/public/js/pagination.js"></script>
 <script>
+function render(){
+  $('.data_account').html('');
+  $.ajax({
+    url:'http://localhost:3000/login/all',
+    type:'GET',
+  })
+  .then((data)=>{
+    data.map(data => {
+      let div = ``;
+       div = `
+        <div class = '${data._id}' >
+          <input class="data_Username" placeholder='${data.username} '></input>
+          <input class="data_Password" placeholder='${data.password} '></input>
+          <input class="data_Email" placeholder='${data.email} '></input>
+          <button class="btn"  onclick="deleteAccount('${data._id}')" >X</button>
+          <button class="btn_update" id="${data._id}" onclick="updateAccount('${data._id}')" >update</button>
+        </div>
+        `
+      $('.data_account').append(div);
+    }) 
+    })
+    .catch((error)=>{
+      console.log(error);
+      res.json(error);
+    })
+}
+render();
+
+  function deleteAccount(id) {
+    $.ajax({
+      url:'http://localhost:3000/login',
+      type:'DELETE',
+      data:{
+        id:id
+      }
+    })
+    .then((data)=>{
+      if(data.status == 200){
+        render();
+      }
+    })
+    .catch((error)=>{
+      console.log(error);
+    })
+  }
+  function updateAccount(id){
+    let username = $(`#${id}`).parent().children('input').eq(0).val();
+    let password =  $(`#${id}`).parent().children('input').eq(1).val();
+    let email =  $(`#${id}`).parent().children('input').eq(2).val();
+    console.log(username, password,email);
+    $.ajax({  
+      url:'http://localhost:3000/login',
+      type:'PUT',
+      data:{
+        id:id,
+        username:username,
+        password:password,
+        email:email,
+      }
+    })
+    .then((data)=>{
+      if(data.status == 200){
+        render();
+      }
+    })
+    .catch((error)=>{
+      console.log(error);
+    })
+  }
 function setCookie(cname, cvalue, exdays) {
   var d = new Date();
   d.setTime(d.getTime() + (exdays*24*60*60*1000));
@@ -54,10 +126,14 @@ function getCookie(cname) {
         .then((data)=>{
             console.log(data);
             setCookie('token',data.token,1);
+            if(data.message=="success"){
+              render();
+            }
         })
         .catch((error)=>{
             console.log(error);
         })
     }
+
 </script>
 </html>
