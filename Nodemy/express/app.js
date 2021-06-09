@@ -143,6 +143,24 @@ app.post("/login", (req, res) => {
     password: password,
   })
   .then((data) => {
+    
+      res.json({
+        message:'success',
+        data:data,
+      });
+  })
+  .catch((error) => {
+    res.status(500).json(error);
+  });
+});
+app.post("/login/check", (req, res) => {
+  let username = req.body.username;
+  let password = req.body.password;
+  ModelMongo.AccountModel.findOne({
+    username: username,
+    password: password,
+  })
+  .then((data) => {
     if (data){
       var token = jwt.sign({
         _id:data._id,
@@ -159,9 +177,51 @@ app.post("/login", (req, res) => {
     res.status(500).json(error);
   });
 });
+app.post("/login/checkcokkie", (req, res) => {
+  console.log(req.body)
+  let token = req.body.token;
+  token = jwt.verify(token,"mk");
+  console.log(token)
+  ModelMongo.AccountModel.findOne({
+    _id:token._id,
+  })
+  .then((data) => {
+    res.json(data);
+      
+  })
+  .catch((error) => {
+    res.status(500).json(error);
+  });
+});
 app.get("/login/all", (req, res) => {
   ModelMongo.AccountModel.find({
     // username: username,
+    // password: password,
+  })
+  .then((data) => {
+    // if (data){
+    //   var token = jwt.sign({
+    //     _id:data._id,
+    //   },'mk')
+    //   return res.json({
+    //     message:'success',
+    //     token:token,
+    //   });
+    // } else {
+    //   res.status(400).json('dang nhap that bai');
+    // }
+    res.json(data);
+  })
+  .catch((error) => {
+    res.status(500).json(error);
+  });
+});
+app.post("/login/find", (req, res) => {
+  
+  let username = req.body.username;
+  console.log(username)
+  ModelMongo.AccountModel.find({
+    username: username,
     // password: password,
   })
   .then((data) => {

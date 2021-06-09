@@ -12,7 +12,10 @@
         <input id="username" name="username"type="text">
         <label for="">password</label>
         <input id="password" name="password"type="text">
-        <button id="click" onclick="login()">send</button>
+        <button id="click" onclick="create()">create</button>
+        <button id="click" onclick="find()">find</button>
+        <button id="login" onclick="login()">login</button>
+        <button style="display:none" id="logout" onclick="logout()">logout</button>
     </div>
     <div class="data_account">
 
@@ -34,12 +37,13 @@ function render(){
     data.map(data => {
       let div = ``;
        div = `
-        <div class = '${data._id}' >
-          <input class="data_Username" placeholder='${data.username} '></input>
-          <input class="data_Password" placeholder='${data.password} '></input>
-          <input class="data_Email" placeholder='${data.email} '></input>
+        <div class ='checkinput ${data._id}' >
+          <input class="data_Username" placeholder='${data.username}' disabled></input>
+          <input class="data_Password" placeholder='${data.password}' disabled></input>
+          <input class="data_Email" placeholder='${data.email}' disabled></input>
           <button class="btn"  onclick="deleteAccount('${data._id}')" >X</button>
-          <button class="btn_update" id="${data._id}" onclick="updateAccount('${data._id}')" >update</button>
+          <button class="btn_updateInput btn_updateInput_${data._id}" onclick="updateInput('${data._id}')" >Update</button>
+          <button style="display:none" class="btn_update" id="${data._id}" onclick="updateAccount('${data._id}')" >Xác Nhận</button>
         </div>
         `
       $('.data_account').append(div);
@@ -51,7 +55,57 @@ function render(){
     })
 }
 render();
-
+// $(document.body).click(function(e) {
+//    console.log(e)
+//    console.log($('#password').val());
+//   if($('#username').val()==""&& $('#password').val()==""){
+//     render();
+//   }
+// });
+function find(){
+  $.ajax({
+    url:'http://localhost:3000/login/find',
+    type:"POST",
+    data:{
+      username: $('#username').val(),
+      password: $('#password').val(),
+    }
+  })
+  .then((data)=>{
+    console.log(data);
+    // setCookie('token',data.token,1);
+    $('.data_account').html('');
+    data.map(data => {
+      let div = ``;
+       div = `
+        <div class = '${data._id}' >
+          <input class="data_Username" placeholder='${data.username}' disabled></input>
+          <input class="data_Password" placeholder='${data.password}' disabled></input>
+          <input class="data_Email" placeholder='${data.email}' disabled></input>
+          <button class="btn"  onclick="deleteAccount('${data._id}')" >X</button>
+          <button class="btn_updateInput btn_updateInput_${data._id}" onclick="updateInput('${data._id}')" >Update</button>
+          <button style="display:none" class="btn_update" id="${data._id}" onclick="updateAccount('${data._id}')" >Xác Nhận</button>
+        </div>
+        `
+      $('.data_account').append(div);
+    }) 
+    $('#username').val('');
+    $('#password').val('');
+  })
+  .catch((error)=>{
+    console.log(error);
+  })
+}
+function updateInput(id){
+  let enableInput =  $(`#${id}`).parent().children('input');
+  //khi click thì tất cả những ô input và nút sẽ về mặc định hết 
+  $(`.checkinput`).children('input').attr("disabled", true);
+  $(`.btn_updateInput`).attr('style','display:inline-block');
+  $(`.btn_update`).attr('style','display:none')
+  $(`#${id}`).attr('style','display:inline-block');
+  $(`.btn_updateInput_${id}`).attr('style','display:none');
+  enableInput.attr("disabled", false)
+}
   function deleteAccount(id) {
     $.ajax({
       url:'http://localhost:3000/login',
@@ -114,7 +168,10 @@ function getCookie(cname) {
   }
   return "";
 }
-    function login(){
+var delete_cookie = function(name) {
+    document.cookie = name + '=;expires=Thu, 01 Jan 1970 00:00:01 GMT;';
+};
+    function create(){
         $.ajax({
             url:'http://localhost:3000/login',
             type:"POST",
@@ -125,8 +182,29 @@ function getCookie(cname) {
         })
         .then((data)=>{
             console.log(data);
+            render();
+            $('#username').val('');
+            $('#password').val('');
+        })
+        .catch((error)=>{
+            console.log(error);
+        })
+    }
+    function login(){
+        $.ajax({
+            url:'http://localhost:3000/login/check',
+            type:"POST",
+            data:{
+                username: $('#username').val(),
+                password: $('#password').val(),
+            }
+        })
+        .then((data)=>{
+            console.log(data);
             setCookie('token',data.token,1);
             if(data.message=="success"){
+              $('#login').attr('style','display:none');
+              $('#logout').attr('style','display:inline-block')
               render();
             }
         })
@@ -134,6 +212,30 @@ function getCookie(cname) {
             console.log(error);
         })
     }
-
+    function logout(){
+      delete_cookie('token');
+      $('#login').attr('style','display:inline-block');
+      $('#logout').attr('style','display:none')
+    }
+    function checklogin(){
+      console.log()
+      $.ajax({
+      url:'http://localhost:3000/login/checkcokkie',
+      type:"POST",
+      data:{
+        token:getCookie('token'),
+      }
+      })
+      .then(data=>{
+        if(data){
+          $('#login').attr('style','display:none');
+          $('#logout').attr('style','display:inline-block')
+        }
+      })
+      .catch((error)=>{
+        console.log(error)
+      })
+    }
+    checklogin()
 </script>
 </html>
