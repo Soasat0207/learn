@@ -20,6 +20,7 @@
     --min-height-section:360px;
     --width-section:100vw;
     --padding-section-mobile:0px 30px;
+    --padding-section:3.2rem 0;
 }
 *{
     box-sizing: border-box;

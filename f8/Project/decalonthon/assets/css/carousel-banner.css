@@ -132,14 +132,13 @@
 .active {
     opacity: 1 !important;
 }
-@media only screen and (max-width: 1000px) {
-    .carousel-banner_slider {
-        height: 100vh;
-    }
-}
 @media only screen and (max-width: 800px) {
     .carousel-banner_slider .box .bg {
         width: 65%;
+    }
+    .carousel-banner_slider .box .illustration .inner{
+        height:40rem;
+        width:20rem;
     }
     .carousel-banner_slider .box .details p {
         margin-right: 0;
@@ -151,12 +150,21 @@
 }
 
 @media only screen and (max-width: 650px) {
+
     .carousel-banner_slider .box .bg {
         width: 100%;
         left: 0;
         bottom: 0;
         height: 54%;
         transform: skewX(0deg);
+    }
+    .carousel-banner_slider .box .illustration{
+        grid-column: 1/-1;
+        padding: 4rem 0 12rem 0;
+    }
+    .carousel-banner_slider .box .illustration .inner{
+        height: 14rem;
+        width: 24rem;
     }
     .carousel-banner_slider .box .bg::before {
         width: 120%;
@@ -170,6 +178,9 @@
         padding: 2rem;
         transform: translateY(-9rem);
     }
+    .carousel-banner_slider .box .details p{
+        margin-top: 0;
+    }
     .carousel-banner_slider .illustration {
         grid-row: 1/span 1;
         grid-column: 1/-1;
@@ -180,10 +191,6 @@
     .carousel-banner_slider .prev ,
     .carousel-banner_slider .next {
         display: none;
-    }
-    .carousel-banner .trail {
-        width: 90%;
-        bottom: 13%;
     }
     .carousel-banner div {
         padding: 1rem;
@@ -208,18 +215,69 @@
 }
 .carousel-banner_slider .box2{
     background-color:#500033;
-    background-image: url(https://contents.mediadecathlon.com/s864415/k$98e770752f6ee5bf13c096e6c840c861/slider%20desktop%20background%20image.jpg?format=auto);
+    background-image: url(../image/slider2.webp);
     background-position: center; /* Center the image */
     background-repeat: no-repeat; /* Do not repeat the image */
     background-size: cover; 
 }
 .carousel-banner_slider .box2 .illustration .inner{
-    background-image: url(https://contents.mediadecathlon.com/s864416/k$eb1ddd543790c25ca57ad925adcee294/slider%20desktop%20content%20image.jpg?format=auto);
+    background-image: url(../image/slider2_2.webp);
     background-position: center; /* Center the image */
     background-repeat: no-repeat; /* Do not repeat the image */
     background-size: cover; 
     
 }
 .carousel-banner_slider .box2 .details button{
+    background-color:#318154;
+}
+.carousel-banner_slider .box3{
+    background-color:#500033;
+    background-image: url(../image/slider3.webp);
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover; 
+}
+.carousel-banner_slider .box3 .illustration .inner{
+    background-image: url(../image/slider3_3.webp);
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover; 
+    
+}
+.carousel-banner_slider .box3 .details button{
+    background-color:#318154;
+}
+.carousel-banner_slider .box4{
+    background-color:#500033;
+    background-image: url(../image/slider4.webp);
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover; 
+}
+.carousel-banner_slider .box4 .illustration .inner{
+    background-image: url(../image/slider4_4.webp);
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover; 
+    
+}
+.carousel-banner_slider .box4 .details button{
+    background-color:#318154;
+}
+.carousel-banner_slider .box5{
+    background-color:#500033;
+    background-image: url(../image/slider5.webp);
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover; 
+}
+.carousel-banner_slider .box5 .illustration .inner{
+    background-image: url(../image/slider5_5.webp);
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover; 
+    
+}
+.carousel-banner_slider .box5 .details button{
     background-color:#318154;
 }

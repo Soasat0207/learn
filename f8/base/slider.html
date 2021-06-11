@@ -653,10 +653,14 @@ let start, move, change, sliderWidth;
 
 // Do this on initial touch on screen
 slider.addEventListener("touchstart", e => {
+    
 // get the touche position of X on the screen
 start = e.touches[0].clientX;
+console.log(window.innerWidth);
+
 // (each slide with) the width of the slider container divided by the number of slides
 sliderWidth = slider.clientWidth / trail.length;
+console.log(sliderWidth)
 });
 
 // Do this on touchDrag on screen
@@ -667,6 +671,8 @@ e.preventDefault();
 move = e.touches[0].clientX;
 // Subtract initial position from end position and save to change variabla
 change = start - move;
+// console.log(start)
+// console.log(move)
 });
 
 const mobile = e => {
