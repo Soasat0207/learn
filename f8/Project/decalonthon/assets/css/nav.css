@@ -7,6 +7,10 @@
     width: 100%;
     z-index: 1;
 }
+.navbar-fiexd{
+    position:fixed;
+    background-color: #fff;
+}
 .navbar-logo{
     display: flex;
     justify-content:space-between;

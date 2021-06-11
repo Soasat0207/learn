@@ -242,17 +242,132 @@
     font-weight: 700;
     margin: 0;
 }
-.topic_sell-left-beach{
+.topic_sell-left-beach,
+.topic_sell-left-sport{
     grid-column-start: 2;
     grid-column-end: 0;
     grid-row-start: 1;
     grid-row-end: 2;
 }
-.topic_sell-right-beach{
+.topic_sell-right-beach,
+.topic_sell-right-sport{
     grid-column-start: 1;
     grid-column-end: 1;
     grid-row-start: 1;
     grid-row-end: 2;
     padding-left: 0;
     padding-right:2rem
+}
+.topic_sell-product-list svg{
+    fill: #00537d;
+    stroke: none;
+    width: 90%;
+}
+/* topic_sell */
+/* product_recalls */
+.product_recalls-title{
+    font-size:2rem;
+    font-weight:700;
+    margin: 0;
+}
+.product_recalls-description{
+    font-size:1.6rem;
+    margin-top: 0;
+}
+.product_recalls-btn {
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 5rem;
+}
+.product_recalls-btn button{
+    background-color: transparent;
+    color: #454d50;
+    border: 2px solid #454d50;
+    border-radius: .4rem;
+    letter-spacing: .024rem;
+    font-size: 1.4rem;
+    line-height: 1.1;
+    padding: 1rem 4rem;
+    min-height: 4rem;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    vertical-align: text-top;
+    border-radius: 4px;
+    font-weight: 700;
+    text-transform: uppercase;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    transition: background-color .2s ease .1s;
+}
+.product_recalls-btn button:hover{
+    background-color:rgba(0, 0, 0 ,0.1)
+}
+/* footer */
+.footer{
+    padding-top: 16px;
+    border-top: 4px solid var(--primary-color);
+    background-color: var(--white-color);
+}
+.footer__heading{
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    color: var(--text-color);
+}
+.footer__list{
+    padding-left: 0;
+    list-style: none;
+}
+.footer__list-items-link{
+    text-decoration: none;
+    font-size: 1.2rem;
+    color: #737373;
+    display: flex;
+    align-items: center;
+    padding: 5px 0;
+}
+.footer__list-items-link:hover{
+    color: var(--primary-color);
+}
+.footer-items_icon{
+    font-size: 1.8rem;
+    margin-right: 12px;
+}
+.footer__download{
+    display: flex;
+}
+.footer__download-qr-img{
+    width: 80px;
+   
+}
+.footer__download-apps{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 12px;
+    justify-content: center;
+}
+.footer__download-apps-android-img { 
+    height: 20px;
+}
+.footer__download-apps-ios-img{
+    height: 20px;
+    margin-left: -16px;
+    margin-top: 8px;
+}
+.footer__coppright{
+    display: flex;
+    flex-direction: column;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+   
+}
+.footer__coppright-text{
+    padding: 3px 0;
+    margin: 0;
+    font-size: 1.2rem;
 }

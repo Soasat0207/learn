@@ -54,7 +54,7 @@ function render(){
       res.json(error);
     })
 }
-render();
+
 // $(document.body).click(function(e) {
 //    console.log(e)
 //    console.log($('#password').val());
@@ -181,7 +181,6 @@ var delete_cookie = function(name) {
             }
         })
         .then((data)=>{
-            console.log(data);
             render();
             $('#username').val('');
             $('#password').val('');
@@ -200,7 +199,6 @@ var delete_cookie = function(name) {
             }
         })
         .then((data)=>{
-            console.log(data);
             setCookie('token',data.token,1);
             if(data.message=="success"){
               $('#login').attr('style','display:none');
@@ -218,7 +216,6 @@ var delete_cookie = function(name) {
       $('#logout').attr('style','display:none')
     }
     function checklogin(){
-      console.log()
       $.ajax({
       url:'http://localhost:3000/login/checkcokkie',
       type:"POST",
@@ -229,7 +226,8 @@ var delete_cookie = function(name) {
       .then(data=>{
         if(data){
           $('#login').attr('style','display:none');
-          $('#logout').attr('style','display:inline-block')
+          $('#logout').attr('style','display:inline-block');
+          render();
         }
       })
       .catch((error)=>{

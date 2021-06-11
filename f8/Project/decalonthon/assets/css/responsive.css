@@ -1,0 +1,68 @@
+/* Mobile & tablet */
+@media (max-width :1023px){
+    
+    .hide-on-mobile-tablet{
+        display: none;
+    }
+    .navbar-logo{
+        justify-content:center;
+    }
+    .details{
+        padding:0
+    }
+    .carousel-banner_slider{
+        height:auto
+    }
+    .carousel-banner_slider .box .illustration{
+        padding:0 5rem 0 9rem;
+    }
+    .local_brand-list-tablet{
+        margin-bottom:2rem
+    }
+    .carousel-banner_slider .box .details{
+        padding:10rem 0rem 10rem 10rem
+    }
+    .carousel-banner_slider .box .illustration .inner{
+        height: 30rem;
+        width:22rem
+    }
+}
+/* tablet */
+@media (min-width :740px) and (max-width :1023px)  {
+   
+}
+/* Mobile */
+@media (max-width :739px){
+    .topic_sell-warp{
+        grid-template-columns: repeat(1,1fr);
+    }
+    .topic_sell-right{
+        grid-template-columns: repeat(2,1fr);
+    }
+    .topic_sell-right-beach, .topic_sell-right-sport{
+        grid-column-start: none; 
+        grid-column-end: none;
+        grid-row-start: none; 
+        grid-row-end: none; 
+        padding-left: none;
+        padding-right: 0rem;
+    }
+    .topic_sell-left-beach, .topic_sell-left-sport{
+        grid-column-start: none; 
+        grid-column-end: none;
+        grid-row-start: none; 
+        grid-row-end: none; 
+        padding-left: none;
+        padding-right: 0rem;
+    }
+    .topic_sell-product-list{
+        padding:0;
+    }
+    .topic_sell-right{
+        padding:0
+    }
+    .deal-header-title-img{
+        width:100%
+    }
+}
+
