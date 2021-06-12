@@ -3,9 +3,10 @@
     padding: .5rem 1rem;
     display: flex;
     align-items: center;
-    /* position: fixed; */
+    position: relative;
     width: 100%;
     z-index: 1;
+    background:var(--white-color);
 }
 .navbar-fiexd{
     position:fixed;
