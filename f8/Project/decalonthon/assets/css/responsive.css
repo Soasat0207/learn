@@ -33,6 +33,9 @@
 }
 /* Mobile */
 @media (max-width :739px){
+    .hide-on-mobile{
+        display: none !important;
+    }
     .topic_sell-warp{
         grid-template-columns: repeat(1,1fr);
     }
@@ -50,7 +53,7 @@
     .topic_sell-left-beach, .topic_sell-left-sport{
         grid-column-start: none; 
         grid-column-end: none;
-        grid-row-start: none; 
+        
         grid-row-end: none; 
         padding-left: none;
         padding-right: 0rem;
@@ -63,6 +66,47 @@
     }
     .deal-header-title-img{
         width:100%
+    }
+    .carousel-banner div{
+        padding:0
+    }
+    .carousel-banner_slider .box .illustration{
+        display: none;
+    }
+    .carousel-banner_slider .box .details{
+        padding:10rem 0 0 0;
+    }
+    .carousel-banner_slider .box .details h1{
+        color:var(--text-color);
+    }
+    .carousel-banner_slider .box .details p{
+        padding-top: 0;
+        color:var(--text-color);
+    }
+    .carousel-banner .trail{
+        bottom:2%
+    }
+    .carousel-banner_slider .box1{
+        background-image:url(https://contents.mediadecathlon.com/s864416/k$eb1ddd543790c25ca57ad925adcee294/slider%20desktop%20content%20image.jpg?format=auto)
+    }
+    .local_brand-items-link{
+        justify-content:center;
+    }
+    .deal-body{
+        width:100%
+    }
+    .topic_sell-banner{
+        padding: 3rem 0;
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items:center;
+    }
+    .topic_sell-banner-detail{
+        margin-top:1rem
+    }
+    .topic_sell-right{
+        grid-gap: 0;
     }
 }
 
