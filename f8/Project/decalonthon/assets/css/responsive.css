@@ -1,6 +1,11 @@
+.hide-on-mobile-pc{
+    display: none;
+}
 /* Mobile & tablet */
 @media (max-width :1023px){
-    
+    .hide-on-mobile-pc{
+        display: block;
+    }
     .hide-on-mobile-tablet{
         display: none;
     }
@@ -108,5 +113,6 @@
     .topic_sell-right{
         grid-gap: 0;
     }
+
 }
 

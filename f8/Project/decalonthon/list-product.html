@@ -19,10 +19,10 @@
     <link rel="stylesheet" href="./assets/css/list-product.css">
     <link rel="stylesheet" href="./assets/css/responsive.css">
 </head>
-<body>
+<body style="position: relative;">
     <header>
         <nav class="navbar">
-            <div class="col col-md-3 col-sm-3 hide-on-pc">
+            <div class="col col-md-3 col-sm-3  hide-on-pc">
                 <label for="nav-mobile-input">
                     <ul class="navbar-list">
                         <li class="navbar-list-items"><a class="navbar-items-link"><i class="fal fa-bars"></i></a></li>
@@ -107,7 +107,7 @@
                 </ul>
                 
             </div>
-            <div class="col col-lg-3 col-md-6 col-sm-6 navbar-logo">
+            <div class="col col-lg-3 col-md-6 col-sm-6 col-md-6 col-sm-6 navbar-logo">
                 <img src="../GOYA/assets/img/logo-light-_1_.png" class="navbar-logo-img"> 
                 
             </div>
@@ -190,7 +190,7 @@
                 <h1 class="body-header_title">Quần áo và giày dép nữ </h1>
             </div>
             <div class="row">
-                <div class="body-warp-left">
+                <div class="hide-on-mobile-tablet body-warp-left col-lg-2 ">
                     <div class="menu-search">
                         <div class="menu-search-category">
                             <h2 class="menu-search-category-title">Category <span><i class="far fa-plus"></i></span></h2>
@@ -498,24 +498,25 @@
                         
                     </div>
                 </div>
-                <div class="body-warp-right">
+                <div class="body-warp-right col-lg-10 col-md-12 col-sm-12">
                     <div class="product-filters-top">
                         <div class="row no-gutters">
-                            <div class="col col-lg-3 product-sorting-bar">
+                            <div class="col col-lg-3 col-md-12 col-sm-12 product-sorting-bar">
                                 <button class="product-sorting-bar-btn">
                                     <span class="product-sorting-bar-icon"><i class="far fa-map-marker-alt"></i></span>
                                     <span class="product-sorting-bar-desc">Chọn của hàng của bạn xem tình trạng còn hàng </span>
                                 </button>
                             </div>
-                            <div class=" col col-lg-9 store-fillters">
+                            <div class=" col col-lg-9 col-md-12 col-sm-12 store-fillters">
                                     <div class="product-sorting-bar store-fillters">
-                                        <div class="col col-lg-4">
+                                        <div class="col col-lg-4 col-md-4  col-sm-4">
                                             <div class="information-product">
-                                                <span class="information-product-number">1.398</span>
-                                                <span class="information-product-description">sản phẩm </span>
+                                                <span class="hide-on-mobile-tablet information-product-number">1.398</span>
+                                                <span class="hide-on-mobile-tablet information-product-description">sản phẩm </span>
+                                                <span class='information-product-mobile-fillter hide-on-mobile-pc'><i class="fal fa-sliders-v"></i>Bộ lọc </span>
                                             </div>
                                         </div>
-                                        <div class="col col-lg-8">
+                                        <div class="col col-lg-8 col-md-8 col-sm-8">
                                             <div class="information-product">
                                                 <div class="information-product-option">
                                                     <div class="information-product-option-value">
@@ -548,17 +549,17 @@
                     <div class="product-list-wrapper">
                         <div class="product-list">
                             <div class="row no-gutters">
-                                <div class="col col-lg-3">
+                                <div class="col col-lg-3 col-md-6 col-sm-6">
                                     <div class="product-items">
                                         <div class="product_gallert">
                                             <div class="product_gallert-slider">
                                                 <img src="./assets/image/product.jpeg" alt="" class="product_gallert-slider-img">
                                             </div>
                                             <div class="product_gallert-thumbnails">
-                                                <span onclick="plusSlides(-1)"><i class="fal fa-chevron-left"></i></span>
+                                                <span onclick="prevSlides(-1)"><i class="fal fa-chevron-left"></i></span>
                                                 <div class="product_gallert-thumbnails-wrapper">
-                                                    <div class="test">
-                                                        <img src="./assets/image/product.jpeg" alt="" class="product_gallert-thumbnails-img ">
+                                                    <div class="product_gallert-thumbnails-list-img">
+                                                        <img src="./assets/image/product.jpeg" alt="" class="product_gallert-thumbnails-img">
                                                         <img  src="./assets/image/product-white.webp" alt="" class="product_gallert-thumbnails-img ">
                                                         <img src="./assets/image/product.jpeg" alt="" class="product_gallert-thumbnails-img ">
                                                         <img src="./assets/image/product.jpeg" alt="" class="product_gallert-thumbnails-img ">               
@@ -568,7 +569,357 @@
                                                         <img src="./assets/image/product.jpeg" alt="" class="product_gallert-thumbnails-img ">                                         
                                                     </div>
                                                 </div>
-                                                <span onclick="plusSlides(1)"><i class="fal fa-chevron-right"></i></span>
+                                                <span onclick="plusSlides()"><i class="fal fa-chevron-right"></i></span>
+                                            </div>
+                                        </div> 
+                                        <div class="product_info-wrapper">
+                                            <a href="" class="product_info-link">
+                                                <span class="product_info-brand">QUECHUA</span>
+                                                <span class="product_info-description">váy ngắn đi bộ đường dài tự nhiên -NH500-Nữ</span>
+                                            </a>
+                                            <div class="produc_info-rate">
+                                                <div class="topic_sell-product-rate">
+                                                    <input id="star5" type="radio" name="rate" value="5">
+                                                    <label  for="star5"></label>
+                                                    <input id="star4" type="radio" name="rate" value="4">
+                                                    <label  for="star4"></label>
+                                                    <input id="star3" type="radio" name="rate" value="3">
+                                                    <label  for="star3"></label>
+                                                    <input id="star2" type="radio" name="rate" value="2">
+                                                    <label  for="star2"></label>
+                                                    <input id="star1" type="radio" name="rate" value="1">
+                                                    <label  for="star1"></label>
+                                                </div>
+                                            </div>
+                                            <div class="product_info-availability">
+                                                <span class="product_info-availability-description">Có sẵn giao hàng trực tuyến trong vòng chưa đầy 72 giờ</span>
+                                            </div>
+                                            <div class="product-info-sticker"><span class="product_info-sticker-description">Phát triển </span></div>
+                                            <div class="product-info-price"><span class="product_info-price-description">13$</span></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col col-lg-3 col-md-6 col-sm-6">
+                                    <div class="product-items">
+                                        <div class="product_gallert">
+                                            <div class="product_gallert-slider">
+                                                <img src="./assets/image/product.jpeg" alt="" class="product_gallert-slider-img">
+                                            </div>
+                                            <div class="product_gallert-thumbnails">
+                                                <!-- <span onclick="prevSlides(-1)"><i class="fal fa-chevron-left"></i></span>
+                                                <div class="product_gallert-thumbnails-wrapper">
+                                                    <div class="product_gallert-thumbnails-list-img">
+                                                        <img src="./assets/image/product.jpeg" alt="" class="product_gallert-thumbnails-img">
+                                                        <img  src="./assets/image/product-white.webp" alt="" class="product_gallert-thumbnails-img ">
+                                                        <img src="./assets/image/product.jpeg" alt="" class="product_gallert-thumbnails-img ">
+                                                        <img src="./assets/image/product.jpeg" alt="" class="product_gallert-thumbnails-img ">               
+                                                        <img src="./assets/image/product.jpeg" alt="" class="product_gallert-thumbnails-img ">                             
+                                                        <img src="./assets/image/product.jpeg" alt="" class="product_gallert-thumbnails-img ">    
+                                                        <img src="./assets/image/product.jpeg" alt="" class="product_gallert-thumbnails-img ">  
+                                                        <img src="./assets/image/product.jpeg" alt="" class="product_gallert-thumbnails-img ">                                         
+                                                    </div>
+                                                </div>
+                                                <span onclick="plusSlides()"><i class="fal fa-chevron-right"></i></span> -->
+                                            </div>
+                                        </div> 
+                                        <div class="product_info-wrapper">
+                                            <a href="" class="product_info-link">
+                                                <span class="product_info-brand">QUECHUA</span>
+                                                <span class="product_info-description">váy ngắn đi bộ đường dài tự nhiên -NH500-Nữ</span>
+                                            </a>
+                                            <div class="produc_info-rate">
+                                                <div class="topic_sell-product-rate">
+                                                    <input id="star5" type="radio" name="rate" value="5">
+                                                    <label  for="star5"></label>
+                                                    <input id="star4" type="radio" name="rate" value="4">
+                                                    <label  for="star4"></label>
+                                                    <input id="star3" type="radio" name="rate" value="3">
+                                                    <label  for="star3"></label>
+                                                    <input id="star2" type="radio" name="rate" value="2">
+                                                    <label  for="star2"></label>
+                                                    <input id="star1" type="radio" name="rate" value="1">
+                                                    <label  for="star1"></label>
+                                                </div>
+                                            </div>
+                                            <div class="product_info-availability">
+                                                <span class="product_info-availability-description">Có sẵn giao hàng trực tuyến trong vòng chưa đầy 72 giờ</span>
+                                            </div>
+                                            <div class="product-info-sticker"><span class="product_info-sticker-description">Phát triển </span></div>
+                                            <div class="product-info-price"><span class="product_info-price-description">13$</span></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col col-lg-3 col-md-6 col-sm-6">
+                                    <div class="product-items">
+                                        <div class="product_gallert">
+                                            <div class="product_gallert-slider">
+                                                <img src="./assets/image/product.jpeg" alt="" class="product_gallert-slider-img">
+                                            </div>
+                                            <div class="product_gallert-thumbnails">
+                                                <span onclick="prevSlides(-1)"><i class="fal fa-chevron-left"></i></span>
+                                                <div class="product_gallert-thumbnails-wrapper">
+                                                    <div class="product_gallert-thumbnails-list-img">
+                                                        <img src="./assets/image/product.jpeg" alt="" class="product_gallert-thumbnails-img">
+                                                        <img  src="./assets/image/product-white.webp" alt="" class="product_gallert-thumbnails-img ">
+                                                        <img src="./assets/image/product.jpeg" alt="" class="product_gallert-thumbnails-img ">
+                                                        <img src="./assets/image/product.jpeg" alt="" class="product_gallert-thumbnails-img ">               
+                                                        <img src="./assets/image/product.jpeg" alt="" class="product_gallert-thumbnails-img ">                             
+                                                        <img src="./assets/image/product.jpeg" alt="" class="product_gallert-thumbnails-img ">    
+                                                        <img src="./assets/image/product.jpeg" alt="" class="product_gallert-thumbnails-img ">  
+                                                        <img src="./assets/image/product.jpeg" alt="" class="product_gallert-thumbnails-img ">                                         
+                                                    </div>
+                                                </div>
+                                                <span onclick="plusSlides()"><i class="fal fa-chevron-right"></i></span>
+                                            </div>
+                                        </div> 
+                                        <div class="product_info-wrapper">
+                                            <a href="" class="product_info-link">
+                                                <span class="product_info-brand">QUECHUA</span>
+                                                <span class="product_info-description">váy ngắn đi bộ đường dài tự nhiên -NH500-Nữ</span>
+                                            </a>
+                                            <div class="produc_info-rate">
+                                                <div class="topic_sell-product-rate">
+                                                    <input id="star5" type="radio" name="rate" value="5">
+                                                    <label  for="star5"></label>
+                                                    <input id="star4" type="radio" name="rate" value="4">
+                                                    <label  for="star4"></label>
+                                                    <input id="star3" type="radio" name="rate" value="3">
+                                                    <label  for="star3"></label>
+                                                    <input id="star2" type="radio" name="rate" value="2">
+                                                    <label  for="star2"></label>
+                                                    <input id="star1" type="radio" name="rate" value="1">
+                                                    <label  for="star1"></label>
+                                                </div>
+                                            </div>
+                                            <div class="product_info-availability">
+                                                <span class="product_info-availability-description">Có sẵn giao hàng trực tuyến trong vòng chưa đầy 72 giờ</span>
+                                            </div>
+                                            <div class="product-info-sticker"><span class="product_info-sticker-description">Phát triển </span></div>
+                                            <div class="product-info-price"><span class="product_info-price-description">13$</span></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col col-lg-3 col-md-6 col-sm-6">
+                                    <div class="product-items">
+                                        <div class="product_gallert">
+                                            <div class="product_gallert-slider">
+                                                <img src="./assets/image/product.jpeg" alt="" class="product_gallert-slider-img">
+                                            </div>
+                                            <div class="product_gallert-thumbnails">
+                                                <!-- <span onclick="prevSlides(-1)"><i class="fal fa-chevron-left"></i></span>
+                                                <div class="product_gallert-thumbnails-wrapper">
+                                                    <div class="product_gallert-thumbnails-list-img">
+                                                        <img src="./assets/image/product.jpeg" alt="" class="product_gallert-thumbnails-img">
+                                                        <img  src="./assets/image/product-white.webp" alt="" class="product_gallert-thumbnails-img ">
+                                                        <img src="./assets/image/product.jpeg" alt="" class="product_gallert-thumbnails-img ">
+                                                        <img src="./assets/image/product.jpeg" alt="" class="product_gallert-thumbnails-img ">               
+                                                        <img src="./assets/image/product.jpeg" alt="" class="product_gallert-thumbnails-img ">                             
+                                                        <img src="./assets/image/product.jpeg" alt="" class="product_gallert-thumbnails-img ">    
+                                                        <img src="./assets/image/product.jpeg" alt="" class="product_gallert-thumbnails-img ">  
+                                                        <img src="./assets/image/product.jpeg" alt="" class="product_gallert-thumbnails-img ">                                         
+                                                    </div>
+                                                </div>
+                                                <span onclick="plusSlides()"><i class="fal fa-chevron-right"></i></span> -->
+                                            </div>
+                                        </div> 
+                                        <div class="product_info-wrapper">
+                                            <a href="" class="product_info-link">
+                                                <span class="product_info-brand">QUECHUA</span>
+                                                <span class="product_info-description">váy ngắn đi bộ đường dài tự nhiên -NH500-Nữ</span>
+                                            </a>
+                                            <div class="produc_info-rate">
+                                                <div class="topic_sell-product-rate">
+                                                    <input id="star5" type="radio" name="rate" value="5">
+                                                    <label  for="star5"></label>
+                                                    <input id="star4" type="radio" name="rate" value="4">
+                                                    <label  for="star4"></label>
+                                                    <input id="star3" type="radio" name="rate" value="3">
+                                                    <label  for="star3"></label>
+                                                    <input id="star2" type="radio" name="rate" value="2">
+                                                    <label  for="star2"></label>
+                                                    <input id="star1" type="radio" name="rate" value="1">
+                                                    <label  for="star1"></label>
+                                                </div>
+                                            </div>
+                                            <div class="product_info-availability">
+                                                <span class="product_info-availability-description">Có sẵn giao hàng trực tuyến trong vòng chưa đầy 72 giờ</span>
+                                            </div>
+                                            <div class="product-info-sticker"><span class="product_info-sticker-description">Phát triển </span></div>
+                                            <div class="product-info-price"><span class="product_info-price-description">13$</span></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col col-lg-3 col-md-6 col-sm-6">
+                                    <div class="product-items">
+                                        <div class="product_gallert">
+                                            <div class="product_gallert-slider">
+                                                <img src="./assets/image/product.jpeg" alt="" class="product_gallert-slider-img">
+                                            </div>
+                                            <div class="product_gallert-thumbnails">
+                                                <span onclick="prevSlides(-1)"><i class="fal fa-chevron-left"></i></span>
+                                                <div class="product_gallert-thumbnails-wrapper">
+                                                    <div class="product_gallert-thumbnails-list-img">
+                                                        <img src="./assets/image/product.jpeg" alt="" class="product_gallert-thumbnails-img">
+                                                        <img  src="./assets/image/product-white.webp" alt="" class="product_gallert-thumbnails-img ">
+                                                        <img src="./assets/image/product.jpeg" alt="" class="product_gallert-thumbnails-img ">
+                                                        <img src="./assets/image/product.jpeg" alt="" class="product_gallert-thumbnails-img ">               
+                                                        <img src="./assets/image/product.jpeg" alt="" class="product_gallert-thumbnails-img ">                             
+                                                        <img src="./assets/image/product.jpeg" alt="" class="product_gallert-thumbnails-img ">    
+                                                        <img src="./assets/image/product.jpeg" alt="" class="product_gallert-thumbnails-img ">  
+                                                        <img src="./assets/image/product.jpeg" alt="" class="product_gallert-thumbnails-img ">                                         
+                                                    </div>
+                                                </div>
+                                                <span onclick="plusSlides()"><i class="fal fa-chevron-right"></i></span>
+                                            </div>
+                                        </div> 
+                                        <div class="product_info-wrapper">
+                                            <a href="" class="product_info-link">
+                                                <span class="product_info-brand">QUECHUA</span>
+                                                <span class="product_info-description">váy ngắn đi bộ đường dài tự nhiên -NH500-Nữ</span>
+                                            </a>
+                                            <div class="produc_info-rate">
+                                                <div class="topic_sell-product-rate">
+                                                    <input id="star5" type="radio" name="rate" value="5">
+                                                    <label  for="star5"></label>
+                                                    <input id="star4" type="radio" name="rate" value="4">
+                                                    <label  for="star4"></label>
+                                                    <input id="star3" type="radio" name="rate" value="3">
+                                                    <label  for="star3"></label>
+                                                    <input id="star2" type="radio" name="rate" value="2">
+                                                    <label  for="star2"></label>
+                                                    <input id="star1" type="radio" name="rate" value="1">
+                                                    <label  for="star1"></label>
+                                                </div>
+                                            </div>
+                                            <div class="product_info-availability">
+                                                <span class="product_info-availability-description">Có sẵn giao hàng trực tuyến trong vòng chưa đầy 72 giờ</span>
+                                            </div>
+                                            <div class="product-info-sticker"><span class="product_info-sticker-description">Phát triển </span></div>
+                                            <div class="product-info-price"><span class="product_info-price-description">13$</span></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col col-lg-3 col-md-6 col-sm-6">
+                                    <div class="product-items">
+                                        <div class="product_gallert">
+                                            <div class="product_gallert-slider">
+                                                <img src="./assets/image/product.jpeg" alt="" class="product_gallert-slider-img">
+                                            </div>
+                                            <div class="product_gallert-thumbnails">
+                                                <!-- <span onclick="prevSlides(-1)"><i class="fal fa-chevron-left"></i></span>
+                                                <div class="product_gallert-thumbnails-wrapper">
+                                                    <div class="product_gallert-thumbnails-list-img">
+                                                        <img src="./assets/image/product.jpeg" alt="" class="product_gallert-thumbnails-img">
+                                                        <img  src="./assets/image/product-white.webp" alt="" class="product_gallert-thumbnails-img ">
+                                                        <img src="./assets/image/product.jpeg" alt="" class="product_gallert-thumbnails-img ">
+                                                        <img src="./assets/image/product.jpeg" alt="" class="product_gallert-thumbnails-img ">               
+                                                        <img src="./assets/image/product.jpeg" alt="" class="product_gallert-thumbnails-img ">                             
+                                                        <img src="./assets/image/product.jpeg" alt="" class="product_gallert-thumbnails-img ">    
+                                                        <img src="./assets/image/product.jpeg" alt="" class="product_gallert-thumbnails-img ">  
+                                                        <img src="./assets/image/product.jpeg" alt="" class="product_gallert-thumbnails-img ">                                         
+                                                    </div>
+                                                </div>
+                                                <span onclick="plusSlides()"><i class="fal fa-chevron-right"></i></span> -->
+                                            </div>
+                                        </div> 
+                                        <div class="product_info-wrapper">
+                                            <a href="" class="product_info-link">
+                                                <span class="product_info-brand">QUECHUA</span>
+                                                <span class="product_info-description">váy ngắn đi bộ đường dài tự nhiên -NH500-Nữ</span>
+                                            </a>
+                                            <div class="produc_info-rate">
+                                                <div class="topic_sell-product-rate">
+                                                    <input id="star5" type="radio" name="rate" value="5">
+                                                    <label  for="star5"></label>
+                                                    <input id="star4" type="radio" name="rate" value="4">
+                                                    <label  for="star4"></label>
+                                                    <input id="star3" type="radio" name="rate" value="3">
+                                                    <label  for="star3"></label>
+                                                    <input id="star2" type="radio" name="rate" value="2">
+                                                    <label  for="star2"></label>
+                                                    <input id="star1" type="radio" name="rate" value="1">
+                                                    <label  for="star1"></label>
+                                                </div>
+                                            </div>
+                                            <div class="product_info-availability">
+                                                <span class="product_info-availability-description">Có sẵn giao hàng trực tuyến trong vòng chưa đầy 72 giờ</span>
+                                            </div>
+                                            <div class="product-info-sticker"><span class="product_info-sticker-description">Phát triển </span></div>
+                                            <div class="product-info-price"><span class="product_info-price-description">13$</span></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col col-lg-3 col-md-6 col-sm-6">
+                                    <div class="product-items">
+                                        <div class="product_gallert">
+                                            <div class="product_gallert-slider">
+                                                <img src="./assets/image/product.jpeg" alt="" class="product_gallert-slider-img">
+                                            </div>
+                                            <div class="product_gallert-thumbnails">
+                                                <span onclick="prevSlides(-1)"><i class="fal fa-chevron-left"></i></span>
+                                                <div class="product_gallert-thumbnails-wrapper">
+                                                    <div class="product_gallert-thumbnails-list-img">
+                                                        <img src="./assets/image/product.jpeg" alt="" class="product_gallert-thumbnails-img">
+                                                        <img  src="./assets/image/product-white.webp" alt="" class="product_gallert-thumbnails-img ">
+                                                        <img src="./assets/image/product.jpeg" alt="" class="product_gallert-thumbnails-img ">
+                                                        <img src="./assets/image/product.jpeg" alt="" class="product_gallert-thumbnails-img ">               
+                                                        <img src="./assets/image/product.jpeg" alt="" class="product_gallert-thumbnails-img ">                             
+                                                        <img src="./assets/image/product.jpeg" alt="" class="product_gallert-thumbnails-img ">    
+                                                        <img src="./assets/image/product.jpeg" alt="" class="product_gallert-thumbnails-img ">  
+                                                        <img src="./assets/image/product.jpeg" alt="" class="product_gallert-thumbnails-img ">                                         
+                                                    </div>
+                                                </div>
+                                                <span onclick="plusSlides()"><i class="fal fa-chevron-right"></i></span>
+                                            </div>
+                                        </div> 
+                                        <div class="product_info-wrapper">
+                                            <a href="" class="product_info-link">
+                                                <span class="product_info-brand">QUECHUA</span>
+                                                <span class="product_info-description">váy ngắn đi bộ đường dài tự nhiên -NH500-Nữ</span>
+                                            </a>
+                                            <div class="produc_info-rate">
+                                                <div class="topic_sell-product-rate">
+                                                    <input id="star5" type="radio" name="rate" value="5">
+                                                    <label  for="star5"></label>
+                                                    <input id="star4" type="radio" name="rate" value="4">
+                                                    <label  for="star4"></label>
+                                                    <input id="star3" type="radio" name="rate" value="3">
+                                                    <label  for="star3"></label>
+                                                    <input id="star2" type="radio" name="rate" value="2">
+                                                    <label  for="star2"></label>
+                                                    <input id="star1" type="radio" name="rate" value="1">
+                                                    <label  for="star1"></label>
+                                                </div>
+                                            </div>
+                                            <div class="product_info-availability">
+                                                <span class="product_info-availability-description">Có sẵn giao hàng trực tuyến trong vòng chưa đầy 72 giờ</span>
+                                            </div>
+                                            <div class="product-info-sticker"><span class="product_info-sticker-description">Phát triển </span></div>
+                                            <div class="product-info-price"><span class="product_info-price-description">13$</span></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col col-lg-3 col-md-6 col-sm-6">
+                                    <div class="product-items">
+                                        <div class="product_gallert">
+                                            <div class="product_gallert-slider">
+                                                <img src="./assets/image/product.jpeg" alt="" class="product_gallert-slider-img">
+                                            </div>
+                                            <div class="product_gallert-thumbnails">
+                                                <!-- <span onclick="prevSlides(-1)"><i class="fal fa-chevron-left"></i></span>
+                                                <div class="product_gallert-thumbnails-wrapper">
+                                                    <div class="product_gallert-thumbnails-list-img">
+                                                        <img src="./assets/image/product.jpeg" alt="" class="product_gallert-thumbnails-img">
+                                                        <img  src="./assets/image/product-white.webp" alt="" class="product_gallert-thumbnails-img ">
+                                                        <img src="./assets/image/product.jpeg" alt="" class="product_gallert-thumbnails-img ">
+                                                        <img src="./assets/image/product.jpeg" alt="" class="product_gallert-thumbnails-img ">               
+                                                        <img src="./assets/image/product.jpeg" alt="" class="product_gallert-thumbnails-img ">                             
+                                                        <img src="./assets/image/product.jpeg" alt="" class="product_gallert-thumbnails-img ">    
+                                                        <img src="./assets/image/product.jpeg" alt="" class="product_gallert-thumbnails-img ">  
+                                                        <img src="./assets/image/product.jpeg" alt="" class="product_gallert-thumbnails-img ">                                         
+                                                    </div>
+                                                </div>
+                                                <span onclick="plusSlides()"><i class="fal fa-chevron-right"></i></span> -->
                                             </div>
                                         </div> 
                                         <div class="product_info-wrapper">
@@ -601,11 +952,74 @@
                             </div>
                         </div>
                     </div>
+                    <div class="more-content">
+                        <button class="more-content-btn">Xem THÊM SẢN PHẨM </button>
+                    </div>
                 </div>
             </div>
            
         </div>
     </section>
+    <div class="filters-faceting">
+        <div class="filters-faceting-wrapper">
+            <div class="filters-faceting-top">
+                <span class="filters-faceting-top-description"><i class="fal fa-sliders-v"></i>Bộ lọc </span>
+                <span class="filters-faceting-top-close"><i class="fal fa-times-circle"></i></span>
+            </div>
+            <div class="filters-faceting-body">
+                <ul class="menu-search-filter-list menu-search-filter-list-mobile-warp">
+                    <h4 class='menu-search-filter-item-title menu-search-filter-item-title-mobile'>Lọc theo sản phẩm <i class="far fa-plus"></i></h4>
+                    <ul class="menu-search-filter-list-mobile ">
+                        <li class="menu-search-filter-items">
+                            <a href="" class="menu-search-filter-link">
+                                <input class="menu-search-filter-checkbox" type="checkbox" name="" id="">
+                                <p class="menu-search-filter-description">Quần Áo <span>(1127)</span></p>
+                            </a>
+                        </li>
+                        <li class="menu-search-filter-items">
+                            <a href="" class="menu-search-filter-link">
+                                <input class="menu-search-filter-checkbox" type="checkbox" name="" id="">
+                                <p class="menu-search-filter-description">Quần Áo <span>(1127)</span></p>
+                            </a>
+                        </li>
+                        <li class="menu-search-filter-items">
+                            <a href="" class="menu-search-filter-link">
+                                <input class="menu-search-filter-checkbox" type="checkbox" name="" id="">
+                                <p class="menu-search-filter-description">Quần Áo <span>(1127)</span></p>
+                            </a>
+                        </li>
+                    </ul>
+                </ul>
+                <ul class="menu-search-filter-list menu-search-filter-list-mobile-warp">
+                    <h4 class='menu-search-filter-item-title menu-search-filter-item-title-mobile'>Lọc theo sản phẩm <i class="far fa-plus"></i></h4>
+                    <ul class="menu-search-filter-list-mobile ">
+                        <li class="menu-search-filter-items">
+                            <a href="" class="menu-search-filter-link">
+                                <input class="menu-search-filter-checkbox" type="checkbox" name="" id="">
+                                <p class="menu-search-filter-description">Quần Áo <span>(1127)</span></p>
+                            </a>
+                        </li>
+                        <li class="menu-search-filter-items">
+                            <a href="" class="menu-search-filter-link">
+                                <input class="menu-search-filter-checkbox" type="checkbox" name="" id="">
+                                <p class="menu-search-filter-description">Quần Áo <span>(1127)</span></p>
+                            </a>
+                        </li>
+                        <li class="menu-search-filter-items">
+                            <a href="" class="menu-search-filter-link">
+                                <input class="menu-search-filter-checkbox" type="checkbox" name="" id="">
+                                <p class="menu-search-filter-description">Quần Áo <span>(1127)</span></p>
+                            </a>
+                        </li>
+                    </ul>
+                </ul>
+                
+            </div>
+            <div class="filters-faceting-footer">
+                <button class="filters-faceting-footer-btn">ỨNG DỤNG</button>
+            </div>
+        </div>
+    </div>
 </body>
 <script src="./assets/js/list-product.js"></script>
 </html>
