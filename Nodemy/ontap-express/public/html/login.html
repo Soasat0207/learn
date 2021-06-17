@@ -14,12 +14,16 @@
         <input id="password" name="password"type="text">
         <label for="">role</label>
         <input id="role" name="role"type="text">
-        <button id="click" onclick="create()">create</button>
-        <button onclick="find()">find</button>
+        <button style="display:none" class="btn-create" onclick="create()">create</button>
+        <button style="display:none" class="btn-find-admin" onclick="find()">find</button>
+        <button style="display:none" class="btn-find-user" onclick="findUser()">find</button>
         <button id="login" onclick="login()">login</button>
         <button style="display:none" id="logout" onclick="logout()">logout</button>
     </div>
     <div class="data_user">
+
+    </div>
+    <div class="data_request">
 
     </div>
 </body>

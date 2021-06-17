@@ -22,8 +22,37 @@ function setCookie(cname, cvalue, exdays) {
   var delete_cookie = function(name) {
       document.cookie = name + '=;expires=Thu, 01 Jan 1970 00:00:01 GMT;';
   };
+function request(){
+    $('.data_request').html('')
+    $.ajax({
+        url:'http://localhost:3000/api/resDelete',
+        type:'GET',
+    })
+    .then((data)=>{
+        data.map((data)=>{
+            let div =``;
+            div =`
+            <div">
+                <p>${data.idUserRequest.username}</p>
+                <input  disabled value ='${data.idUserDelete.username}'></input>
+                <input disabled value ='${data.idUserDelete.password}'></input>
+                <input disabled value ='${data.idUserDelete.role}'></input>
+                <button class="btn"  onclick="deleteUser('${data.idUserDelete._id}');deleteRequest('${data._id}')">Xác nhận</button>
+                <button class="btn-deleteRequest"  onclick="deleteRequest('${data._id}')" >Xoá yêu cầu</button>
+            </div>
+            `;
+            $('.data_request').append(div);
+        })
+    })
+    .catch((error)=>{
+        console.log(error);
+    })
+}
+
 function render() {
     $('.data_user').html('');
+    $('#username').val('');
+    $('#password').val('');
     $.ajax({
         url:'http://localhost:3000/api/user',
         type:'GET',
@@ -49,7 +78,50 @@ function render() {
         console.log(error);
     })
 }
+function renderUser(idUser){
+    $('.data_user').html('');
+    $('#username').val('');
+    $('#password').val('');
+    $.ajax({
+        url:'http://localhost:3000/api/user',
+        type:'GET',
+    })
+    .then((data)=>{
+        data.map((data)=>{
+            let div =``;
+            div =`
+            <div class="checkinput ${data._id}">
+                <input class="data_username" placeholder='${data.username}' disabled value ='${data.username}'></input>
+                <button class="request" onclick="requestDelete('${data._id}','${idUser}')" >X</button>
+            </div>
+            `
+            $('.data_user').append(div);
+            dbUpdateInput(data._id);
+        })
+    })
+    .catch((error)=>{
+        console.log(error);
+    })   
+}
+function requestDelete(idDelete,idUser){
+    $.ajax({
+        url:'http://localhost:3000/api/resDelete',
+        type:'POST',
+        data:{
+            idUserRequest:idUser,
+            idUserDelete:idDelete,
+        }
+    })
+    .then((data)=>{
+        if(data){
+            request();
+        }
+    })
+    .catch((error)=>{
+        console.log(error);
+    })
 
+}
 function create(){
     let username = $('#username').val();
     let password = $('#password').val();
@@ -64,13 +136,20 @@ function create(){
         }
     })
     .then((data)=>{
+        console.log(data);
+        if(data.message == 'tài khoản đã tồn tại'){
+            $('#username').val('');
+            $('#password').val('');
+            $('#role').val('');
+            alert(data.message);
+        }
         if(data.status == 200){
+            alert(data.message);
             render();
             $('#username').val('');
             $('#password').val('');
             $('#role').val('');
-          }
-        
+        }
     })
     .catch((error)=>{
         console.log(error);
@@ -86,7 +165,26 @@ function deleteUser(id){
     })
     .then((data)=>{
         if(data.status == 200){
-          render();
+            render();
+        }
+      })
+    .catch((error)=>{
+        console.log(error);
+    })
+}
+
+function deleteRequest(id){
+    $.ajax({
+        url:'http://localhost:3000/api/resDelete',
+        type:'DELETE',
+        data:{
+            id:id,
+        }
+    })
+    .then((data)=>{
+
+        if(data.status == 200){
+            request();
         }
       })
     .catch((error)=>{
@@ -165,6 +263,43 @@ function find(){
         })
     })
     .catch((error)=>{
+        location.reload(false);
+        // history.go(0)
+        console.log(error);
+    })
+}
+function findUser(){
+    let username = $('#username').val();
+    let password = $('#password').val();
+    let role = $('#role').val();
+    $('.data_user').html('');
+    $.ajax({
+        url:'http://localhost:3000/api/user/find',
+        type:'POST',
+        data:{
+            username:username,
+            password:password,
+            role: role,
+        }
+    })
+    .then((data)=>{
+        console.log(data);
+        data.map((data)=>{
+            let div =``;
+            div =`
+            <div class="checkinput ${data._id}">
+                <input class="data_username" placeholder='${data.username}' disabled value ='${data.username}'></input>
+            </div>
+            `
+            $('.data_user').append(div);
+            dbUpdateInput(data._id);
+            $('#username').val('');
+            $('#password').val('');
+        })
+    })
+    .catch((error)=>{
+        location.reload(false);
+        // history.go(0)
         console.log(error);
     })
 }
@@ -182,16 +317,30 @@ function login(){
         }
     })
     .then((data)=>{
-        setCookie('token',data.token,1);
-        if(data.message=="success"){
+        setCookie('token',data.token,1);  
+        console.log(data)  
+        if(data.data.role=="user"){
             $('#login').attr('style','display:none');
-            $('#logout').attr('style','display:inline-block')
+            $('#logout').attr('style','display:inline-block');
+            $('.btn-create').attr('style','display:none');
+            $('.btn-find-user').attr('style','display:inline-block');
+            renderUser(data.data._id);
+            request()
+            alert(data.message);
+        }
+        if(data.data.role=="admin"){
+            $('#login').attr('style','display:none');
+            $('#logout').attr('style','display:inline-block');
+            $('.btn-create').attr('style','display:inline-block');
+            $('.btn-find-admin').attr('style','display:inline-block');
             render();
+            request()
             alert(data.message);
         }
         
     })
     .catch((error)=>{
+        
         console.log(error);
     })
 }
@@ -199,5 +348,41 @@ function logout(){
     delete_cookie('token');
     $('#login').attr('style','display:inline-block');
     $('#logout').attr('style','display:none');
+    $('.btn-create').attr('style','display:none');
+    $('.btn-find-admin').attr('style','display:none');
+    $('.btn-find-user').attr('style','display:none');
     location.reload();
 }
+function checklogin(){
+    let token = getCookie('token')
+    $.ajax({
+        url:'http://localhost:3000/api/user/checkcookie',
+        type:'POST',
+        data:{
+            token:token,
+        }
+    })
+    .then((data)=>{ 
+        if(data.role =="admin"){
+            $('#login').attr('style','display:none');
+            $('#logout').attr('style','display:inline-block');
+            $('.btn-create').attr('style','display:inline-block');
+            $('.btn-find-admin').attr('style','display:inline-block');
+            render();
+            request();
+        }
+        if(data.role =="user"){
+            $('.data_password').attr('style','display:none');
+            $('#login').attr('style','display:none');
+            $('#logout').attr('style','display:inline-block');
+            $('.btn-create').attr('style','display:none');
+            $('.btn-find-user').attr('style','display:inline-block');
+            renderUser(data._id);
+        }
+        
+    })
+    .catch((error)=>{
+        console.log(error);
+    })
+}
+checklogin();
