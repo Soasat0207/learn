@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="login">
+        <label for="">username</label>
+        <input id="username" name="username"type="text">
+        <label for="">password</label>
+        <input id="password" name="password"type="text">
+        <label for="">role</label>
+        <input id="role" name="role"type="text">
+        <button style="display:none" class="btn-create" onclick="create()">create</button>
+        <button style="display:none" class="btn-find-admin" onclick="find()">find</button>
+        <button style="display:none" class="btn-find-user" onclick="findUser()">find</button>
+        <button id="login" onclick="login()">login</button>
+        <button style="display:none" id="logout" onclick="logout()">logout</button>
+    </div>
+    <div class="data_user">
+
+    </div>
+    <div class="data_request">
+
+    </div>
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="http://localhost:3000/public/js/login.js"></script>
+</html>
