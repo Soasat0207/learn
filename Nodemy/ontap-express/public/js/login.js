@@ -30,6 +30,7 @@ function request(){
     })
     .then((data)=>{
         data.map((data)=>{
+            console.log(data);
             let div =``;
             div =`
             <div">

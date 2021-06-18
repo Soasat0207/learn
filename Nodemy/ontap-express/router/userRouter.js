@@ -99,21 +99,12 @@ router.post('/check',(req,res) =>{
         res.status(500).json('loi sever')
     })
 })
-router.post('/checkcookie',(req,res,next)=>{
-    let token = req.cookies.token;
-    token = jwt.verify(token,"mk");
-    ModelMongo.userModel.findOne({
-        $and: [
-             { _id:token._id },
-         ]
-    })
-    .then((data) =>{
-        res.json(data)
-    })
-    .catch((error)=>{
-        res.status(500).json('loi sever')
-    })
-});
+
+router.post('/checkcookie',checkAuth.checkcookie,(req,res)=>{
+    console.log(req.data)
+    res.json(req.data);
+}
+);
 router.put('/',checkAuth.checkcookie,checkAuth.checkadmin,(req,res) =>{
     let id = req.body.id
     let username = req.body.username;

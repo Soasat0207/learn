@@ -9,6 +9,8 @@ function checkcookie (req,res,next){
          ]
     })
     .then((data) =>{
+        console.log(data);
+        req.data=data;
         next();
     })
     .catch((error)=>{
