@@ -371,3 +371,181 @@
     margin: 0 auto 20px;
     max-width: 60px;
 }
+.delivery-services-info{
+    background-color: #f4f4f4;
+    border-radius: 4px;
+    padding: 1.5rem 3rem;
+    display: flex;
+    align-items: center;
+    color: rgba(40, 44, 63, 0.6);
+    position: relative;
+    border: 2px solid transparent;
+    outline: solid 5px transparent;
+    transition: 0.3s ease;
+    margin-top: 1rem;
+    justify-content:space-between
+}
+.delivery-services-info-warpper{
+    display:flex;
+}
+.delivery-services-info-icon{
+    margin-right: 1.8rem;
+    font-size: 4rem;
+}
+.delivery-services-info-description{
+    color: #424453;
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+.delivery-services-info-text{
+    font-size: 1.3rem;
+    font-weight: 500;
+}
+.delivery-services-info-btn{
+    background-color: #fff;
+    border: 1px solid #c6c6c6;
+    color: #424453;
+    font-size: 13px;
+    padding: 10px 20px;
+    font-weight: 600;
+    line-height: 1.5;
+    border-radius: 0.25rem;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    user-select: none;
+    cursor: pointer;
+    display:flex;
+}
+.delivery-services-info-btn-icon{
+    margin-left: 1rem;
+}
+.product_details-tab{
+    margin-top: 4rem;
+}
+.media{
+    background-color: #f4f4f4;
+    border-radius: 4px;
+    padding: 30px;
+    align-items: center;
+    color: #424453;
+    margin-bottom: 30px;
+    display:flex
+}
+.media-left-img{
+    max-width: 60px;
+    margin-right: 30px;
+    mix-blend-mode: multiply;
+}
+.media-body h6{
+    font-weight: 600;
+    font-size: 1.6rem;
+    margin:0;
+}
+.media-body p{
+    font-weight: 500;
+    font-size: 1.3rem;
+    margin-top:1rem;
+}
+.product-review .product-review-title{
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 3rem;
+    margin-bottom: 2rem;
+}
+.product-review-overview{
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    flex-direction: column;
+    border: 0.1rem solid #d0d5da;
+}
+.product-review-overview-point{
+    width: 100%;
+    font-weight: normal;
+    border-bottom: 0.1rem solid #d0d5da;
+    font-size: 4rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: baseline;
+    -ms-flex-align: baseline;
+    align-items: baseline;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    padding: 0.8rem 1.6rem;
+    margin: 0;
+}
+.product-review-overview-rate{
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    padding: 1.6rem;
+    font-size: 1.6rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+.product-review-overview-counts{
+    padding-right: 1.6rem;
+    padding-bottom: 1.6rem;
+    padding-left: 1.6rem;
+    font-size: 1.2rem;
+}
+.product-review-overview-counts p{
+    text-align: center;
+    margin-top: 0;
+}
+.product-review-overview-counts-btn{
+    color: #1a2a34;
+    font-size: 1.3rem;
+    line-height: 1.1;
+    padding: 1rem 4rem;
+    min-height: 4rem;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    vertical-align: text-top;
+    border-radius: .2rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    transition: background-color .2s ease .1s;
+    z-index: 0;
+    display: flex;
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 32rem;
+    margin-bottom: 1rem;
+    text-decoration: none;
+    background-color: #d0d5da;
+}
+.product-review-overview-counts-btn::after{
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 150%;
+    height: 150%;
+    border-radius: .2rem;
+    transform-origin: top right;
+    transform: rotate(-10deg) translateY(53%);
+    transition: transform .1s ease-in .1s;
+    z-index: -1;
+    background-color: #b4bcc4;
+}
+.product-review-overview-counts-btn:hover::after{
+    transform: none;
+    transition: transform .1s ease-out;
+}
+.product-review-overview-counts-btn-primary{
+    background-color: var(--primary-color);
+    color: var(--white-color);
+}
+.product-review-overview-counts-btn-primary::after{
+    background-color: #0070a8;
+}
