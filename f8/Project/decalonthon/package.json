@@ -1,0 +1,24 @@
+{
+  "name": "decalonthon",
+  "version": "1.0.0",
+  "description": "",
+  "main": "sever.js",
+  "scripts": {
+    "start": "nodemon sever.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Soasat0207/decalonthon.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Soasat0207/decalonthon/issues"
+  },
+  "homepage": "https://github.com/Soasat0207/decalonthon#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "nodemon": "^2.0.7"
+  }
+}

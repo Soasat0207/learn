@@ -727,3 +727,58 @@
     background-color:var(--primary-color);
     color: var(--white-color);
 }
+.recommended-Products-title{
+    text-align: center;
+    font-size: 3rem;
+}
+.recommended-Products-list-items-info-availability{
+    text-align: center;
+}
+.recommended-Products-btn{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display:none;
+}
+.recommended-Products-list-items{
+    max-width: 100%;
+    height: auto;
+    display: flex;
+    overflow: hidden;
+    vertical-align: middle;
+
+}
+.product-items:hover .recommended-Products-btn{
+    display:block;
+}
+@media (max-width :1023px){
+    .product-price-ratting{
+        margin: 0;
+    }
+    .product_details-color, .product_details-size{
+        margin: 0;
+    }
+    .tab-item{
+        padding: 0;
+        margin: 0;
+        font-size:1.2rem
+    }
+    .tabs{
+        justify-content: space-between;
+    }
+    .tabs .line{
+        height:2px
+    }
+    .review-list-body{
+        border: 0.1rem solid #d0d5da;
+    }
+    .review-list{
+        margin-left: 0;
+    }
+}
+@media (max-width :739px){
+    .product_details-color{
+    
+    }
+
+}
