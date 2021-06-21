@@ -5,8 +5,13 @@ const resDeleteRouter = require('./router/resDelete_Router');
 const app = express();
 const path = require('path');
 const bodyParser = require("body-parser");
-var cookieParser = require('cookie-parser')
-const port = 3000;
+var cookieParser = require('cookie-parser');
+var multer  = require('multer')
+const port = process.env.PORT || 3000;
+
+
+ 
+// const port = 3000;
 app.use(cookieParser())
 app.use(
     bodyParser.urlencoded({

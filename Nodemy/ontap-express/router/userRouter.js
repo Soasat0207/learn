@@ -2,7 +2,21 @@ const express = require('express');
 const router = express.Router();
 const ModelMongo = require("../router/mongodb");
 const jwt = require('jsonwebtoken');
-const checkAuth = require('./checkAuth')
+const checkAuth = require('./checkAuth');
+var multer  = require('multer')
+const path = require('path');
+
+var storage = multer.diskStorage({
+    destination: function (req, file, cb) {
+      cb(null,path.join(__dirname,'../public/upload'))
+    },
+    filename: function (req, file, cb) {
+      let index = file.originalname.lastIndexOf('.');
+      let extention = file.originalname.slice(index,file.originalname.length);
+      cb(null, file.fieldname + '-' + Date.now() + extention);
+    }
+  })
+var upload = multer({ storage: storage })
 // lất dữ liệu từ db
 router.get('/',(req,res) =>{
     ModelMongo.userModel.find({
@@ -72,6 +86,7 @@ router.post('/find',checkAuth.checkcookie,(req,res) =>{
         res.status(500).json('loi sever')
     })
 })
+
 router.post('/check',(req,res) =>{
     let username = req.body.username;
     let password = req.body.password;
@@ -105,6 +120,22 @@ router.post('/checkcookie',checkAuth.checkcookie,(req,res)=>{
     res.json(req.data);
 }
 );
+router.post('/profile', upload.single('avatar'), function (req, res, next) {
+    // req.file is the `avatar` file
+    // req.body will hold the text fields, if there were any
+    console.log(req.file)
+    ModelMongo.userModel.findOneAndUpdate({
+        username:'admin'
+    },{
+        img:req.file.filename,
+    })
+    .then((data) => {
+        console.log(data)
+    })
+    .catch((err) => {
+        console.log(err);
+    })
+  })
 router.put('/',checkAuth.checkcookie,checkAuth.checkadmin,(req,res) =>{
     let id = req.body.id
     let username = req.body.username;
