@@ -659,5 +659,71 @@
     border-bottom: 0.1rem solid #d0d5da;
 }
 .review-items-info{
-    padding:1.6rem;
+    padding:1.6rem 0rem 1.6rem 1.6rem;
+    
+}
+.review-items-info h3{
+    font-size:2rem;
+    margin: 0;
+}
+.review-items-info-accuracy{
+    font-size: 1.6rem;
+    display: flex;
+    align-items: center;
+    color: var(--green);
+}
+.review-items-info-accuracy span {
+    padding-left: 1rem;
+}
+.review-items-details{
+    margin-top:1.6rem;
+    padding-left:1.6rem;
+    border-left:0.1rem solid #d0d5da ;
+}
+.review-items-details-title{
+    margin:0;
+    font-size: 1.6rem;
+    color: var(--text-color);
+    /* padding-bottom: 1.2rem; */
+}
+.review-list-items{
+    border-top:0.1rem solid #d0d5da ;
+    padding-bottom: 5rem;
+}
+.review-list-items:last-child{
+    border-bottom:0.1rem solid #d0d5da ;
+}
+.review-items-details-rate{
+    font-size:1.4rem;
+    margin-top:0.8rem;
+}
+.review-items-details-rate span{
+    padding-left: 1rem;
+}
+.review-items-details-rate-time{
+    color:#63707F;
+}
+.review-items-desc{
+    margin-top: 0.8rem;
+    font-size:1.4rem;
+    width: 80%;
+}
+.review-reaction{
+    font-size: 1.4rem;
+    margin-top:0.8rem; 
+    color: #ccc;
+}
+.review-reaction i{
+    padding-right: 1rem;
+}
+.review-reaction i:hover{
+    color: blue;
+    cursor: pointer;
+}
+.review-reaction i:focus{
+    color: blue;
+}
+.seemore_review{
+    background-color:var(--primary-color);
+    color: var(--white-color);
 }

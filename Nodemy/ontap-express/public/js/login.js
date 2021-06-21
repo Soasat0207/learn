@@ -183,7 +183,6 @@ function deleteRequest(id){
         }
     })
     .then((data)=>{
-
         if(data.status == 200){
             request();
         }
