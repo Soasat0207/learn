@@ -3,7 +3,7 @@ const router = express.Router();
 const ModelMongo = require("../router/mongodb");
 const jwt = require('jsonwebtoken');
 const checkAuth = require('./checkAuth');
-var multer  = require('multer')
+var multer=require('multer')
 const path = require('path');
 
 var storage = multer.diskStorage({
