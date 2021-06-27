@@ -226,10 +226,10 @@
                             <div class="cart-items-info-product">
                                 <div class="cart-items-info-product-description">
                                     <span>Tất bó cơ chạy bộ - Đen</span>
-                                    <span>MÃ SẢN PHẨM:2504706</span>
+                                    <span>MÃ SẢN PHẨM: 2504706</span>
                                     <span>MÀU SẮC : TRẮNG</span>
                                     <span>KÍCH THƯỚC : 42</span>
-                                    <span>GIAO HÀNG TRONG VÒNG CHƯA ĐẦY 72 GIỜ</span>
+                                    <span class="cart-items-info-product-description-delivery">GIAO HÀNG TRONG VÒNG CHƯA ĐẦY 72 GIỜ</span>
                                 </div>
                                 <div class="cart-items-unit-price">
                                     <span>35$</span>
@@ -243,14 +243,75 @@
                                     <span>35$</span>
                                 </div>
                             </div>
-                            <div class="cart-items-delete cart-items-unit-price"><button>x</button></div>
+                            <div class="cart-items-delete cart-items-unit-price"><button><i class="fal fa-trash"></i></button></div>
+                        </div>
+                        <div class="cart-items">
+                            <div class="cart-items-img"><img src="https://contents.mediadecathlon.com/p1933438/4965b28f8de5aacd63f851ffc485da1a/p1933438.jpg?f=150x150" alt=""></div>
+                            <div class="cart-items-info-product">
+                                <div class="cart-items-info-product-description">
+                                    <span>Tất bó cơ chạy bộ - Đen</span>
+                                    <span>MÃ SẢN PHẨM: 2504706</span>
+                                    <span>MÀU SẮC : TRẮNG</span>
+                                    <span>KÍCH THƯỚC : 42</span>
+                                    <span class="cart-items-info-product-description-delivery">GIAO HÀNG TRONG VÒNG CHƯA ĐẦY 72 GIỜ</span>
+                                </div>
+                                <div class="cart-items-unit-price">
+                                    <span>35$</span>
+                                </div>
+                                <div class="cart-items-quantity cart-items-unit-price">
+                                    <button class="cart-items-quantity-btn cart-items-quantity-btn-disabled" >-</button>
+                                    <input class="cart-items-quantity-input" type="number" min='1' max='5'>
+                                    <button class="cart-items-quantity-btn">+</button>
+                                </div>
+                                <div class="cart-items-total-price cart-items-unit-price">
+                                    <span>35$</span>
+                                </div>
+                            </div>
+                            <div class="cart-items-delete cart-items-unit-price"><button><i class="fal fa-trash"></i></button></div>
+                        </div>
+                    </div>
+                    <div class="cart cart_payment">
+                        <div class="cart_payment-secure">
+                            <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzNy40MjciIGhlaWdodD0iNDMuODcxIiB2aWV3Qm94PSIwIDAgMzcuNDI3IDQzLjg3MSI+PGRlZnM+PHN0eWxlPi5he2ZpbGw6I2YyNjYwMDtzdHJva2U6I2YyNjYwMDt9LmJ7ZmlsbDojMDA4MWM2O3N0cm9rZTojMDA4MWM2O308L3N0eWxlPjwvZGVmcz48ZyB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtMTczNy41IC0yNC41KSI+PGcgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMTc1MCAzNykiPjxnIHRyYW5zZm9ybT0idHJhbnNsYXRlKDApIj48cGF0aCBjbGFzcz0iYSIgZD0iTS40MzMsMTkuNzExYS40NTEuNDUxLDAsMCwxLS4yNzctLjFBLjQ2LjQ2LDAsMCwxLDAsMTkuMjc3VjkuNzRhLjQzMy40MzMsMCwwLDEsLjM1NS0uNDMzbDExLjY1Mi0yLjFhLjQ0Mi40NDIsMCwwLDEsLjM1NS4wODcuNDUxLjQ1MSwwLDAsMSwuMTQ3LjMzOHY5LjUzN2EuNDMzLjQzMywwLDAsMS0uMzU1LjQzM0wuNTEyLDE5LjdaTS44NjcsMTAuMDd2OC42N2wxMC43NzctMS45MjVWOC4xNDVaIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgwIC0wLjk1OCkiLz48cGF0aCBjbGFzcz0iYSIgZD0iTTMuMzEzLDguMzU4YS40MzMuNDMzLDAsMCwxLS40MzMtLjQzM1YzLjc2M2EzLjc2MywzLjc2MywwLDEsMSw3LjUyNSwwVjYuNjc2YS40NDIuNDQyLDAsMCwxLS40MzMuNDMzLjQzMy40MzMsMCwwLDEtLjQzMy0uNDMzVjMuNzYzYTIuOSwyLjksMCwwLDAtNS43OTIsMFY3LjkyNEEuNDMzLjQzMywwLDAsMSwzLjMxMyw4LjM1OFoiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC0wLjM4MyAwKSIvPjwvZz48L2c+PGcgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMTczOCAyNSkiPjxnIHRyYW5zZm9ybT0idHJhbnNsYXRlKDAgMCkiPjxwYXRoIGNsYXNzPSJiIiBkPSJNMTguMjA5LDQyLjg1OUMxNi4zNTQsNDIuODU5LDAsMzUuNDE4LDAsOC43YS43MzkuNzM5LDAsMCwxLC41NjktLjczOUMuNjk1LDcuOTQ5LDEzLjMsNC45LDE3LjY3Ny4yMTlhLjczOS43MzksMCwwLDEsMS4wNzIsMGM0LjQsNC42OTMsMTcsNy43MywxNy4xMDgsNy43NmEuNzM5LjczOSwwLDAsMSwuNTY5LjczOUMzNi40MjYsMzUuNDE4LDIwLjA3MSw0Mi44NTksMTguMjA5LDQyLjg1OVpNMS40NzgsOS4yNzJDMS43MDcsMzQuMSwxNi41MjQsNDEuMzM3LDE4LjIxNiw0MS4zODFTMzQuNzMzLDM0LjEsMzQuOTQ4LDkuMjcyQzMyLjQ1Nyw4LjYzNiwyMi43LDUuOTA5LDE4LjIwOSwxLjc2MywxMy43MjMsNS45MDksMy45NjgsOC42MzYsMS40NzgsOS4yNzJaIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgwIDAuMDExKSIvPjwvZz48L2c+PC9nPjwvc3ZnPg==" alt="">
+                            <div class="cart_payment-secure-desc">
+                                <p><strong>100% SECURE TRANSACTION</strong></p>
+                                <p>Secure SSL encryption</p>
+                            </div>
+                        </div>
+                        <div class="cart_payment-icon">
+                            <div class="payment-icon">
+                                <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI1NiIgaGVpZ2h0PSIzNiIgdmlld0JveD0iMCAwIDU2IDM2Ij48ZGVmcz48c3R5bGU+LmF7ZmlsbDojMDE0ZDlhO30uYntmaWxsOiMwMTVkOTM7fS5je2ZpbGw6IzNhYzZlYjt9LmR7ZmlsbDojZmZjMjAwO30uZXtmaWxsOiNlMjBkMDY7fS5me2ZpbGw6I2ZmZjtmb250LXNpemU6N3B4O2ZvbnQtZmFtaWx5OlJvYm90by1Cb2xkLCBSb2JvdG87Zm9udC13ZWlnaHQ6NzAwO2xldHRlci1zcGFjaW5nOi0wLjAzZW07fS5ne2xldHRlci1zcGFjaW5nOi0wLjAxZW07fS5oe2ZpbGw6I2ZkN2IzMDt9PC9zdHlsZT48L2RlZnM+PGcgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMCkiPjxyZWN0IGNsYXNzPSJhIiB3aWR0aD0iNTYiIGhlaWdodD0iMzYiIHJ4PSI0LjE2Ii8+PHBhdGggY2xhc3M9ImIiIGQ9Ik00OS42NSwwSDQuMTFBNC4xNiw0LjE2LDAsMCwwLDAsNC4yMVYzMS43OUE0LjE2LDQuMTYsMCwwLDAsNC4xMSwzNkg4LjQ4QzI2Ljg5LDMwLDQwLjQyLDE3LDQ5LjY1LDBaIi8+PHJlY3QgY2xhc3M9ImMiIHdpZHRoPSI1Ljc3IiBoZWlnaHQ9IjIuMzEiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDUuMjMgMjEuNTUpIi8+PHJlY3QgY2xhc3M9ImMiIHdpZHRoPSIyNC41MiIgaGVpZ2h0PSIyLjMxIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSg1LjIzIDI2LjY3KSIvPjxyZWN0IGNsYXNzPSJjIiB3aWR0aD0iNS43NyIgaGVpZ2h0PSIyLjMxIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgxNC42MSAyMS41NSkiLz48cmVjdCBjbGFzcz0iYyIgd2lkdGg9IjUuNzciIGhlaWdodD0iMi4zMSIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMjMuOTkgMjEuNTUpIi8+PGVsbGlwc2UgY2xhc3M9ImQiIGN4PSI1LjMyIiBjeT0iNS40NSIgcng9IjUuMzIiIHJ5PSI1LjQ1IiB0cmFuc2Zvcm09InRyYW5zbGF0ZSg0MC4xNCAxOS44MSkiLz48ZWxsaXBzZSBjbGFzcz0iZSIgY3g9IjUuMzIiIGN5PSI1LjQ1IiByeD0iNS4zMiIgcnk9IjUuNDUiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDM0LjE5IDE5LjgxKSIvPjx0ZXh0IGNsYXNzPSJmIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgzMS4wNiAxMi41MSkiPjx0c3BhbiB4PSIwIiB5PSIwIj5ERUI8L3RzcGFuPjx0c3BhbiBjbGFzcz0iZyIgeT0iMCI+STwvdHNwYW4+PHRzcGFuIHk9IjAiPlQ8L3RzcGFuPjwvdGV4dD48cmVjdCBjbGFzcz0iZCIgd2lkdGg9IjEwLjQyIiBoZWlnaHQ9IjguNTIiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDQuNzggNS4zNikiLz48cmVjdCBjbGFzcz0iaCIgd2lkdGg9IjMuMTIiIGhlaWdodD0iMi4zNCIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoNC43OCA4LjQ1KSIvPjxyZWN0IGNsYXNzPSJoIiB3aWR0aD0iMy4xMiIgaGVpZ2h0PSIyLjM0IiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgxMi4wOSA4LjQ1KSIvPjwvZz48L3N2Zz4=" alt="">
+                                <span>CREDIT/DEBIT</span>
+                            </div>
+                            <div class="payment-icon">
+                                <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI1NiIgaGVpZ2h0PSIzNiIgdmlld0JveD0iMCAwIDU2IDM2Ij48ZGVmcz48c3R5bGU+LmF7ZmlsbDojMDE0ZDlhO30uYntmaWxsOiMwMTVkOTM7fS5je2ZpbGw6IzNhYzZlYjt9LmR7ZmlsbDojZmZjMjAwO30uZXtmaWxsOiNlMjBkMDY7fS5me2ZpbGw6I2ZmZjtmb250LXNpemU6N3B4O2ZvbnQtZmFtaWx5OlJvYm90by1Cb2xkLCBSb2JvdG87Zm9udC13ZWlnaHQ6NzAwO2xldHRlci1zcGFjaW5nOi0wLjAzZW07fS5ne2xldHRlci1zcGFjaW5nOi0wLjAxZW07fS5oe2ZpbGw6I2ZkN2IzMDt9PC9zdHlsZT48L2RlZnM+PGcgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMCkiPjxyZWN0IGNsYXNzPSJhIiB3aWR0aD0iNTYiIGhlaWdodD0iMzYiIHJ4PSI0LjE2Ii8+PHBhdGggY2xhc3M9ImIiIGQ9Ik00OS42NSwwSDQuMTFBNC4xNiw0LjE2LDAsMCwwLDAsNC4yMVYzMS43OUE0LjE2LDQuMTYsMCwwLDAsNC4xMSwzNkg4LjQ4QzI2Ljg5LDMwLDQwLjQyLDE3LDQ5LjY1LDBaIi8+PHJlY3QgY2xhc3M9ImMiIHdpZHRoPSI1Ljc3IiBoZWlnaHQ9IjIuMzEiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDUuMjMgMjEuNTUpIi8+PHJlY3QgY2xhc3M9ImMiIHdpZHRoPSIyNC41MiIgaGVpZ2h0PSIyLjMxIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSg1LjIzIDI2LjY3KSIvPjxyZWN0IGNsYXNzPSJjIiB3aWR0aD0iNS43NyIgaGVpZ2h0PSIyLjMxIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgxNC42MSAyMS41NSkiLz48cmVjdCBjbGFzcz0iYyIgd2lkdGg9IjUuNzciIGhlaWdodD0iMi4zMSIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMjMuOTkgMjEuNTUpIi8+PGVsbGlwc2UgY2xhc3M9ImQiIGN4PSI1LjMyIiBjeT0iNS40NSIgcng9IjUuMzIiIHJ5PSI1LjQ1IiB0cmFuc2Zvcm09InRyYW5zbGF0ZSg0MC4xNCAxOS44MSkiLz48ZWxsaXBzZSBjbGFzcz0iZSIgY3g9IjUuMzIiIGN5PSI1LjQ1IiByeD0iNS4zMiIgcnk9IjUuNDUiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDM0LjE5IDE5LjgxKSIvPjx0ZXh0IGNsYXNzPSJmIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgzMS4wNiAxMi41MSkiPjx0c3BhbiB4PSIwIiB5PSIwIj5ERUI8L3RzcGFuPjx0c3BhbiBjbGFzcz0iZyIgeT0iMCI+STwvdHNwYW4+PHRzcGFuIHk9IjAiPlQ8L3RzcGFuPjwvdGV4dD48cmVjdCBjbGFzcz0iZCIgd2lkdGg9IjEwLjQyIiBoZWlnaHQ9IjguNTIiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDQuNzggNS4zNikiLz48cmVjdCBjbGFzcz0iaCIgd2lkdGg9IjMuMTIiIGhlaWdodD0iMi4zNCIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoNC43OCA4LjQ1KSIvPjxyZWN0IGNsYXNzPSJoIiB3aWR0aD0iMy4xMiIgaGVpZ2h0PSIyLjM0IiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgxMi4wOSA4LjQ1KSIvPjwvZz48L3N2Zz4=" alt="">
+                                <span>CREDIT/DEBIT</span>
+                            </div>
+                            <div class="payment-icon">
+                                <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI1NiIgaGVpZ2h0PSIzNiIgdmlld0JveD0iMCAwIDU2IDM2Ij48ZGVmcz48c3R5bGU+LmF7ZmlsbDojMDE0ZDlhO30uYntmaWxsOiMwMTVkOTM7fS5je2ZpbGw6IzNhYzZlYjt9LmR7ZmlsbDojZmZjMjAwO30uZXtmaWxsOiNlMjBkMDY7fS5me2ZpbGw6I2ZmZjtmb250LXNpemU6N3B4O2ZvbnQtZmFtaWx5OlJvYm90by1Cb2xkLCBSb2JvdG87Zm9udC13ZWlnaHQ6NzAwO2xldHRlci1zcGFjaW5nOi0wLjAzZW07fS5ne2xldHRlci1zcGFjaW5nOi0wLjAxZW07fS5oe2ZpbGw6I2ZkN2IzMDt9PC9zdHlsZT48L2RlZnM+PGcgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMCkiPjxyZWN0IGNsYXNzPSJhIiB3aWR0aD0iNTYiIGhlaWdodD0iMzYiIHJ4PSI0LjE2Ii8+PHBhdGggY2xhc3M9ImIiIGQ9Ik00OS42NSwwSDQuMTFBNC4xNiw0LjE2LDAsMCwwLDAsNC4yMVYzMS43OUE0LjE2LDQuMTYsMCwwLDAsNC4xMSwzNkg4LjQ4QzI2Ljg5LDMwLDQwLjQyLDE3LDQ5LjY1LDBaIi8+PHJlY3QgY2xhc3M9ImMiIHdpZHRoPSI1Ljc3IiBoZWlnaHQ9IjIuMzEiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDUuMjMgMjEuNTUpIi8+PHJlY3QgY2xhc3M9ImMiIHdpZHRoPSIyNC41MiIgaGVpZ2h0PSIyLjMxIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSg1LjIzIDI2LjY3KSIvPjxyZWN0IGNsYXNzPSJjIiB3aWR0aD0iNS43NyIgaGVpZ2h0PSIyLjMxIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgxNC42MSAyMS41NSkiLz48cmVjdCBjbGFzcz0iYyIgd2lkdGg9IjUuNzciIGhlaWdodD0iMi4zMSIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMjMuOTkgMjEuNTUpIi8+PGVsbGlwc2UgY2xhc3M9ImQiIGN4PSI1LjMyIiBjeT0iNS40NSIgcng9IjUuMzIiIHJ5PSI1LjQ1IiB0cmFuc2Zvcm09InRyYW5zbGF0ZSg0MC4xNCAxOS44MSkiLz48ZWxsaXBzZSBjbGFzcz0iZSIgY3g9IjUuMzIiIGN5PSI1LjQ1IiByeD0iNS4zMiIgcnk9IjUuNDUiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDM0LjE5IDE5LjgxKSIvPjx0ZXh0IGNsYXNzPSJmIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgzMS4wNiAxMi41MSkiPjx0c3BhbiB4PSIwIiB5PSIwIj5ERUI8L3RzcGFuPjx0c3BhbiBjbGFzcz0iZyIgeT0iMCI+STwvdHNwYW4+PHRzcGFuIHk9IjAiPlQ8L3RzcGFuPjwvdGV4dD48cmVjdCBjbGFzcz0iZCIgd2lkdGg9IjEwLjQyIiBoZWlnaHQ9IjguNTIiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDQuNzggNS4zNikiLz48cmVjdCBjbGFzcz0iaCIgd2lkdGg9IjMuMTIiIGhlaWdodD0iMi4zNCIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoNC43OCA4LjQ1KSIvPjxyZWN0IGNsYXNzPSJoIiB3aWR0aD0iMy4xMiIgaGVpZ2h0PSIyLjM0IiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgxMi4wOSA4LjQ1KSIvPjwvZz48L3N2Zz4=" alt="">
+                                <span>CREDIT/DEBIT</span>
+                            </div>
                         </div>
                     </div>
                 </div>
                 <div class="col col-lg-4">
-                    <div class="cart">
-                        <h1>hello</h1>
+                    <div class="cart cart-right">
+                        <h5 class="cart-right-title">order Summary</h5>
+                        <div class="cart-right-total-price">
+                            <span>total</span>
+                            <span>35$</span>
+                        </div>
+                        <div class="cart-right-ship">
+                            <span>Shipping</span>
+                            <span>FREE</span>
+                        </div>
+                        <div class="cart-right-total">
+                            <span>total</span>
+                            <span>35$</span>
+                        </div>
+                       
                     </div>
+                    <a href="" class="product-review-overview-counts-btn cart-right-btn"><span>Thêm vào giỏ hàng </span></a>
                 </div>
             </div>
             
