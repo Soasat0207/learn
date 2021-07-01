@@ -135,7 +135,7 @@ router.post('/profile', upload.single('avatar'), function (req, res, next) {
     .catch((err) => {
         console.log(err);
     })
-  })
+})
 router.put('/',checkAuth.checkcookie,checkAuth.checkadmin,(req,res) =>{
     let id = req.body.id
     let username = req.body.username;
