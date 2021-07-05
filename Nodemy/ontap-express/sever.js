@@ -9,8 +9,6 @@ var cookieParser = require('cookie-parser');
 var multer  = require('multer')
 const port = process.env.PORT || 3000;
 
-
- 
 // const port = 3000;
 app.use(cookieParser())
 app.use(

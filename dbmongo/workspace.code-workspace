@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": ".."
+		},
+		{
+			"path": "../../../../Documents/project-decathlon"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "project-decathlon"
+	}
+}
