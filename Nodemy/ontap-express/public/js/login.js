@@ -317,7 +317,7 @@ function login(){
         }
     })
     .then((data)=>{
-        setCookie('token',data.token,1);  
+        setCookie('token',data.token,1);
         console.log(data)  
         if(data.data.role=="user"){
             $('#login').attr('style','display:none');
