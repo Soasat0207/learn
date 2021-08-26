@@ -1,0 +1,21 @@
+1.Tại sao lại phải dùng reactJs ?
+-tạo được hiệu Suất tốt hơn (hạn chế cập nhập Dom Tăng tốc dộ cải thiện Ux)
+-không thể sử dụng react với tên file viết hoa 
+2.Comprment 
+là gì ? + Trong ract Các component hoạt động giống các hàm trả về thành phần html 
++ Các component là thành phần độc lập có thể tái sử dụng
++ Các component giống như function trong js nhưng chúng đập lập là có nhiệm vụ trả về html thông qua hàm render
+giúp phân chia các UI để dễ quản lý và tái sử dụng 
+có 2 loại component 
++Functional Component 
++class Component 
+3.JSX là gì ? 
+4.State là gì ?
+5.Props là gì ?
+là thông tin được truyền giữa component này mới component khác
+Props được truyền vào dưới dạng 1 object
+PropTypes
+6.axios là 1 thư viện tạo ra http requet theo dạng aychin (bất đồng bộ)
+
+useEffect
+mỗi khi components gửi 1 request tới khiến cho mọi func bên trong luôn rest lại nên phải thêm 1 array rỗng đằng sau

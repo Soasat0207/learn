@@ -1,50 +1,34 @@
-import React from 'react';
-import logo from './logo.svg';
+import React ,{Fragment,Component} from 'react';
 import './App.css';
-// function App() {
-//   var fullName = 'Le Huy Hiep'
-//   return (
-//     <div className="App">
-//       <header className="App-header">
-//         <h1>My name is {fullName}</h1>
-//         <p>This is my first app</p>
-//         <img src={logo} className="App-logo" alt="logo" />
-//         <p>
-//           Edit <code>src/App.js</code> and save to reload.
-//         </p>
-//         <a
-//           className="App-link"
-//           href="https://reactjs.org"
-//           target="_blank"
-//           rel="noopener noreferrer"
-//         >
-//           Learn React
-//         </a>
-//       </header>
-//     </div>
-//   );
-// }
-
+import Clock from './components/Clock'
 class App extends React.Component {
-
-  // eslint-disable-next-line react/require-render-return
+  // eslint-disable-next-line no-useless-constructor
+  constructor(props) {
+    super(props);
+    this.state = {
+      time:new Date().toString(),
+    }
+    this.process = null
+  }
+  start = () => {
+    this.process = setInterval(()=>{
+      this.setState({
+        time:new Date().toString()
+      })
+    },1000)
+    
+  }
+  end = () => {
+    clearInterval(this.process)
+  }
   render() {
-    var fullName = 'Le Huy Hiep'
     return (
-      <div className="App">
-        <header className="App-header">
-          <h1>My name is {fullName}</h1>
-          <p>This is my first app</p>
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a className="App-link" href="https://reactjs.org" target="_blank" rel="noopener noreferrer"> Learn React </a>
-        </header>
-      </div>
-    );
+      <Fragment>
+        <Clock time={this.state.time}/>
+        <button onClick={this.start}>Start</button>
+        <button onClick={this.end}>End</button>
+      </Fragment>
+    )
   }
 }
-
-
 export default App;

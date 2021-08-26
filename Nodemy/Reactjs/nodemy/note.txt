@@ -1,0 +1,15 @@
+Huỷ toàn bộ hiệu ứng ban đầu 
+event.preventDefault();
+https://reactjs.org/docs/events.html xem sự kiện 
+componentDidMount(){} :được sử dụng khi đã render xong thì sẽ chạy js này 
+
+props là giá trị đưuocj truyển từ bên ngoài vào thông qua dạng là attribius
+props là bất biến chỉ có thể để đọc thôi không thể gán lại được
+props thay đổi không làm render lại phần tử 
+
+
+state 
+    khi ta thay đổi thì cần đến hàm setState
+    setSate là hàm bất đồng bộ 
+    state thay đổi thì component sẽ render lại 
+    setState : có cơ chế merge lại các thuộc tính 
