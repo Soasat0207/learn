@@ -1,0 +1,17 @@
+1.hook là gì ?
+-trong hook có thể dùng trộn cả class 
+-class và hook chỉ là 2 kiểu viết khác nhau thôi 
+-khiến cho component sạch sẽ quản lí state nhanh gọn chủ động hơn 
+
+useState dùng để quản lí các trạng thái của component
+useState laf 1 hàm mà giá trị trả về là 1 array thành phần thứ nhất là biến lưu lại hiện trạng trạng thái ban đầu của component và phần tu2 thứ 2 dùng để thay đổi trạng thái của component
+
+useContext:
+-quản lý trạng thái của state 
+-Có Tính  Global 
+
+useEffect:
+
+useReduce:
+1 kho chứa những hành động mà người dùng tác động lên component 
+
