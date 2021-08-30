@@ -1,0 +1,5 @@
+React hook là gì ?
+Khi nào dùng hook ?
+
+UseState
+UseEffect:được thực thi sau mỗi lần render 
