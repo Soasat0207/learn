@@ -37,7 +37,7 @@ const Navbar = (props) => {
             <Nav scrollNav={scrollNav}>
                 <NavbarContainer>
                     <NavLogo to="/" onClick={toggleHome}>dolla</NavLogo>
-                    <MobileIcon onClick={toggle}>
+                    <MobileIcon  onClick={toggle} >
                         <FaBars/>
                     </MobileIcon>
                     <NavMenu >
