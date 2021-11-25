@@ -9,10 +9,7 @@ body{
   display: flex;
   flex-direction: column;
   font-family: "Helvetica Neue";
-  background-color: #f4f4f5;
-
-  
-    
+  background-color: #f4f4f5;  
 }
 body > div{
     margin: auto;
