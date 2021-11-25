@@ -1,3 +1,6 @@
+import '../../assets/css/rest.css';
+import '../../assets/css/grid.css';
+import '../../assets/css/base.css';
 import styled from 'styled-components';
 import {Link as LinkS} from 'react-scroll';
 import {Link as LinkR} from 'react-router-dom';
@@ -7,7 +10,7 @@ export const SidebarContainer = styled.aside`
     z-index:2;
     width:100%;
     height:100%;
-    background:#0d0d0d;
+    background:var(--primary-color);
     display:grid;
     align-items:center;
     top:0;
@@ -19,6 +22,9 @@ export const SidebarContainer = styled.aside`
 export const CloseIcon = styled(FaTimes)`
     color:#fff;
     z-index:99;
+    font-size:3rem;
+    margin-right:2rem;
+    margin-top:2rem;
 `
 export const Icon = styled.div`
     position:absolute;
@@ -34,8 +40,9 @@ export const SidebarWrapper = styled.div`
 `
 export const SidebarMenu = styled.ul`
     display:grid;
+    padding:0;
     grid-template-columns:1fr;
-    grid-template-rows:repeat(6,80px);
+    grid-template-rows:repeat(8,60px);
     text-align:center;
     @media screen and (max-width:480px){
         grid-template-rows:repeat(6,80px);
@@ -47,6 +54,7 @@ export const SidebarLink = styled(LinkS)`
     align-items:center;
     justify-content:center;
     font-size:1.5rem;
+    font-weight: 600;
     text-decoration:none;
     list-style:none;
     transition:all 0.2s ease-in-out;

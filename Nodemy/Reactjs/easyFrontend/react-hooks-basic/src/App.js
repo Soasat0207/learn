@@ -5,6 +5,7 @@ import PostList from './Components/PostList'
 import Pagination from './Components/pagination'
 import QueryString from 'query-string'
 import React, { useEffect, useState } from 'react'
+import PostFiltersForm from './Components/PostFiltersFrom';
 function App() {
   const [postList,setPostList]= useState([]);
   const [todoList,setTodoList]= useState([
@@ -49,15 +50,18 @@ function App() {
     setTodoList(newTodoList)
   }
   const handlePageChange = (newPage) =>{
-    console.log(newPage);
     setFilters({
       ...filters,
       _page: newPage,
     })
   }
+  const handleFilltersChange = (newFilters) =>{
+    console.log(newFilters);
+  }
   return (
     <div className="app">
       <h1>ReactHook-todoList</h1>
+      <PostFiltersForm onSubmit={handleFilltersChange}/>
       {/* <TodoForm onSubmit={handleTodoFormSubmit}></TodoForm> */}
       {/* <TodoList
       todos={todoList}
